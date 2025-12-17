@@ -353,31 +353,135 @@ function initThemeSwitcher() {
    PROJECT CASE STUDY MODALS
 ============================================ */
 function initProjectModals() {
-  // Project data (customize these)
+  // Project data
   const projects = {
     'project1': {
-      title: 'Rocket Delivery',
-      problem: 'Food delivery apps often struggle with slow service and poor user experience. Users need a fast, reliable way to order food.',
-      solution: 'Built a mobile-first food delivery app with real-time tracking, optimized routing, and a clean interface that prioritizes speed.',
-      tech: ['React Native', 'Node.js', 'MongoDB', 'Google Maps API', 'Socket.io'],
+      title: 'Rocket Elevators Website (Static Front-End)',
+      problem: 'The existing website was based on a Smarty Template and did not reflect the Rocket Elevators brand or business requirements.',
+      solution: 'Rebuilt the website by removing all template-specific references, updating content and links, and creating new pages aligned with the Rocket Elevators identity.',
+      tech: ['HTML', 'CSS'],
       lessons: [
-        'Learned real-time data synchronization with WebSockets',
-        'Improved mobile performance optimization skills',
-        'Understood the importance of UX in high-frequency apps'
+        'Understanding and refactoring legacy HTML templates',
+        'Structuring a multi-page static website',
+        'Applying semantic HTML best practices',
+        'Creating consistent layouts and navigation',
+        'Styling pages using CSS for branding and readability'
       ],
-      github: 'https://github.com/YOURUSERNAME/PROJECT1'
+      github: 'https://github.com/eglcbxx'
     },
     'project2': {
-      title: 'Data Analysis Notebook',
-      problem: 'Data analysts need a simple way to visualize and share insights from complex datasets.',
-      solution: 'Created an interactive notebook environment for data exploration with built-in visualizations and export capabilities.',
-      tech: ['Python', 'Pandas', 'Matplotlib', 'Jupyter', 'Flask'],
+      title: 'Elevator Quote Form',
+      problem: 'There was no system in place to generate elevator pricing based on different building types.',
+      solution: 'Designed and implemented a dynamic quote form that calculates pricing based on user input and building specifications.',
+      tech: ['HTML', 'CSS', 'Bootstrap', 'JavaScript'],
       lessons: [
-        'Deepened understanding of data processing pipelines',
-        'Learned effective data visualization principles',
-        'Improved Python performance optimization skills'
+        'Building interactive forms with JavaScript',
+        'Handling user input and form validation',
+        'Implementing business logic on the client side',
+        'Using Bootstrap for responsive layouts',
+        'Improving UX through dynamic feedback'
       ],
-      github: 'https://github.com/YOURUSERNAME/PROJECT2'
+      github: 'https://github.com/eglcbxx'
+    },
+    'project3': {
+      title: 'Introduction to Node.js & Express',
+      problem: 'Lack of understanding of how server-side applications work with Node.js and Express.',
+      solution: 'Created a simple backend server using Express with basic endpoints to handle requests and responses.',
+      tech: ['Node.js', 'Express', 'JavaScript', 'Nodemon'],
+      lessons: [
+        'Understanding the client–server architecture',
+        'Creating RESTful endpoints with Express',
+        'Handling HTTP requests and responses',
+        'Using Nodemon for development efficiency',
+        'Organizing a basic backend project structure'
+      ],
+      github: 'https://github.com/eglcbxx'
+    },
+    'project4': {
+      title: 'Node.js Backend with Database',
+      problem: 'No experience connecting a backend server to a database.',
+      solution: 'Extended the Express server by integrating MongoDB for data storage and management using Mongoose.',
+      tech: ['Node.js', 'Express', 'JavaScript', 'Nodemon', 'MongoDB', 'Mongoose'],
+      lessons: [
+        'Connecting a backend to a NoSQL database',
+        'Designing schemas and models with Mongoose',
+        'Performing CRUD operations',
+        'Managing asynchronous database operations',
+        'Structuring a scalable backend architecture'
+      ],
+      github: 'https://github.com/eglcbxx'
+    },
+    'project5': {
+      title: 'Agent Management Web Application',
+      problem: 'A web application was needed to manage agents, authentication, and operational data.',
+      solution: 'Built a full MERN stack admin application with authentication, session tokens, CRUD operations, reporting, and transaction management.',
+      tech: ['MongoDB', 'Express', 'React', 'Node.js', 'MERN Stack'],
+      lessons: [
+        'Building full-stack applications',
+        'Implementing authentication and session management',
+        'Securing API endpoints',
+        'Managing complex CRUD workflows',
+        'Creating dashboards and reports',
+        'Connecting frontend and backend in a production-ready app'
+      ],
+      github: 'https://github.com/eglcbxx'
+    },
+    'project6': {
+      title: 'Blog Platform',
+      problem: 'A complete blogging system was required to manage content and users.',
+      solution: 'Developed a MERN-based blog application with user registration, authentication, post creation, comments, and admin content management.',
+      tech: ['MongoDB', 'Express', 'React', 'Node.js', 'MERN Stack'],
+      lessons: [
+        'Designing role-based user systems',
+        'Managing content workflows (posts, comments)',
+        'Implementing user authentication and authorization',
+        'Building reusable React components',
+        'Handling relational-like data in MongoDB'
+      ],
+      github: 'https://github.com/eglcbxx'
+    },
+    'project7': {
+      title: 'Rocket Food Back Office',
+      problem: 'The Rocket Food mobile application lacked a back-office system for managing data.',
+      solution: 'Developed a backend server and administrative back office using Java to manage application data.',
+      tech: ['Java', 'MySQL'],
+      lessons: [
+        'Understanding backend development with Java',
+        'Designing relational databases with MySQL',
+        'Implementing CRUD operations in Java',
+        'Building admin tools for data management',
+        'Applying MVC concepts in backend systems'
+      ],
+      github: 'https://github.com/eglcbxx'
+    },
+    'project8': {
+      title: 'Mobile Application Development',
+      problem: 'No mobile application was available for users.',
+      solution: 'Built a mobile application using React Native and connected it to the existing Java backend server.',
+      tech: ['React Native', 'Java'],
+      lessons: [
+        'Building cross-platform mobile applications',
+        'Connecting mobile apps to backend APIs',
+        'Managing application state and navigation',
+        'Understanding mobile UX best practices',
+        'Integrating frontend and backend systems'
+      ],
+      github: 'https://github.com/eglcbxx'
+    },
+    'project9': {
+      title: 'AI-Enhanced Portfolio',
+      problem: 'Creating a professional portfolio from scratch is time-consuming and requires balancing design, functionality, and best practices.',
+      solution: 'Leveraged AI tools (GitHub Copilot, ChatGPT, Claude) to rapidly prototype and build this interactive portfolio with advanced animations, accessibility features, and modern UX patterns.',
+      tech: ['HTML5', 'CSS3', 'JavaScript', 'AI Tools (Copilot, ChatGPT, Claude)', 'Responsive Design'],
+      lessons: [
+        'Advanced prompt engineering for code generation',
+        'Effective use of AI for rapid prototyping and iteration',
+        'Combining AI suggestions with human expertise',
+        'Implementing scroll animations and micro-interactions',
+        'Building accessible, semantic HTML structures',
+        'AI-assisted debugging and refactoring workflows'
+      ],
+      github: 'https://github.com/eglcbxx/eglcbxx.github.io'
     }
   };
 
