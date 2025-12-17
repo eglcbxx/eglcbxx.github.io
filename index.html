@@ -14,20 +14,7 @@
     <a href="#main-content" class="skip-to-main">Skip to main content</a>
 
     <!-- HEADER -->
-    <header>
-        <div class="container nav">
-            <div class="brand">
-                <img src="assets/logo.png" alt="Logo" />
-                <span>Etienne Codeboxx</span>
-            </div>
-            <ul>
-                <li><a href="index.html" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
-                <li><a href="links.html" data-page="links">Links</a></li>
-                <li><a href="contact.html" data-page="contact">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main class="container" id="main-content" role="main" aria-label="Main content">
         <section class="hero animate-fade">
@@ -48,234 +35,23 @@
 
         <h2 style="margin-top:22px;" class="animate-on-scroll">Technical Skills</h2>
 
-        <div class="skill-grid">
-            <div class="skill-card animate-on-scroll" data-skill="frontend">
-                <div class="skill-header">
-                    <div class="skill-name">💻 Frontend Development</div>
-                    <div class="skill-level">Advanced</div>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar" style="--skill-width:90%"></div>
-                </div>
-                <p class="small">HTML/CSS (★★★★☆), JavaScript (★★★★☆), React (★★★★☆), TypeScript (★★★☆☆)</p>
-                <div class="skill-details">
-                    <ul>
-                        <li>Expert in modern HTML5/CSS3 and responsive design</li>
-                        <li>Advanced JavaScript ES6+ and async programming</li>
-                        <li>Extensive React experience with hooks and state management</li>
-                        <li>Working knowledge of TypeScript for type-safe code</li>
-                        <li>Component-based architecture and design patterns</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="skill-card animate-on-scroll" data-skill="backend">
-                <div class="skill-header">
-                    <div class="skill-name">🔧 Backend Development</div>
-                    <div class="skill-level">Intermediate</div>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar" style="--skill-width:65%"></div>
-                </div>
-                <p class="small">Ruby on Rails (★★★☆☆), Java (★★★☆☆)</p>
-                <div class="skill-details">
-                    <ul>
-                        <li>Ruby on Rails MVC architecture and RESTful APIs</li>
-                        <li>Java object-oriented programming</li>
-                        <li>Server-side routing and middleware</li>
-                        <li>Authentication and session management</li>
-                        <li>API design and integration</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="skill-card animate-on-scroll" data-skill="database">
-                <div class="skill-header">
-                    <div class="skill-name">🗄️ Databases</div>
-                    <div class="skill-level">Intermediate</div>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar" style="--skill-width:65%"></div>
-                </div>
-                <p class="small">SQL (★★★☆☆), MySQL (★★★☆☆), MongoDB (★★★☆☆)</p>
-                <div class="skill-details">
-                    <ul>
-                        <li>Complex SQL queries, CRUD operations, and joins</li>
-                        <li>MySQL database design and optimization</li>
-                        <li>MongoDB NoSQL document modeling</li>
-                        <li>Data relationships and normalization</li>
-                        <li>Query performance and indexing</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="skill-card animate-on-scroll" data-skill="ai">
-                <div class="skill-header">
-                    <div class="skill-name">🤖 AI-Powered Development</div>
-                    <div class="skill-level">Expert</div>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar" style="--skill-width:100%"></div>
-                </div>
-                <p class="small">Copilot, ChatGPT, Claude, Gemini — All (★★★★★)</p>
-                <div class="skill-details">
-                    <ul>
-                        <li>Expert prompt engineering for optimal AI responses</li>
-                        <li>Technical specification writing with AI assistance</li>
-                        <li>AI-powered development, refactoring, and debugging</li>
-                        <li>Automated documentation generation</li>
-                        <li>Accelerated learning of new technologies using AI</li>
-                        <li>Daily use of GitHub Copilot, ChatGPT, Claude, and Gemini</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="skill-card animate-on-scroll" data-skill="learning">
-                <div class="skill-header">
-                    <div class="skill-name">🧠 Learning & Methodology</div>
-                    <div class="skill-level">Expert</div>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar" style="--skill-width:95%"></div>
-                </div>
-                <p class="small">Quick learning (★★★★★), Adaptation (★★★★★), Project structuring (★★★★☆)</p>
-                <div class="skill-details">
-                    <ul>
-                        <li>Advanced ability to quickly master new IT tools</li>
-                        <li>Rapid adaptation to new technical environments</li>
-                        <li>Technical project structuring and organization</li>
-                        <li>Self-directed learning and continuous improvement</li>
-                        <li>Problem-solving with systematic approach</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="skill-card animate-on-scroll" data-skill="tools">
-                <div class="skill-header">
-                    <div class="skill-name">🛠️ Tools & Environment</div>
-                    <div class="skill-level">Advanced</div>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar" style="--skill-width:90%"></div>
-                </div>
-                <p class="small">VS Code (★★★★★), Windows/macOS (★★★★☆), Google Workspace & Office (★★★★☆)</p>
-                <div class="skill-details">
-                    <ul>
-                        <li>Expert in Visual Studio Code with extensions</li>
-                        <li>Proficient on both Windows and macOS systems</li>
-                        <li>Google Workspace (Docs, Sheets, Slides) mastery</li>
-                        <li>Microsoft Office suite expertise</li>
-                        <li>Slack for team collaboration</li>
-                        <li>Professional email and communication management</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="skill-card animate-on-scroll" data-skill="creative">
-                <div class="skill-header">
-                    <div class="skill-name">🎨 Design & Creative</div>
-                    <div class="skill-level">Intermediate</div>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar" style="--skill-width:60%"></div>
-                </div>
-                <p class="small">Adobe Photoshop (★★★☆☆)</p>
-                <div class="skill-details">
-                    <ul>
-                        <li>Image editing and manipulation</li>
-                        <li>UI mockup creation</li>
-                        <li>Asset preparation for web</li>
-                        <li>Basic graphic design principles</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="skill-card animate-on-scroll" data-skill="languages">
-                <div class="skill-header">
-                    <div class="skill-name">🌍 Languages</div>
-                    <div class="skill-level">Bilingual</div>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar" style="--skill-width:95%"></div>
-                </div>
-                <p class="small">French (★★★★★), English (★★★★☆)</p>
-                <div class="skill-details">
-                    <ul>
-                        <li>French: Native fluency</li>
-                        <li>English: Advanced professional proficiency</li>
-                        <li>Technical documentation in both languages</li>
-                        <li>Effective communication in multicultural teams</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="skill-grid" id="skills-container">
+            <!-- Skills loaded dynamically from data/skills.json -->
         </div>
 
         <h2 style="margin-top:32px;" class="animate-on-scroll">Professional Strengths</h2>
 
-        <div class="grid">
-            <div class="card animate-on-scroll">
-                <h3>🚀 AI-Enhanced Development</h3>
-                <ul>
-                    <li>Leveraging AI tools to accelerate development cycles</li>
-                    <li>Expert in writing effective prompts for code generation</li>
-                    <li>Combining human expertise with AI assistance</li>
-                    <li>Rapid prototyping and iterative improvement</li>
-                </ul>
-            </div>
-
-            <div class="card animate-on-scroll">
-                <h3>💡 Fast Learning & Adaptation</h3>
-                <ul>
-                    <li>Quickly mastering new frameworks and technologies</li>
-                    <li>Thriving in dynamic, evolving tech environments</li>
-                    <li>Self-motivated continuous learning</li>
-                    <li>Translating technical concepts into actionable solutions</li>
-                </ul>
-            </div>
-
-            <div class="card animate-on-scroll">
-                <h3>🤝 Collaboration & Communication</h3>
-                <ul>
-                    <li>Bilingual communication (French/English)</li>
-                    <li>Clear technical documentation and specifications</li>
-                    <li>Effective remote collaboration using modern tools</li>
-                    <li>Team-oriented with strong interpersonal skills</li>
-                </ul>
-            </div>
-
-            <div class="card animate-on-scroll">
-                <h3>🎯 Problem-Solving Approach</h3>
-                <ul>
-                    <li>Systematic debugging and troubleshooting</li>
-                    <li>Breaking down complex problems methodically</li>
-                    <li>Research-driven decision making</li>
-                    <li>Balancing practical solutions with best practices</li>
-                </ul>
-            </div>
+        <div class="grid" id="strengths-container">
+            <!-- Strengths loaded dynamically from data/strengths.json -->
         </div>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="social">
-                <a href="https://www.linkedin.com/in/etienne-lapointe-b82b101bb/" target="_blank"
-                    rel="noreferrer">LinkedIn</a>
-                <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="mailto:etienne.gonthier-lapointe@codeboxx.bix">Email</a>
-            </div>
-            <p class="small">© <span id="year"></span> Etienne Codeboxx</p>
-        </div>
+    <div id="footer-placeholder"></div>
 
-        <script src="script.js"></script>
-        <script>
-            document.getElementById("year").textContent = new Date().getFullYear();
-            const page = document.body.dataset.page;
-            document.querySelectorAll("a[data-page]").forEach(a => {
-                if (a.dataset.page === page) a.classList.add("active");
-            });
-        </script>
-    </footer>
+    <script src="components/template-engine.js"></script>
+    <script src="components/components.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

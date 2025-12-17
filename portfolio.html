@@ -13,20 +13,7 @@
 
     <a href="#main-content" class="skip-to-main">Skip to main content</a>
 
-    <header>
-        <div class="container nav">
-            <div class="brand">
-                <img src="assets/logo.png" alt="Logo" />
-                <span>Etienne Codeboxx</span>
-            </div>
-            <ul>
-                <li><a href="index.html" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
-                <li><a href="links.html" data-page="links">Links</a></li>
-                <li><a href="contact.html" data-page="contact">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main class="container" id="main-content" role="main" aria-label="Portfolio projects">
         <h1 class="animate-fade">Portfolio</h1>
@@ -40,128 +27,16 @@
             <button class="filter-btn" data-filter="mobile">Mobile</button>
         </div>
 
-        <div class="grid">
-            <div class="card animate-on-scroll project-item" data-category="web" data-project="project1">
-                <h3>Rocket Elevators Website</h3>
-                <img class="project-img" src="assets/project1.png" alt="Rocket Elevators Website">
-                <p class="small">Rebuilt static website from legacy Smarty template to modern HTML/CSS with brand identity.</p>
-                <p>
-                    <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">
-                        View Details →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card animate-on-scroll project-item" data-category="web" data-project="project2">
-                <h3>Elevator Quote Form</h3>
-                <img class="project-img" src="assets/project1.png" alt="Quote Form">
-                <p class="small">Dynamic pricing calculator with Bootstrap and JavaScript for elevator installations.</p>
-                <p>
-                    <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">
-                        View Details →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card animate-on-scroll project-item" data-category="backend" data-project="project3">
-                <h3>Node.js Express Server</h3>
-                <img class="project-img" src="assets/project2.png" alt="Express Server">
-                <p class="small">First backend server with Express, learning RESTful APIs and client-server architecture.</p>
-                <p>
-                    <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">
-                        View Details →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card animate-on-scroll project-item" data-category="backend" data-project="project4">
-                <h3>Node.js with MongoDB</h3>
-                <img class="project-img" src="assets/project2.png" alt="Node MongoDB">
-                <p class="small">Extended Express server with MongoDB integration using Mongoose for data persistence.</p>
-                <p>
-                    <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">
-                        View Details →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card animate-on-scroll project-item" data-category="fullstack" data-project="project5">
-                <h3>Agent Management System</h3>
-                <img class="project-img" src="assets/project1.png" alt="Agent Management">
-                <p class="small">Full MERN stack admin app with authentication, CRUD operations, and reporting dashboards.</p>
-                <p>
-                    <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">
-                        View Details →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card animate-on-scroll project-item" data-category="fullstack" data-project="project6">
-                <h3>Blog Platform</h3>
-                <img class="project-img" src="assets/project2.png" alt="Blog Platform">
-                <p class="small">MERN blog with user authentication, role-based access, post management, and comments.</p>
-                <p>
-                    <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">
-                        View Details →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card animate-on-scroll project-item" data-category="backend" data-project="project7">
-                <h3>Rocket Food Back Office</h3>
-                <img class="project-img" src="assets/project1.png" alt="Rocket Food">
-                <p class="small">Java backend with MySQL for administrative data management of mobile application.</p>
-                <p>
-                    <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">
-                        View Details →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card animate-on-scroll project-item" data-category="mobile" data-project="project8">
-                <h3>Mobile Food Delivery App</h3>
-                <img class="project-img" src="assets/project1.png" alt="Mobile App">
-                <p class="small">React Native mobile app connected to Java backend for cross-platform food delivery.</p>
-                <p>
-                    <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">
-                        View Details →
-                    </a>
-                </p>
-            </div>
-
-            <div class="card animate-on-scroll project-item" data-category="web" data-project="project9">
-                <h3>AI-Enhanced Portfolio</h3>
-                <img class="project-img" src="assets/project2.png" alt="This Portfolio">
-                <p class="small">This portfolio! Built with HTML/CSS/JS using AI tools for rapid development and optimization.</p>
-                <p>
-                    <a href="https://github.com/eglcbxx/eglcbxx.github.io" target="_blank" rel="noreferrer">
-                        View Details →
-                    </a>
-                </p>
-            </div>
+        <div class="grid" id="projects-container">
+            <!-- Projects loaded dynamically from data/projects.json -->
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="social">
-                <a href="https://www.linkedin.com/in/etienne-lapointe-b82b101bb/" target="_blank"
-                    rel="noreferrer">LinkedIn</a>
-                <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="mailto:etienne.gonthier-lapointe@codeboxx.bix">Email</a>
-            </div>
-            <p class="small">© <span id="year"></span> Etienne Codeboxx</p>
-        </div>
+    <div id="footer-placeholder"></div>
 
-        <script src="script.js"></script>
-        <script>
-            document.getElementById("year").textContent = new Date().getFullYear();
-            const page = document.body.dataset.page;
-            document.querySelectorAll("a[data-page]").forEach(a => {
-                if (a.dataset.page === page) a.classList.add("active");
-            });
-        </script>
-    </footer>
+    <script src="components/template-engine.js"></script>
+    <script src="components/components.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

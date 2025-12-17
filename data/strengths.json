@@ -1,0 +1,44 @@
+{
+  "strengths": [
+    {
+      "emoji": "🚀",
+      "title": "AI-Enhanced Development",
+      "points": [
+        "Leveraging AI tools to accelerate development cycles",
+        "Expert in writing effective prompts for code generation",
+        "Combining human expertise with AI assistance",
+        "Rapid prototyping and iterative improvement"
+      ]
+    },
+    {
+      "emoji": "💡",
+      "title": "Fast Learning & Adaptation",
+      "points": [
+        "Quickly mastering new frameworks and technologies",
+        "Thriving in dynamic, evolving tech environments",
+        "Self-motivated continuous learning",
+        "Translating technical concepts into actionable solutions"
+      ]
+    },
+    {
+      "emoji": "🤝",
+      "title": "Collaboration & Communication",
+      "points": [
+        "Bilingual communication (French/English)",
+        "Clear technical documentation and specifications",
+        "Effective remote collaboration using modern tools",
+        "Team-oriented with strong interpersonal skills"
+      ]
+    },
+    {
+      "emoji": "🎯",
+      "title": "Problem-Solving Approach",
+      "points": [
+        "Systematic debugging and troubleshooting",
+        "Breaking down complex problems methodically",
+        "Research-driven decision making",
+        "Balancing practical solutions with best practices"
+      ]
+    }
+  ]
+}

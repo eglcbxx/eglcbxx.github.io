@@ -1,0 +1,16 @@
+{
+  "resources": [
+    {
+      "title": "Codeboxx Academy",
+      "image": "assets/resource1.png",
+      "description": "My primary learning platform for full-stack development, where I've built foundational skills in web technologies and software engineering practices.",
+      "link": "https://academy.codeboxx.com/"
+    },
+    {
+      "title": "Codecademy",
+      "image": "assets/resource2.png",
+      "description": "Interactive platform for learning programming languages and frameworks through hands-on practice and projects.",
+      "link": "https://www.codecademy.com/"
+    }
+  ]
+}

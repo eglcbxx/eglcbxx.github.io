@@ -13,62 +13,22 @@
 
     <a href="#main-content" class="skip-to-main">Skip to main content</a>
 
-    <header>
-        <div class="container nav">
-            <div class="brand">
-                <img src="assets/logo.png" alt="Logo" />
-                <span>Etienne Codeboxx</span>
-            </div>
-            <ul>
-                <li><a href="index.html" data-page="index">Home</a></li>
-                <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
-                <li><a href="links.html" data-page="links">Links</a></li>
-                <li><a href="contact.html" data-page="contact">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main class="container" id="main-content" role="main" aria-label="Resource links">
         <h1 class="animate-fade">Links & Resources</h1>
         <p class="small animate-fade">Platforms and tools I use for learning and development.</p>
 
-        <div class="grid">
-            <div class="card animate-on-scroll">
-                <h3>Codeboxx Academy</h3>
-                <img class="project-img" src="assets/resource1.png" alt="Codeboxx Academy">
-                <p class="small">My primary learning platform for full-stack development, where I've built foundational skills in web technologies and software engineering practices.</p>
-                <a href="https://academy.codeboxx.com/" target="_blank" rel="noreferrer">Visit →</a>
-            </div>
-
-            <div class="card animate-on-scroll">
-                <h3>Codecademy</h3>
-                <img class="project-img" src="assets/resource2.png" alt="Codecademy">
-                <p class="small">Interactive platform for learning programming languages and frameworks through hands-on practice and projects.</p>
-                <a href="https://www.codecademy.com/" target="_blank" rel="noreferrer">Visit →</a>
-            </div>
+        <div class="grid" id="resources-container">
+            <!-- Resources loaded dynamically from data/resources.json -->
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="social">
-                <a href="https://www.linkedin.com/in/etienne-lapointe-b82b101bb/" target="_blank"
-                    rel="noreferrer">LinkedIn</a>
-                <a href="https://github.com/eglcbxx" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="mailto:etienne.gonthier-lapointe@codeboxx.bix">Email</a>
-            </div>
-            <p class="small">© <span id="year"></span> Etienne Codeboxx</p>
-        </div>
+    <div id="footer-placeholder"></div>
 
-        <script src="script.js"></script>
-        <script>
-            document.getElementById("year").textContent = new Date().getFullYear();
-            const page = document.body.dataset.page;
-            document.querySelectorAll("a[data-page]").forEach(a => {
-                if (a.dataset.page === page) a.classList.add("active");
-            });
-        </script>
-    </footer>
+    <script src="components/template-engine.js"></script>
+    <script src="components/components.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

@@ -1,0 +1,186 @@
+{
+  "projects": [
+    {
+      "id": "project1",
+      "title": "Rocket Elevators Website (Static Front-End)",
+      "category": "web",
+      "image": "assets/project1.png",
+      "description": "Rebuilt static website from legacy Smarty template to modern HTML/CSS with brand identity.",
+      "link": "https://github.com/eglcbxx",
+      "modalData": {
+        "problem": "The existing website was based on a Smarty Template and did not reflect the Rocket Elevators brand or business requirements.",
+        "solution": "Rebuilt the website by removing all template-specific references, updating content and links, and creating new pages aligned with the Rocket Elevators identity.",
+        "tech": ["HTML", "CSS"],
+        "lessons": [
+          "Understanding and refactoring legacy HTML templates",
+          "Structuring a multi-page static website",
+          "Applying semantic HTML best practices",
+          "Creating consistent layouts and navigation",
+          "Styling pages using CSS for branding and readability"
+        ]
+      }
+    },
+    {
+      "id": "project2",
+      "title": "Elevator Quote Form",
+      "category": "web",
+      "image": "assets/project1.png",
+      "description": "Dynamic pricing calculator with Bootstrap and JavaScript for elevator installations.",
+      "link": "https://github.com/eglcbxx",
+      "modalData": {
+        "problem": "There was no system in place to generate elevator pricing based on different building types.",
+        "solution": "Designed and implemented a dynamic quote form that calculates pricing based on user input and building specifications.",
+        "tech": ["HTML", "CSS", "Bootstrap", "JavaScript"],
+        "lessons": [
+          "Building interactive forms with JavaScript",
+          "Handling user input and form validation",
+          "Implementing business logic on the client side",
+          "Using Bootstrap for responsive layouts",
+          "Improving UX through dynamic feedback"
+        ]
+      }
+    },
+    {
+      "id": "project3",
+      "title": "Introduction to Node.js & Express",
+      "category": "backend",
+      "image": "assets/project2.png",
+      "description": "First backend server with Express, learning RESTful APIs and client-server architecture.",
+      "link": "https://github.com/eglcbxx",
+      "modalData": {
+        "problem": "Lack of understanding of how server-side applications work with Node.js and Express.",
+        "solution": "Created a simple backend server using Express with basic endpoints to handle requests and responses.",
+        "tech": ["Node.js", "Express", "JavaScript", "Nodemon"],
+        "lessons": [
+          "Understanding the client–server architecture",
+          "Creating RESTful endpoints with Express",
+          "Handling HTTP requests and responses",
+          "Using Nodemon for development efficiency",
+          "Organizing a basic backend project structure"
+        ]
+      }
+    },
+    {
+      "id": "project4",
+      "title": "Node.js Backend with Database",
+      "category": "backend",
+      "image": "assets/project2.png",
+      "description": "Extended Express server with MongoDB integration using Mongoose for data persistence.",
+      "link": "https://github.com/eglcbxx",
+      "modalData": {
+        "problem": "No experience connecting a backend server to a database.",
+        "solution": "Extended the Express server by integrating MongoDB for data storage and management using Mongoose.",
+        "tech": ["Node.js", "Express", "JavaScript", "Nodemon", "MongoDB", "Mongoose"],
+        "lessons": [
+          "Connecting a backend to a NoSQL database",
+          "Designing schemas and models with Mongoose",
+          "Performing CRUD operations",
+          "Managing asynchronous database operations",
+          "Structuring a scalable backend architecture"
+        ]
+      }
+    },
+    {
+      "id": "project5",
+      "title": "Agent Management Web Application",
+      "category": "fullstack",
+      "image": "assets/project1.png",
+      "description": "Full MERN stack admin app with authentication, CRUD operations, and reporting dashboards.",
+      "link": "https://github.com/eglcbxx",
+      "modalData": {
+        "problem": "A web application was needed to manage agents, authentication, and operational data.",
+        "solution": "Built a full MERN stack admin application with authentication, session tokens, CRUD operations, reporting, and transaction management.",
+        "tech": ["MongoDB", "Express", "React", "Node.js", "MERN Stack"],
+        "lessons": [
+          "Building full-stack applications",
+          "Implementing authentication and session management",
+          "Securing API endpoints",
+          "Managing complex CRUD workflows",
+          "Creating dashboards and reports",
+          "Connecting frontend and backend in a production-ready app"
+        ]
+      }
+    },
+    {
+      "id": "project6",
+      "title": "Blog Platform",
+      "category": "fullstack",
+      "image": "assets/project2.png",
+      "description": "MERN blog with user authentication, role-based access, post management, and comments.",
+      "link": "https://github.com/eglcbxx",
+      "modalData": {
+        "problem": "A complete blogging system was required to manage content and users.",
+        "solution": "Developed a MERN-based blog application with user registration, authentication, post creation, comments, and admin content management.",
+        "tech": ["MongoDB", "Express", "React", "Node.js", "MERN Stack"],
+        "lessons": [
+          "Designing role-based user systems",
+          "Managing content workflows (posts, comments)",
+          "Implementing user authentication and authorization",
+          "Building reusable React components",
+          "Handling relational-like data in MongoDB"
+        ]
+      }
+    },
+    {
+      "id": "project7",
+      "title": "Rocket Food Back Office",
+      "category": "backend",
+      "image": "assets/project1.png",
+      "description": "Java backend with MySQL for administrative data management of mobile application.",
+      "link": "https://github.com/eglcbxx",
+      "modalData": {
+        "problem": "The Rocket Food mobile application lacked a back-office system for managing data.",
+        "solution": "Developed a backend server and administrative back office using Java to manage application data.",
+        "tech": ["Java", "MySQL"],
+        "lessons": [
+          "Understanding backend development with Java",
+          "Designing relational databases with MySQL",
+          "Implementing CRUD operations in Java",
+          "Building admin tools for data management",
+          "Applying MVC concepts in backend systems"
+        ]
+      }
+    },
+    {
+      "id": "project8",
+      "title": "Mobile Application Development",
+      "category": "mobile",
+      "image": "assets/project1.png",
+      "description": "React Native mobile app connected to Java backend for cross-platform food delivery.",
+      "link": "https://github.com/eglcbxx",
+      "modalData": {
+        "problem": "No mobile application was available for users.",
+        "solution": "Built a mobile application using React Native and connected it to the existing Java backend server.",
+        "tech": ["React Native", "Java"],
+        "lessons": [
+          "Building cross-platform mobile applications",
+          "Connecting mobile apps to backend APIs",
+          "Managing application state and navigation",
+          "Understanding mobile UX best practices",
+          "Integrating frontend and backend systems"
+        ]
+      }
+    },
+    {
+      "id": "project9",
+      "title": "AI-Enhanced Portfolio",
+      "category": "web",
+      "image": "assets/project2.png",
+      "description": "This portfolio! Built with HTML/CSS/JS using AI tools for rapid development and optimization.",
+      "link": "https://github.com/eglcbxx/eglcbxx.github.io",
+      "modalData": {
+        "problem": "Creating a professional portfolio from scratch is time-consuming and requires balancing design, functionality, and best practices.",
+        "solution": "Leveraged AI tools (GitHub Copilot, ChatGPT, Claude) to rapidly prototype and build this interactive portfolio with advanced animations, accessibility features, and modern UX patterns.",
+        "tech": ["HTML5", "CSS3", "JavaScript", "AI Tools (Copilot, ChatGPT, Claude)", "Responsive Design"],
+        "lessons": [
+          "Advanced prompt engineering for code generation",
+          "Effective use of AI for rapid prototyping and iteration",
+          "Combining AI suggestions with human expertise",
+          "Implementing scroll animations and micro-interactions",
+          "Building accessible, semantic HTML structures",
+          "AI-assisted debugging and refactoring workflows"
+        ]
+      }
+    }
+  ]
+}
