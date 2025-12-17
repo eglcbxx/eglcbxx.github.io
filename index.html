@@ -11,6 +11,8 @@
 
 <body data-page="index">
 
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
     <!-- HEADER -->
     <header>
         <div class="container nav">
@@ -27,11 +29,11 @@
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <h1>Hi, I’m Etienne Codeboxx 👋</h1>
+    <main class="container" id="main-content" role="main" aria-label="Main content">
+        <section class="hero animate-fade">
+            <h1>Hi, I'm Etienne Codeboxx 👋</h1>
             <p class="small">
-                I’m a Full-Stack Developer focused on building clean, reliable web apps.
+                I'm a Full-Stack Developer focused on building clean, reliable web apps.
                 I enjoy turning ideas into simple, usable products.
             </p>
             <div>
@@ -42,26 +44,106 @@
             </div>
         </section>
 
-        <h2 style="margin-top:22px;">Quick Skills Overview</h2>
+        <h2 style="margin-top:22px;" class="animate-on-scroll">Quick Skills Overview</h2>
+
+        <div class="skill-grid">
+            <div class="skill-card animate-on-scroll" data-skill="frontend">
+                <div class="skill-header">
+                    <div class="skill-name">Frontend Development</div>
+                    <div class="skill-level">Advanced</div>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar" style="--skill-width:85%"></div>
+                </div>
+                <p class="small">HTML/CSS, JavaScript, React, Responsive Design</p>
+                <div class="skill-details">
+                    <ul>
+                        <li>5+ projects with modern React</li>
+                        <li>Expert in responsive CSS layouts</li>
+                        <li>Strong accessibility awareness</li>
+                        <li>Component-based architecture</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card animate-on-scroll" data-skill="backend">
+                <div class="skill-header">
+                    <div class="skill-name">Backend Development</div>
+                    <div class="skill-level">Intermediate</div>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar" style="--skill-width:70%"></div>
+                </div>
+                <p class="small">Node.js, Express, REST APIs, Authentication</p>
+                <div class="skill-details">
+                    <ul>
+                        <li>Built RESTful APIs with Express</li>
+                        <li>Database design and optimization</li>
+                        <li>JWT authentication implementation</li>
+                        <li>Error handling best practices</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card animate-on-scroll" data-skill="database">
+                <div class="skill-header">
+                    <div class="skill-name">Databases & Data</div>
+                    <div class="skill-level">Intermediate</div>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar" style="--skill-width:75%"></div>
+                </div>
+                <p class="small">SQL, MongoDB, Data Modeling</p>
+                <div class="skill-details">
+                    <ul>
+                        <li>Complex SQL queries and joins</li>
+                        <li>MongoDB schema design</li>
+                        <li>Database performance tuning</li>
+                        <li>Data normalization principles</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skill-card animate-on-scroll" data-skill="tools">
+                <div class="skill-header">
+                    <div class="skill-name">Tools & Workflow</div>
+                    <div class="skill-level">Advanced</div>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar" style="--skill-width:80%"></div>
+                </div>
+                <p class="small">Git, GitHub, VSCode, Postman, Testing</p>
+                <div class="skill-details">
+                    <ul>
+                        <li>Git version control mastery</li>
+                        <li>CI/CD pipeline experience</li>
+                        <li>API testing with Postman</li>
+                        <li>Agile development practices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="margin-top:32px;" class="animate-on-scroll">Soft Skills</h2>
 
         <div class="grid">
-            <div class="card">
-                <h3>Technical Skills</h3>
+            <div class="card animate-on-scroll">
+                <h3>Communication & Teamwork</h3>
                 <ul>
-                    <li>Frontend: HTML/CSS, JavaScript, React</li>
-                    <li>Backend: Node/Express (or Java/Spring)</li>
-                    <li>Databases: SQL, MongoDB</li>
-                    <li>Tools: Git/GitHub, VSCode, Postman</li>
+                    <li>Clear technical documentation</li>
+                    <li>Effective code reviews</li>
+                    <li>Collaborative problem solving</li>
+                    <li>Active listening in team settings</li>
                 </ul>
             </div>
 
-            <div class="card">
-                <h3>Soft Skills</h3>
+            <div class="card animate-on-scroll">
+                <h3>Problem Solving & Learning</h3>
                 <ul>
-                    <li>Clear communication & teamwork</li>
-                    <li>Strong problem solving</li>
-                    <li>Reliable delivery & attention to detail</li>
+                    <li>Breaking down complex problems</li>
                     <li>Continuous learning mindset</li>
+                    <li>Debugging and troubleshooting</li>
+                    <li>Adapting to new technologies</li>
                 </ul>
             </div>
         </div>
@@ -79,6 +161,7 @@
             <p class="small">© <span id="year"></span> Etienne Codeboxx</p>
         </div>
 
+        <script src="script.js"></script>
         <script>
             document.getElementById("year").textContent = new Date().getFullYear();
             const page = document.body.dataset.page;

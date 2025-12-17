@@ -11,6 +11,8 @@
 
 <body data-page="contact">
 
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
     <header>
         <div class="container nav">
             <div class="brand">
@@ -26,14 +28,14 @@
         </div>
     </header>
 
-    <main class="container">
-        <h1>Contact</h1>
-        <p class="small">
+    <main class="container" id="main-content" role="main" aria-label="Contact form">
+        <h1 class="animate-fade">Contact</h1>
+        <p class="small animate-fade">
             This form opens your default email app with the message pre-filled.
-            (For true “send directly”, you need a form service or backend.)
+            (For true "send directly", you need a form service or backend.)
         </p>
 
-        <div class="card">
+        <div class="card animate-on-scroll">
             <form id="contactForm">
                 <label class="small" for="email">Your email</label>
                 <input id="email" type="email" placeholder="you@example.com" required />
