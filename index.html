@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YOUR NAME — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="index">
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Logo" />
+        <span>YOUR NAME</span>
+      </div>
+      <ul>
+        <li><a href="index.html" data-page="index">Home</a></li>
+        <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
+        <li><a href="links.html" data-page="links">Links</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Hi, I’m YOUR NAME 👋</h1>
+      <p class="small">
+        I’m a Full-Stack Developer focused on building clean, reliable web apps.
+        I enjoy turning ideas into simple, usable products.
+      </p>
+      <div>
+        <span class="tag">JavaScript</span>
+        <span class="tag">React</span>
+        <span class="tag">Node</span>
+        <span class="tag">SQL</span>
+      </div>
+    </section>
+
+    <h2 style="margin-top:22px;">Quick Skills Overview</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Frontend: HTML/CSS, JavaScript, React</li>
+          <li>Backend: Node/Express (or Java/Spring)</li>
+          <li>Databases: SQL, MongoDB</li>
+          <li>Tools: Git/GitHub, VSCode, Postman</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Clear communication & teamwork</li>
+          <li>Strong problem solving</li>
+          <li>Reliable delivery & attention to detail</li>
+          <li>Continuous learning mindset</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="social">
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="mailto:YOUR_EMAIL_HERE@example.com">Email</a>
+      </div>
+      <p class="small">© <span id="year"></span> YOUR NAME</p>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const page = document.body.dataset.page;
+      document.querySelectorAll("a[data-page]").forEach(a=>{
+        if(a.dataset.page === page) a.classList.add("active");
+      });
+    </script>
+  </footer>
+
+</body>
+</html>

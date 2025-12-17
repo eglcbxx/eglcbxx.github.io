@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — YOUR NAME</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="portfolio">
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Logo" />
+      <span>YOUR NAME</span>
+    </div>
+    <ul>
+      <li><a href="index.html" data-page="index">Home</a></li>
+      <li><a href="portfolio.html" data-page="portfolio">Portfolio</a></li>
+      <li><a href="links.html" data-page="links">Links</a></li>
+      <li><a href="contact.html" data-page="contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Portfolio</h1>
+  <p class="small">Two highlighted projects with short descriptions and GitHub links.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Project 1 — Rocket Delivery</h3>
+      <img class="project-img" src="assets/project1.png" alt="Project 1 screenshot">
+      <p class="small">Short description: what it does + what you learned.</p>
+      <p>
+        <a href="https://github.com/YOURUSERNAME/PROJECT1" target="_blank" rel="noreferrer">
+          View GitHub Repository →
+        </a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Project 2 — Data Analysis Notebook</h3>
+      <img class="project-img" src="assets/project2.png" alt="Project 2 screenshot">
+      <p class="small">Short description: goal + tech + outcome.</p>
+      <p>
+        <a href="https://github.com/YOURUSERNAME/PROJECT2" target="_blank" rel="noreferrer">
+          View GitHub Repository →
+        </a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="social">
+      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="mailto:YOUR_EMAIL_HERE@example.com">Email</a>
+    </div>
+    <p class="small">© <span id="year"></span> YOUR NAME</p>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const page = document.body.dataset.page;
+    document.querySelectorAll("a[data-page]").forEach(a=>{
+      if(a.dataset.page === page) a.classList.add("active");
+    });
+  </script>
+</footer>
+
+</body>
+</html>
