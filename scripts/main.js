@@ -100,26 +100,30 @@ function setupContactForm(){
       const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbybDx4CeYRYUFr4juI36tUFN4AJjKN6ksESkil8gj4iMMfhGggA5OmI8j3C4oV6zpM6Hg/exec';
       
       const response = await fetch(SCRIPT_URL, {
+        redirect: 'follow',
         method: 'POST',
-        mode: 'no-cors', // Required for Google Apps Script
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/plain;charset=utf-8',
         },
         body: JSON.stringify({ email })
       });
 
-      // Note: With no-cors mode, we can't read the response
-      // Assume success if no error was thrown
-      formMessage.className = 'form-message success active';
-      formMessage.innerHTML = `
-        <strong>✓ Email sent successfully!</strong><br>
-        <span class="small">Check your inbox for a message from Coach E.T. @ Codeboxx</span>
-      `;
+      const result = await response.json();
       
-      // Clear form
-      emailInput.value = '';
-      emailInput.classList.remove('success', 'error');
-      emailError.classList.remove('active');
+      if (result.success) {
+        formMessage.className = 'form-message success active';
+        formMessage.innerHTML = `
+          <strong>✓ Email sent successfully!</strong><br>
+          <span class="small">Check your inbox for a message from Coach E.T. @ Codeboxx</span>
+        `;
+        
+        // Clear form
+        emailInput.value = '';
+        emailInput.classList.remove('success', 'error');
+        emailError.classList.remove('active');
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
 
     } catch (error) {
       console.error('Form submission error:', error);
