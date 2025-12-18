@@ -376,8 +376,8 @@ async function initProjectModals() {
     if (e.target === modal) closeModal();
   });
 
-  // Open modal for project cards
-  document.querySelectorAll('.card').forEach((card, index) => {
+  // Open modal for project cards (excluding cards with no-modal class)
+  document.querySelectorAll('.card:not(.no-modal)').forEach((card, index) => {
     const projectKey = `project${index + 1}`;
     if (projects[projectKey]) {
       card.parentElement.classList.add('project-card-clickable');
