@@ -24,7 +24,7 @@
       "id": "project2",
       "title": "Elevator Quote Form",
       "category": "web",
-      "image": "assets/project1.png",
+      "image": "assets/project2.png",
       "description": "Dynamic pricing calculator with Bootstrap and JavaScript for elevator installations.",
       "link": "https://github.com/eglcbxx",
       "modalData": {
@@ -44,7 +44,7 @@
       "id": "project3",
       "title": "Introduction to Node.js & Express",
       "category": "backend",
-      "image": "assets/project2.png",
+      "image": "assets/project3.png",
       "description": "First backend server with Express, learning RESTful APIs and client-server architecture.",
       "link": "https://github.com/eglcbxx",
       "modalData": {
@@ -64,7 +64,7 @@
       "id": "project4",
       "title": "Node.js Backend with Database",
       "category": "backend",
-      "image": "assets/project2.png",
+      "image": "assets/project4.png",
       "description": "Extended Express server with MongoDB integration using Mongoose for data persistence.",
       "link": "https://github.com/eglcbxx",
       "modalData": {
@@ -84,7 +84,7 @@
       "id": "project5",
       "title": "Agent Management Web Application",
       "category": "fullstack",
-      "image": "assets/project1.png",
+      "image": "assets/project5.png",
       "description": "Full MERN stack admin app with authentication, CRUD operations, and reporting dashboards.",
       "link": "https://github.com/eglcbxx",
       "modalData": {
@@ -105,7 +105,7 @@
       "id": "project6",
       "title": "Blog Platform",
       "category": "fullstack",
-      "image": "assets/project2.png",
+      "image": "assets/project6.png",
       "description": "MERN blog with user authentication, role-based access, post management, and comments.",
       "link": "https://github.com/eglcbxx",
       "modalData": {
@@ -125,7 +125,7 @@
       "id": "project7",
       "title": "Rocket Food Back Office",
       "category": "backend",
-      "image": "assets/project1.png",
+      "image": "assets/project7.png",
       "description": "Java backend with MySQL for administrative data management of mobile application.",
       "link": "https://github.com/eglcbxx",
       "modalData": {
@@ -145,7 +145,7 @@
       "id": "project8",
       "title": "Mobile Application Development",
       "category": "mobile",
-      "image": "assets/project1.png",
+      "image": "assets/project8.png",
       "description": "React Native mobile app connected to Java backend for cross-platform food delivery.",
       "link": "https://github.com/eglcbxx",
       "modalData": {
@@ -165,7 +165,7 @@
       "id": "project9",
       "title": "AI-Enhanced Portfolio",
       "category": "web",
-      "image": "assets/project2.png",
+      "image": "assets/project9.png",
       "description": "This portfolio! Built with HTML/CSS/JS using AI tools for rapid development and optimization.",
       "link": "https://github.com/eglcbxx/eglcbxx.github.io",
       "modalData": {

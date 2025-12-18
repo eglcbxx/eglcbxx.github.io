@@ -6,12 +6,12 @@
 async function loadComponents() {
     try {
         // Load header
-        const headerResponse = await fetch('components/header.html');
+        const headerResponse = await fetch('components/layout/header.html');
         const headerHTML = await headerResponse.text();
         document.getElementById('header-placeholder').innerHTML = headerHTML;
 
         // Load footer
-        const footerResponse = await fetch('components/footer.html');
+        const footerResponse = await fetch('components/layout/footer.html');
         const footerHTML = await footerResponse.text();
         document.getElementById('footer-placeholder').innerHTML = footerHTML;
 
