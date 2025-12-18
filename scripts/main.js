@@ -22,38 +22,33 @@ function initScrollAnimations() {
 }
 
 /* ============================================
-   CONTACT FORM
+   CONTACT FORM - Google Apps Script Integration
 ============================================ */
 function setupContactForm(){
   const form = document.querySelector("#contactForm");
   if(!form) return;
 
   const emailInput = document.querySelector("#email");
-  const messageInput = document.querySelector("#message");
+  const submitBtn = document.querySelector("#submitBtn");
+  const btnText = submitBtn.querySelector('.btn-text');
+  const btnLoading = submitBtn.querySelector('.btn-loading');
+  const formMessage = document.querySelector("#formMessage");
 
-  // Add form groups and error messages
-  const emailGroup = emailInput.parentElement;
-  const messageGroup = messageInput.parentElement;
-
-  emailGroup.classList.add('form-group');
-  messageGroup.classList.add('form-group');
+  // Add form group and error message
+  emailInput.parentElement.classList.add('form-group');
 
   const emailError = document.createElement('div');
   emailError.className = 'form-error';
   emailError.textContent = 'Please enter a valid email address';
   emailInput.parentNode.appendChild(emailError);
 
-  const messageError = document.createElement('div');
-  messageError.className = 'form-error';
-  messageError.textContent = 'Message must be at least 10 characters';
-  messageInput.parentNode.appendChild(messageError);
-
-  // Live validation
+  // Email validation
   const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
 
+  // Live validation
   emailInput.addEventListener('blur', () => {
     const value = emailInput.value.trim();
     if (!value || !validateEmail(value)) {
@@ -76,60 +71,69 @@ function setupContactForm(){
         emailError.classList.remove('active');
       }
     }
+    // Clear previous messages when typing
+    formMessage.className = 'form-message';
+    formMessage.textContent = '';
   });
 
-  messageInput.addEventListener('blur', () => {
-    const value = messageInput.value.trim();
-    if (!value || value.length < 10) {
-      messageInput.classList.add('error');
-      messageInput.classList.remove('success');
-      messageError.classList.add('active');
-    } else {
-      messageInput.classList.remove('error');
-      messageInput.classList.add('success');
-      messageError.classList.remove('active');
-    }
-  });
-
-  messageInput.addEventListener('input', () => {
-    if (messageInput.classList.contains('error')) {
-      const value = messageInput.value.trim();
-      if (value && value.length >= 10) {
-        messageInput.classList.remove('error');
-        messageInput.classList.add('success');
-        messageError.classList.remove('active');
-      }
-    }
-  });
-
-  form.addEventListener("submit", (e) => {
+  // Form submission
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const email = emailInput.value.trim();
-    const message = messageInput.value.trim();
 
-    let hasError = false;
-
+    // Validate
     if(!email || !validateEmail(email)){
       emailInput.classList.add('error');
       emailError.classList.add('active');
-      hasError = true;
+      return;
     }
 
-    if(!message || message.length < 10){
-      messageInput.classList.add('error');
-      messageError.classList.add('active');
-      hasError = true;
+    // Show loading state
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline';
+    formMessage.className = 'form-message';
+    formMessage.textContent = '';
+
+    try {
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbybDx4CeYRYUFr4juI36tUFN4AJjKN6ksESkil8gj4iMMfhGggA5OmI8j3C4oV6zpM6Hg/exec';
+      
+      const response = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Required for Google Apps Script
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email })
+      });
+
+      // Note: With no-cors mode, we can't read the response
+      // Assume success if no error was thrown
+      formMessage.className = 'form-message success active';
+      formMessage.innerHTML = `
+        <strong>✓ Email sent successfully!</strong><br>
+        <span class="small">Check your inbox for a message from Coach E.T. @ Codeboxx</span>
+      `;
+      
+      // Clear form
+      emailInput.value = '';
+      emailInput.classList.remove('success', 'error');
+      emailError.classList.remove('active');
+
+    } catch (error) {
+      console.error('Form submission error:', error);
+      formMessage.className = 'form-message error active';
+      formMessage.innerHTML = `
+        <strong>✗ Something went wrong</strong><br>
+        <span class="small">Please try again or email directly: eglcbxx@gmail.com</span>
+      `;
+    } finally {
+      // Reset button state
+      submitBtn.disabled = false;
+      btnText.style.display = 'inline';
+      btnLoading.style.display = 'none';
     }
-
-    if (hasError) return;
-
-    const to = "YOUR_EMAIL_HERE@example.com";
-    const subject = encodeURIComponent(`Portfolio contact from ${email}`);
-    const body = encodeURIComponent(`From: ${email}\n\nMessage:\n${message}`);
-
-    // Opens the user's default email app
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
   });
 }
 

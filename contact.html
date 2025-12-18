@@ -18,23 +18,22 @@
     <main class="container" id="main-content" role="main" aria-label="Contact form">
         <h1 class="animate-fade">Contact</h1>
         <p class="small animate-fade">
-            This form opens your default email app with the message pre-filled.
-            (For true "send directly", you need a form service or backend.)
+            Enter your email below and I'll send you a message. Reply to that email to start our conversation!
         </p>
 
         <div class="card no-modal animate-on-scroll">
             <form id="contactForm">
-                <label class="small" for="email">Your email</label>
+                <label class="small" for="email">Your email address</label>
                 <input id="email" type="email" placeholder="you@example.com" required />
 
-                <div style="height:12px"></div>
+                <div style="height:16px"></div>
 
-                <label class="small" for="message">Message</label>
-                <textarea id="message" placeholder="Write your message..." required></textarea>
+                <button type="submit" id="submitBtn">
+                    <span class="btn-text">Send</span>
+                    <span class="btn-loading" style="display:none">Sending...</span>
+                </button>
 
-                <div style="height:12px"></div>
-
-                <button type="submit">Send</button>
+                <div id="formMessage" class="form-message"></div>
             </form>
         </div>
     </main>
