@@ -176,8 +176,11 @@ function initSkillCards() {
   skillCards.forEach(card => {
     observer.observe(card);
     
-    // Toggle expanded state on click
+    // Toggle expanded state on click (only for cards NOT in carousel)
     card.addEventListener('click', () => {
+      // Don't expand if clicking inside carousel (handled by carousel)
+      if (card.closest('.carousel-track')) return;
+      
       const isExpanded = card.classList.contains('expanded');
       
       // Close all other cards
@@ -199,7 +202,10 @@ function initStrengthCards() {
   
   strengthCards.forEach(card => {
     // Toggle expanded state on click
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      // Don't expand if clicking inside carousel (handled by carousel)
+      if (card.closest('.carousel-track')) return;
+      
       const isExpanded = card.classList.contains('expanded');
       
       // Close all other cards
@@ -209,6 +215,187 @@ function initStrengthCards() {
       if (!isExpanded) {
         card.classList.add('expanded');
       }
+    });
+  });
+}
+
+/* ============================================
+   CAROUSEL SLIDER - Seamless Infinite Loop
+============================================ */
+function initCarousel() {
+  const carousels = document.querySelectorAll('.carousel-wrapper');
+  
+  carousels.forEach(wrapper => {
+    const track = wrapper.querySelector('.carousel-track');
+    
+    if (!track) {
+      console.warn('No track found in carousel');
+      return;
+    }
+    
+    // Wait for cards to be rendered before proceeding
+    const waitForCards = () => {
+      return new Promise((resolve) => {
+        const checkCards = () => {
+          const cards = track.querySelectorAll('.skill-card, .strength-card');
+          if (cards.length > 0 && cards[0].offsetWidth > 0) {
+            resolve(Array.from(cards));
+          } else {
+            requestAnimationFrame(checkCards);
+          }
+        };
+        checkCards();
+      });
+    };
+    
+    waitForCards().then((originalCards) => {
+      console.log(`Initializing carousel ${wrapper.id} with ${originalCards.length} cards`);
+      
+      // Simple double strategy: [OriginalCards] [CloneSet]
+      // Clone cards and append after originals
+      originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        
+        // Get the computed height of the original card
+        const originalHeight = card.offsetHeight;
+        
+        // Ensure clone has exact same styling and dimensions as original
+        clone.style.visibility = 'visible';
+        clone.style.opacity = '1';
+        clone.style.display = '';
+        clone.style.boxSizing = 'border-box';
+        clone.style.margin = '0';
+        clone.style.height = `${originalHeight}px`; // Force exact height match
+        clone.style.minHeight = `${originalHeight}px`;
+        clone.style.verticalAlign = 'top';
+        
+        track.appendChild(clone);
+      });
+      
+      console.log(`Total cards after cloning: ${track.children.length}`);
+      
+      // Calculate dimensions AFTER cloning to ensure accurate measurements
+      const firstCard = track.children[0];
+      const cardWidth = firstCard.offsetWidth;
+      const computedStyle = window.getComputedStyle(track);
+      const gapWidth = parseInt(computedStyle.gap) || 20;
+      const singleCardWidth = cardWidth + gapWidth;
+      
+      // Width of one complete set
+      const cardsPerSet = originalCards.length;
+      const setWidth = cardsPerSet * singleCardWidth;
+      
+      console.log(`Card width: ${cardWidth}px, Gap: ${gapWidth}px, Single card width: ${singleCardWidth}px, Set width: ${setWidth}px, Cards per set: ${cardsPerSet}`);
+      
+      // Start position at 0 (showing originals)
+      let currentPosition = 0;
+      let animationId = null;
+      let hasExpandedCard = false;
+      
+      // Set initial position
+      track.style.transform = `translate3d(0px, 0px, 0px)`;
+      
+      // Seamless infinite scroll - let clones show, then reset invisibly
+      const animate = () => {
+        if (hasExpandedCard) {
+          animationId = requestAnimationFrame(animate);
+          return;
+        }
+        
+        currentPosition += 1.5; // Scroll speed in px/frame
+        
+        // Apply transform - this shows both original AND cloned cards
+        track.style.transform = `translate3d(-${currentPosition}px, 0px, 0px)`;
+        
+        // Only reset after we've scrolled well into the cloned set
+        // Reset when position exceeds setWidth (we're viewing clones that look identical to originals)
+        if (currentPosition > setWidth) {
+          // Instantly jump back by exactly one setWidth
+          // This is invisible because clones at position X look identical to originals at position X-setWidth
+          track.style.transition = 'none';
+          currentPosition = currentPosition - setWidth;
+          track.style.transform = `translate3d(-${currentPosition}px, 0px, 0px)`;
+          // Force reflow
+          void track.offsetHeight;
+        }
+        
+        animationId = requestAnimationFrame(animate);
+      };
+      
+      const startAutoScroll = () => {
+        if (animationId) return;
+        animate();
+      };
+      
+      const stopAutoScroll = () => {
+        if (animationId) {
+          cancelAnimationFrame(animationId);
+          animationId = null;
+        }
+      };
+      
+      // Start animation immediately
+      startAutoScroll();
+      
+      // Card click to expand and center
+      track.addEventListener('click', (e) => {
+        const card = e.target.closest('.skill-card, .strength-card');
+        if (!card) return;
+        
+        // Don't expand if clicking details button or link
+        if (e.target.classList.contains('details-toggle') || e.target.closest('.details-toggle')) {
+          return;
+        }
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
+          return;
+        }
+        
+        e.stopPropagation();
+        e.preventDefault();
+        
+        const isExpanded = card.classList.contains('expanded');
+        
+        // Close all cards in this carousel
+        track.querySelectorAll('.skill-card, .strength-card').forEach(c => c.classList.remove('expanded'));
+        
+        if (!isExpanded) {
+          // Stop auto-scroll when expanding a card
+          hasExpandedCard = true;
+          stopAutoScroll();
+          
+          // Expand the card
+          card.classList.add('expanded');
+          
+          // Center the card
+          setTimeout(() => {
+            const cardRect = card.getBoundingClientRect();
+            const wrapperRect = wrapper.getBoundingClientRect();
+            const cardCenter = cardRect.left + cardRect.width / 2;
+            const wrapperCenter = wrapperRect.left + wrapperRect.width / 2;
+            const adjustment = cardCenter - wrapperCenter;
+            
+            currentPosition += adjustment;
+            track.style.transition = 'transform 0.3s ease';
+            track.style.transform = `translate3d(-${currentPosition}px, 0px, 0px)`;
+            
+            setTimeout(() => {
+              track.style.transition = 'none';
+            }, 300);
+          }, 50);
+        } else {
+          // Resume auto-scroll
+          hasExpandedCard = false;
+          track.style.transition = 'none';
+          
+          // Normalize position to 0 - setWidth range
+          while (currentPosition >= setWidth) {
+            currentPosition -= setWidth;
+          }
+          
+          track.style.transform = `translate3d(-${currentPosition}px, 0px, 0px)`;
+          startAutoScroll();
+        }
+      });
     });
   });
 }
