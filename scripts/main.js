@@ -98,7 +98,7 @@ function setupContactForm(){
 
     try {
       // Get reCAPTCHA token (IMPORTANT: Replace with your actual site key)
-      const RECAPTCHA_SITE_KEY = 'YOUR_RECAPTCHA_SITE_KEY_HERE';
+      const RECAPTCHA_SITE_KEY = '6Ld9JEIsAAAAAMPrhtM1pLkRZUe46GLhl9bMWK4f';
       const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit' });
       
       const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxPLlipVqcepDB1WxTL1jY2ED4jkGAXNiKuB-pljJg3rTq4pqCCmyPVJFReNUMjkYdk/exec';
