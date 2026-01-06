@@ -5,6 +5,11 @@
 
 async function loadComponents() {
     try {
+        // Load translations first
+        if (typeof loadTranslations === 'function') {
+            await loadTranslations();
+        }
+
         // Load header
         const headerResponse = await fetch('components/layout/header.html');
         const headerHTML = await headerResponse.text();
@@ -21,6 +26,11 @@ async function loadComponents() {
 
         // Load dynamic content based on page
         await loadPageContent();
+        
+        // Apply translations to loaded components
+        if (typeof updatePageLanguage === 'function') {
+            updatePageLanguage();
+        }
     } catch (error) {
         console.error('Error loading components:', error);
     }
@@ -63,6 +73,7 @@ async function loadPageContent() {
     if (typeof initPageTransitions === 'function') initPageTransitions();
     if (typeof initScrollProgress === 'function') initScrollProgress();
     if (typeof initThemeSwitcher === 'function') initThemeSwitcher();
+    if (typeof initLanguageSwitcher === 'function') initLanguageSwitcher();
     if (typeof initStickyIndicator === 'function') initStickyIndicator();
     if (typeof setupContactForm === 'function') setupContactForm();
 }

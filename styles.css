@@ -559,7 +559,7 @@ body.page-exit{
 .theme-toggle{
   position:fixed;
   bottom:24px;
-  right:24px;
+  left:24px;
   width:52px;
   height:52px;
   border-radius:50%;
@@ -586,15 +586,143 @@ body.page-exit{
 .theme-icon{
   width:24px;
   height:24px;
-  transition:transform 0.3s ease;
+  transition:opacity 0.3s ease;
+  position:absolute;
 }
 
+/* Dark mode - show white moon, hide sun */
 .theme-toggle[data-theme="dark"] .sun-icon{
   display:none;
 }
 
+.theme-toggle[data-theme="dark"] .moon-icon{
+  display:block;
+  color:#ffffff;
+}
+
+/* Dark mode hover - show sun, hide moon, light background */
+.theme-toggle[data-theme="dark"]:hover{
+  background:#f8f9fa;
+}
+
+.theme-toggle[data-theme="dark"]:hover .sun-icon{
+  display:block;
+  color:#1a1a1a;
+}
+
+.theme-toggle[data-theme="dark"]:hover .moon-icon{
+  display:none;
+}
+
+/* Light mode - show sun, hide moon */
 .theme-toggle[data-theme="light"] .moon-icon{
   display:none;
+}
+
+.theme-toggle[data-theme="light"] .sun-icon{
+  display:block;
+  color:#1a1a1a;
+}
+
+/* Light mode hover - show moon, hide sun, dark background */
+.theme-toggle[data-theme="light"]:hover{
+  background:#121a2a;
+}
+
+.theme-toggle[data-theme="light"]:hover .moon-icon{
+  display:block;
+  color:#ffffff;
+}
+
+.theme-toggle[data-theme="light"]:hover .sun-icon{
+  display:none;
+}
+
+/* ============================================
+   LANGUAGE SWITCHER
+============================================ */
+.language-toggle{
+  position:fixed;
+  bottom:84px;
+  left:24px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:var(--card);
+  border:2px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+  transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  z-index:1000;
+  font-weight:700;
+  font-size:12px;
+  color:var(--text);
+}
+
+.language-toggle:hover{
+  transform:scale(1.1);
+  box-shadow:0 6px 20px rgba(122,162,255,.4);
+}
+
+.language-toggle:active{
+  transform:scale(0.95);
+}
+
+.language-menu{
+  position:fixed;
+  bottom:144px;
+  left:24px;
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:12px;
+  padding:8px;
+  box-shadow:0 4px 20px rgba(0,0,0,.3);
+  z-index:999;
+  min-width:160px;
+  opacity:0;
+  transform:translateY(10px);
+  pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+}
+
+.language-menu.active{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:all;
+}
+
+.language-option{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 12px;
+  cursor:pointer;
+  border-radius:8px;
+  transition:background 0.2s ease;
+  font-size:14px;
+  color:var(--text);
+}
+
+.language-option:hover{
+  background:var(--bg);
+}
+
+.language-option.active{
+  background:var(--accent);
+  color:white;
+}
+
+.language-option .lang-code{
+  font-weight:700;
+  margin-right:8px;
+}
+
+.language-option .lang-name{
+  opacity:0.8;
+  font-size:13px;
 }
 
 /* ============================================

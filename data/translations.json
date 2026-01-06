@@ -1,0 +1,167 @@
+{
+  "en": {
+    "name": "English",
+    "nav": {
+      "home": "Home",
+      "portfolio": "Portfolio",
+      "links": "Links",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hi, I'm Coach E.T @ Codeboxx",
+      "subtitle": "Full-Stack Developer & AI Tools Expert",
+      "description": "I specialize in leveraging AI tools to accelerate learning, improve code quality, and build efficient solutions with modern web technologies.",
+      "viewWork": "View My Work",
+      "getInTouch": "Get In Touch"
+    },
+    "sections": {
+      "skills": "Technical Skills",
+      "strengths": "Professional Strengths",
+      "projects": "Featured Projects",
+      "resources": "Resources & Links"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Showcasing web development projects built with modern technologies and AI-assisted development practices.",
+      "allProjects": "All Projects",
+      "frontend": "Frontend",
+      "fullstack": "Full-Stack",
+      "backend": "Backend",
+      "mobile": "Mobile"
+    },
+    "links": {
+      "title": "Links & Resources",
+      "description": "Platforms and tools I use for learning and development."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Enter your email below and I'll send you a message. Reply to that email to start our conversation!",
+      "emailLabel": "Your email address",
+      "emailPlaceholder": "you@example.com",
+      "sendButton": "Send",
+      "sending": "Sending...",
+      "success": "Message sent! Check your email inbox.",
+      "error": "Something went wrong. Please try again.",
+      "invalidEmail": "Please enter a valid email address"
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    },
+    "aria": {
+      "skipToMain": "Skip to main content",
+      "mainContent": "Main content",
+      "toggleTheme": "Toggle theme",
+      "toggleLanguage": "Change language"
+    }
+  },
+  "fr": {
+    "name": "Français",
+    "nav": {
+      "home": "Accueil",
+      "portfolio": "Portfolio",
+      "links": "Liens",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Salut, je suis Coach E.T @ Codeboxx",
+      "subtitle": "Développeur Full-Stack & Expert en Outils IA",
+      "description": "Je me spécialise dans l'utilisation d'outils d'IA pour accélérer l'apprentissage, améliorer la qualité du code et créer des solutions efficaces avec des technologies web modernes.",
+      "viewWork": "Voir Mon Travail",
+      "getInTouch": "Me Contacter"
+    },
+    "sections": {
+      "skills": "Compétences Techniques",
+      "strengths": "Forces Professionnelles",
+      "projects": "Projets Vedettes",
+      "resources": "Ressources & Liens"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Présentation de projets de développement web construits avec des technologies modernes et des pratiques de développement assistées par IA.",
+      "allProjects": "Tous les Projets",
+      "frontend": "Frontend",
+      "fullstack": "Full-Stack",
+      "backend": "Backend",
+      "mobile": "Mobile"
+    },
+    "links": {
+      "title": "Liens & Ressources",
+      "description": "Plateformes et outils que j'utilise pour l'apprentissage et le développement."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Entrez votre email ci-dessous et je vous enverrai un message. Répondez à cet email pour commencer notre conversation!",
+      "emailLabel": "Votre adresse email",
+      "emailPlaceholder": "vous@exemple.com",
+      "sendButton": "Envoyer",
+      "sending": "Envoi...",
+      "success": "Message envoyé! Vérifiez votre boîte de réception.",
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "invalidEmail": "Veuillez entrer une adresse email valide"
+    },
+    "footer": {
+      "rights": "Tous droits réservés."
+    },
+    "aria": {
+      "skipToMain": "Passer au contenu principal",
+      "mainContent": "Contenu principal",
+      "toggleTheme": "Changer le thème",
+      "toggleLanguage": "Changer la langue"
+    }
+  },
+  "vn": {
+    "name": "Tiếng Việt",
+    "nav": {
+      "home": "Trang Chủ",
+      "portfolio": "Dự Án",
+      "links": "Liên Kết",
+      "contact": "Liên Hệ"
+    },
+    "hero": {
+      "greeting": "Xin chào, tôi là Coach E.T @ Codeboxx",
+      "subtitle": "Lập Trình Viên Full-Stack & Chuyên Gia Công Cụ AI",
+      "description": "Tôi chuyên về việc tận dụng các công cụ AI để tăng tốc độ học tập, cải thiện chất lượng mã và xây dựng các giải pháp hiệu quả với công nghệ web hiện đại.",
+      "viewWork": "Xem Công Việc",
+      "getInTouch": "Liên Hệ Tôi"
+    },
+    "sections": {
+      "skills": "Kỹ Năng Kỹ Thuật",
+      "strengths": "Điểm Mạnh Chuyên Nghiệp",
+      "projects": "Dự Án Nổi Bật",
+      "resources": "Tài Nguyên & Liên Kết"
+    },
+    "portfolio": {
+      "title": "Dự Án",
+      "description": "Giới thiệu các dự án phát triển web được xây dựng với công nghệ hiện đại và thực hành phát triển có sự hỗ trợ của AI.",
+      "allProjects": "Tất Cả Dự Án",
+      "frontend": "Frontend",
+      "fullstack": "Full-Stack",
+      "backend": "Backend",
+      "mobile": "Di Động"
+    },
+    "links": {
+      "title": "Liên Kết & Tài Nguyên",
+      "description": "Các nền tảng và công cụ tôi sử dụng để học tập và phát triển."
+    },
+    "contact": {
+      "title": "Liên Hệ",
+      "description": "Nhập email của bạn bên dưới và tôi sẽ gửi cho bạn một tin nhắn. Trả lời email đó để bắt đầu cuộc trò chuyện của chúng ta!",
+      "emailLabel": "Địa chỉ email của bạn",
+      "emailPlaceholder": "ban@example.com",
+      "sendButton": "Gửi",
+      "sending": "Đang gửi...",
+      "success": "Tin nhắn đã được gửi! Kiểm tra hộp thư đến của bạn.",
+      "error": "Đã xảy ra lỗi. Vui lòng thử lại.",
+      "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ"
+    },
+    "footer": {
+      "rights": "Bảo lưu mọi quyền."
+    },
+    "aria": {
+      "skipToMain": "Bỏ qua đến nội dung chính",
+      "mainContent": "Nội dung chính",
+      "toggleTheme": "Chuyển đổi chủ đề",
+      "toggleLanguage": "Thay đổi ngôn ngữ"
+    }
+  }
+}

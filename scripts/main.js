@@ -39,7 +39,8 @@ function setupContactForm(){
 
   const emailError = document.createElement('div');
   emailError.className = 'form-error';
-  emailError.textContent = 'Please enter a valid email address';
+  emailError.textContent = translate('contact.invalidEmail') || 'Please enter a valid email address';
+  emailError.setAttribute('data-i18n', 'contact.invalidEmail');
   emailInput.parentNode.appendChild(emailError);
 
   // Email validation
@@ -122,10 +123,7 @@ function setupContactForm(){
       // Note: With no-cors mode, we can't read the response
       // Assume success if no error was thrown
       formMessage.className = 'form-message success active';
-      formMessage.innerHTML = `
-        <strong>✓ Email sent successfully!</strong><br>
-        <span class="small">Check your inbox for a message from Coach E.T. @ Codeboxx</span>
-      `;
+      formMessage.textContent = translate('contact.success') || 'Message sent! Check your email inbox.';
       
       // Clear form
       emailInput.value = '';
@@ -135,10 +133,7 @@ function setupContactForm(){
     } catch (error) {
       console.error('Form submission error:', error);
       formMessage.className = 'form-message error active';
-      formMessage.innerHTML = `
-        <strong>✗ Something went wrong</strong><br>
-        <span class="small">Please try again or email directly: eglcbxx@gmail.com</span>
-      `;
+      formMessage.textContent = translate('contact.error') || 'Something went wrong. Please try again.';
     } finally {
       // Reset button state
       submitBtn.disabled = false;
@@ -153,7 +148,16 @@ function setupContactForm(){
    NOTE: Content is loaded by components.js
    This runs AFTER templates are rendered
 ============================================ */
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  // Load translations first
+  await loadTranslations();
+  
+  // Initialize language switcher
+  initLanguageSwitcher();
+  
+  // Apply initial translations
+  updatePageLanguage();
+  
   // components.js will call these functions after loading content
   // Keeping this for backwards compatibility if someone loads page without components
 });
@@ -647,6 +651,135 @@ function initThemeSwitcher() {
   });
   
   document.body.appendChild(themeToggle);
+}
+
+/* ============================================
+   LANGUAGE SWITCHER & TRANSLATION SYSTEM
+============================================ */
+let translations = {};
+let currentLanguage = 'en';
+
+async function loadTranslations() {
+  try {
+    const response = await fetch('data/translations.json');
+    translations = await response.json();
+  } catch (error) {
+    console.error('Error loading translations:', error);
+  }
+}
+
+function translate(key) {
+  const keys = key.split('.');
+  let value = translations[currentLanguage];
+  
+  for (const k of keys) {
+    if (value && value[k]) {
+      value = value[k];
+    } else {
+      return key; // Return key if translation not found
+    }
+  }
+  
+  return value;
+}
+
+function updatePageLanguage() {
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const translation = translate(key);
+    
+    if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+      element.placeholder = translation;
+    } else if (element.tagName === 'LABEL') {
+      element.textContent = translation;
+    } else {
+      element.textContent = translation;
+    }
+  });
+  
+  // Update aria-label attributes
+  document.querySelectorAll('[data-i18n-aria]').forEach(element => {
+    const key = element.getAttribute('data-i18n-aria');
+    element.setAttribute('aria-label', translate(key));
+  });
+  
+  // Update HTML lang attribute
+  document.documentElement.setAttribute('lang', currentLanguage);
+}
+
+function initLanguageSwitcher() {
+  // Create language toggle button
+  const langToggle = document.createElement('button');
+  langToggle.className = 'language-toggle';
+  langToggle.setAttribute('aria-label', 'Change language');
+  
+  // Get saved language or default to English
+  currentLanguage = localStorage.getItem('language') || 'en';
+  
+  // Create language menu
+  const langMenu = document.createElement('div');
+  langMenu.className = 'language-menu';
+  
+  const languages = [
+    { code: 'en', name: 'English' },
+    { code: 'fr', name: 'Français' },
+    { code: 'vn', name: 'Tiếng Việt' }
+  ];
+  
+  languages.forEach(lang => {
+    const option = document.createElement('div');
+    option.className = 'language-option';
+    if (lang.code === currentLanguage) {
+      option.classList.add('active');
+    }
+    
+    option.innerHTML = `
+      <span class="lang-code">${lang.code.toUpperCase()}</span>
+      <span class="lang-name">${lang.name}</span>
+    `;
+    
+    option.addEventListener('click', async () => {
+      currentLanguage = lang.code;
+      localStorage.setItem('language', lang.code);
+      
+      // Update active state
+      langMenu.querySelectorAll('.language-option').forEach(opt => {
+        opt.classList.remove('active');
+      });
+      option.classList.add('active');
+      
+      // Update button text
+      langToggle.textContent = lang.code.toUpperCase();
+      
+      // Update page language
+      updatePageLanguage();
+      
+      // Close menu
+      langMenu.classList.remove('active');
+    });
+    
+    langMenu.appendChild(option);
+  });
+  
+  // Set initial button text
+  langToggle.textContent = currentLanguage.toUpperCase();
+  
+  // Toggle menu on button click
+  langToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langMenu.classList.toggle('active');
+  });
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+      langMenu.classList.remove('active');
+    }
+  });
+  
+  document.body.appendChild(langToggle);
+  document.body.appendChild(langMenu);
 }
 
 /* ============================================
