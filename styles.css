@@ -602,8 +602,8 @@ body.page-exit{
 ============================================ */
 .language-toggle{
   position:fixed;
-  bottom:24px;
-  right:24px;
+  bottom:84px;
+  left:24px;
   width:52px;
   height:52px;
   border-radius:50%;
@@ -632,8 +632,8 @@ body.page-exit{
 
 .language-menu{
   position:fixed;
-  bottom:84px;
-  right:24px;
+  bottom:144px;
+  left:24px;
   background:var(--card);
   border:2px solid var(--border);
   border-radius:12px;
