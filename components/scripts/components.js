@@ -55,6 +55,7 @@ async function loadPageContent() {
     // Initialize all interactive features after content is loaded
     if (typeof initScrollAnimations === 'function') initScrollAnimations();
     if (typeof initSkillCards === 'function') initSkillCards();
+    if (typeof initStrengthCards === 'function') initStrengthCards();
     if (typeof initPortfolioFilters === 'function') initPortfolioFilters();
     if (typeof initProjectModals === 'function') initProjectModals();
     if (typeof initPageTransitions === 'function') initPageTransitions();

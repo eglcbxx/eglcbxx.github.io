@@ -192,6 +192,28 @@ function initSkillCards() {
 }
 
 /* ============================================
+   INTERACTIVE STRENGTH CARDS
+============================================ */
+function initStrengthCards() {
+  const strengthCards = document.querySelectorAll('.strength-card');
+  
+  strengthCards.forEach(card => {
+    // Toggle expanded state on click
+    card.addEventListener('click', () => {
+      const isExpanded = card.classList.contains('expanded');
+      
+      // Close all other cards
+      strengthCards.forEach(c => c.classList.remove('expanded'));
+      
+      // Toggle current card
+      if (!isExpanded) {
+        card.classList.add('expanded');
+      }
+    });
+  });
+}
+
+/* ============================================
    PORTFOLIO FILTERS
 ============================================ */
 function initPortfolioFilters() {
@@ -391,11 +413,11 @@ async function initProjectModals() {
     if (e.target === modal) closeModal();
   });
 
-  // Open modal for project cards (excluding cards with no-modal class)
-  document.querySelectorAll('.card:not(.no-modal)').forEach((card, index) => {
-    const projectKey = `project${index + 1}`;
+  // Open modal for project cards only (using data-project attribute)
+  document.querySelectorAll('.project-item[data-project]').forEach((card) => {
+    const projectKey = card.dataset.project;
     if (projects[projectKey]) {
-      card.parentElement.classList.add('project-card-clickable');
+      card.classList.add('project-card-clickable');
       card.addEventListener('click', () => {
         const project = projects[projectKey];
         const modalBody = document.getElementById('modalBody');
