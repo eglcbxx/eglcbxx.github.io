@@ -586,14 +586,55 @@ body.page-exit{
 .theme-icon{
   width:24px;
   height:24px;
-  transition:transform 0.3s ease;
+  transition:opacity 0.3s ease;
+  position:absolute;
 }
 
+/* Dark mode - show white moon, hide sun */
 .theme-toggle[data-theme="dark"] .sun-icon{
   display:none;
 }
 
+.theme-toggle[data-theme="dark"] .moon-icon{
+  display:block;
+  color:#ffffff;
+}
+
+/* Dark mode hover - show sun, hide moon, light background */
+.theme-toggle[data-theme="dark"]:hover{
+  background:#f8f9fa;
+}
+
+.theme-toggle[data-theme="dark"]:hover .sun-icon{
+  display:block;
+  color:#1a1a1a;
+}
+
+.theme-toggle[data-theme="dark"]:hover .moon-icon{
+  display:none;
+}
+
+/* Light mode - show sun, hide moon */
 .theme-toggle[data-theme="light"] .moon-icon{
+  display:none;
+}
+
+.theme-toggle[data-theme="light"] .sun-icon{
+  display:block;
+  color:#1a1a1a;
+}
+
+/* Light mode hover - show moon, hide sun, dark background */
+.theme-toggle[data-theme="light"]:hover{
+  background:#121a2a;
+}
+
+.theme-toggle[data-theme="light"]:hover .moon-icon{
+  display:block;
+  color:#ffffff;
+}
+
+.theme-toggle[data-theme="light"]:hover .sun-icon{
   display:none;
 }
 
