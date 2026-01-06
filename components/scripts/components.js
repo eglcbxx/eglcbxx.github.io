@@ -58,6 +58,7 @@ async function loadPageContent() {
     if (typeof initStrengthCards === 'function') initStrengthCards();
     if (typeof initPortfolioFilters === 'function') initPortfolioFilters();
     if (typeof initProjectModals === 'function') initProjectModals();
+    if (typeof initImageModal === 'function') initImageModal();
     if (typeof initPageTransitions === 'function') initPageTransitions();
     if (typeof initScrollProgress === 'function') initScrollProgress();
     if (typeof initThemeSwitcher === 'function') initThemeSwitcher();

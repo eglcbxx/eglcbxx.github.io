@@ -214,6 +214,49 @@ function initStrengthCards() {
 }
 
 /* ============================================
+   IMAGE MODAL
+============================================ */
+function initImageModal() {
+  // Create image modal structure
+  const imageModal = document.createElement('div');
+  imageModal.className = 'image-modal';
+  imageModal.innerHTML = `
+    <button class="modal-close" aria-label="Close image">×</button>
+    <div class="image-modal-content">
+      <img id="modalImage" src="" alt="">
+    </div>
+  `;
+  document.body.appendChild(imageModal);
+
+  const modalImg = document.getElementById('modalImage');
+  const closeBtn = imageModal.querySelector('.modal-close');
+
+  // Close modal handlers
+  const closeModal = () => imageModal.classList.remove('active');
+  closeBtn.addEventListener('click', closeModal);
+  imageModal.addEventListener('click', (e) => {
+    if (e.target === imageModal || e.target === modalImg) closeModal();
+  });
+
+  // Add click handlers to all project images
+  document.querySelectorAll('.project-img').forEach(img => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent card click
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      imageModal.classList.add('active');
+    });
+  });
+
+  // Keyboard accessibility
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+}
+
+/* ============================================
    PORTFOLIO FILTERS
 ============================================ */
 function initPortfolioFilters() {
