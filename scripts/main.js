@@ -291,6 +291,7 @@ function initCarousel() {
       let currentPosition = 0;
       let animationId = null;
       let hasExpandedCard = false;
+      let isAnimating = false; // Lock to prevent rapid clicks
       
       // Set initial position
       track.style.transform = `translate3d(0px, 0px, 0px)`;
@@ -310,6 +311,12 @@ function initCarousel() {
         // Only reset after we've scrolled well into the cloned set
         // Reset when position exceeds setWidth (we're viewing clones that look identical to originals)
         if (currentPosition > setWidth) {
+          // Clear any expanded states before resetting to avoid confusion between originals and clones
+          track.querySelectorAll('.skill-card, .strength-card').forEach(c => c.classList.remove('expanded'));
+          wrapper.classList.remove('has-expanded-card');
+          hasExpandedCard = false;
+          isAnimating = false;
+          
           // Instantly jump back by exactly one setWidth
           // This is invisible because clones at position X look identical to originals at position X-setWidth
           track.style.transition = 'none';
@@ -342,6 +349,9 @@ function initCarousel() {
         const card = e.target.closest('.skill-card, .strength-card');
         if (!card) return;
         
+        // Prevent clicks while animation is in progress
+        if (isAnimating) return;
+        
         // Don't expand if clicking details button or link
         if (e.target.classList.contains('details-toggle') || e.target.closest('.details-toggle')) {
           return;
@@ -353,20 +363,41 @@ function initCarousel() {
         e.stopPropagation();
         e.preventDefault();
         
-        const isExpanded = card.classList.contains('expanded');
+        // Check if THIS card is currently expanded BEFORE removing classes
+        const wasExpanded = card.classList.contains('expanded');
         
-        // Close all cards in this carousel
-        track.querySelectorAll('.skill-card, .strength-card').forEach(c => c.classList.remove('expanded'));
+        // Check if carousel has any expanded card state
+        const hasExpandedState = wrapper.classList.contains('has-expanded-card');
         
-        if (!isExpanded) {
+        // If we have an expanded state and this card wasn't expanded, block the action
+        if (hasExpandedState && !wasExpanded) {
+          return;
+        }
+        
+        // Lock to prevent rapid clicks
+        isAnimating = true;
+        
+        // Close ALL cards first (clean slate)
+        track.querySelectorAll('.skill-card, .strength-card').forEach(c => {
+          c.classList.remove('expanded');
+        });
+        
+        // If clicking on a different card (or clicking on a collapsed card)
+        if (!wasExpanded) {
           // Stop auto-scroll when expanding a card
           hasExpandedCard = true;
           stopAutoScroll();
           
+          // Add class to wrapper to trigger dimming effect
+          wrapper.classList.add('has-expanded-card');
+          
           // Expand the card
           card.classList.add('expanded');
           
-          // Center the card
+          // Force reflow to ensure expanded class is applied
+          void card.offsetHeight;
+          
+          // Wait for CSS expansion to start before centering
           setTimeout(() => {
             const cardRect = card.getBoundingClientRect();
             const wrapperRect = wrapper.getBoundingClientRect();
@@ -380,20 +411,34 @@ function initCarousel() {
             
             setTimeout(() => {
               track.style.transition = 'none';
+              // Unlock after all animations complete (expansion + centering)
+              setTimeout(() => {
+                isAnimating = false;
+              }, 100);
             }, 300);
-          }, 50);
+          }, 100);
         } else {
-          // Resume auto-scroll
+          // Clicking on the same expanded card - collapse it and resume scrolling
           hasExpandedCard = false;
+          
+          // Remove dimming effect
+          wrapper.classList.remove('has-expanded-card');
+          
           track.style.transition = 'none';
           
-          // Normalize position to 0 - setWidth range
-          while (currentPosition >= setWidth) {
-            currentPosition -= setWidth;
-          }
-          
-          track.style.transform = `translate3d(-${currentPosition}px, 0px, 0px)`;
-          startAutoScroll();
+          // Wait for collapse animation to complete before allowing new expansions
+          setTimeout(() => {
+            // Normalize position to 0 - setWidth range
+            while (currentPosition >= setWidth) {
+              currentPosition -= setWidth;
+            }
+            
+            track.style.transform = `translate3d(-${currentPosition}px, 0px, 0px)`;
+            startAutoScroll();
+            
+            // Unlock after collapse is fully complete
+            isAnimating = false;
+          }, 350); // Wait for max-height transition to complete
         }
       });
     });

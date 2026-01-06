@@ -1077,6 +1077,20 @@ button:disabled{
   position:relative;
 }
 
+/* Dim non-expanded cards when one card is expanded */
+.carousel-wrapper.has-expanded-card .skill-card:not(.expanded),
+.carousel-wrapper.has-expanded-card .strength-card:not(.expanded){
+  opacity:0.3;
+  filter:blur(2px);
+  transition:opacity 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-wrapper.has-expanded-card .skill-card.expanded,
+.carousel-wrapper.has-expanded-card .strength-card.expanded{
+  opacity:1;
+  filter:none;
+}
+
 /* Auto-scroll indicator */
 .carousel-wrapper.auto-scrolling .carousel-track{
   animation:none;
