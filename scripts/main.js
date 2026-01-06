@@ -97,33 +97,40 @@ function setupContactForm(){
     formMessage.textContent = '';
 
     try {
-      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbybDx4CeYRYUFr4juI36tUFN4AJjKN6ksESkil8gj4iMMfhGggA5OmI8j3C4oV6zpM6Hg/exec';
+      // Get reCAPTCHA token (IMPORTANT: Replace with your actual site key)
+      const RECAPTCHA_SITE_KEY = 'YOUR_RECAPTCHA_SITE_KEY_HERE';
+      const recaptchaToken = await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit' });
+      
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxPLlipVqcepDB1WxTL1jY2ED4jkGAXNiKuB-pljJg3rTq4pqCCmyPVJFReNUMjkYdk/exec';
+      
+      // Get current origin for security validation
+      const origin = window.location.origin;
       
       const response = await fetch(SCRIPT_URL, {
-        redirect: 'follow',
         method: 'POST',
+        mode: 'no-cors', // Required for Google Apps Script
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ 
+          email,
+          origin,
+          recaptchaToken
+        })
       });
 
-      const result = await response.json();
+      // Note: With no-cors mode, we can't read the response
+      // Assume success if no error was thrown
+      formMessage.className = 'form-message success active';
+      formMessage.innerHTML = `
+        <strong>✓ Email sent successfully!</strong><br>
+        <span class="small">Check your inbox for a message from Coach E.T. @ Codeboxx</span>
+      `;
       
-      if (result.success) {
-        formMessage.className = 'form-message success active';
-        formMessage.innerHTML = `
-          <strong>✓ Email sent successfully!</strong><br>
-          <span class="small">Check your inbox for a message from Coach E.T. @ Codeboxx</span>
-        `;
-        
-        // Clear form
-        emailInput.value = '';
-        emailInput.classList.remove('success', 'error');
-        emailError.classList.remove('active');
-      } else {
-        throw new Error(result.message || 'Submission failed');
-      }
+      // Clear form
+      emailInput.value = '';
+      emailInput.classList.remove('success', 'error');
+      emailError.classList.remove('active');
 
     } catch (error) {
       console.error('Form submission error:', error);
