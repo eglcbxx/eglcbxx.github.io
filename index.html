@@ -1,82 +1,13 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coach E.T @ Codeboxx — Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/images/logo.png" />
-    <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body data-page="index">
-
-    <a href="#main-content" class="skip-to-main" data-i18n="aria.skipToMain">Skip to main content</a>
-
-    <!-- HEADER -->
-    <div id="header-placeholder"></div>
-
-    <main class="container" id="main-content" role="main" aria-label="Main content">
-        <section class="hero animate-fade">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1><span data-i18n="hero.greeting">Hi, I'm Coach E.T @ Codeboxx</span> <span class="wave">👋</span></h1>
-                    <p class="hero-subtitle" data-i18n="hero.subtitle">
-                        Full-Stack Developer & AI Tools Expert
-                    </p>
-                    <p class="hero-description" data-i18n="hero.description">
-                        I specialize in leveraging AI tools to accelerate learning, improve code quality, 
-                        and build efficient solutions with modern web technologies.
-                    </p>
-                    <div class="hero-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">React</span>
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">Ruby on Rails</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">AI Tools Expert</span>
-                    </div>
-                    <div class="hero-cta">
-                        <a href="portfolio.html" class="btn-primary" data-i18n="hero.viewWork">View My Work</a>
-                        <a href="contact.html" class="btn-secondary" data-i18n="hero.getInTouch">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-wrapper">
-                        <img src="assets/images/egl-picture.jpg" alt="Coach E.T @ Codeboxx" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="section-header">
-            <h2 class="animate-on-scroll" data-i18n="sections.skills">Technical Skills</h2>
-        </div>
-
-        <div class="carousel-wrapper" id="skills-carousel">
-            <div class="carousel-track" id="skills-container">
-                <!-- Skills loaded dynamically from data/skills.json -->
-            </div>
-        </div>
-
-        <div class="section-header">
-            <h2 class="animate-on-scroll" data-i18n="sections.strengths">Professional Strengths</h2>
-        </div>
-
-        <div class="carousel-wrapper" id="strengths-carousel">
-            <div class="carousel-track" id="strengths-container">
-                <!-- Strengths loaded dynamically from data/strengths.json -->
-            </div>
-        </div>
-    </main>
-
-    <!-- FOOTER -->
-    <div id="footer-placeholder"></div>
-
-    <script src="components/scripts/template-engine.js"></script>
-    <script src="components/scripts/components.js"></script>
-    <script src="scripts/main.js"></script>
-
-</body>
-
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
