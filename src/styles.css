@@ -1454,3 +1454,253 @@ textarea:focus-visible{
   background:var(--card);
   color:var(--text);
 }
+
+/* ============================================
+   BACKOFFICE
+============================================ */
+
+/* ── Session-check / loading spinner ── */
+.backoffice-loading{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* ── Login page ── */
+.login-page{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  background:var(--bg);
+  padding:20px;
+}
+
+.login-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:40px;
+  width:100%;
+  max-width:420px;
+}
+
+.login-card h2{
+  margin-bottom:4px;
+}
+
+.login-card label{
+  display:block;
+  margin-bottom:6px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.login-card input{
+  width:100%;
+}
+
+/* ── Backoffice layout ── */
+.backoffice{
+  min-height:100vh;
+  background:var(--bg);
+  color:var(--text);
+  padding:24px;
+  max-width:960px;
+  margin:0 auto;
+}
+
+.backoffice-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:24px;
+  gap:16px;
+  flex-wrap:wrap;
+  position:static;
+  background:transparent;
+  backdrop-filter:none;
+  border-bottom:none;
+  padding:0;
+}
+
+.backoffice-header h1{
+  font-size:24px;
+  margin:0;
+}
+
+.backoffice-header-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* ── Empty state ── */
+.backoffice-empty{
+  text-align:center;
+  padding:60px 20px;
+  color:var(--muted);
+}
+
+/* ── Messages table ── */
+.backoffice-table-wrap{
+  overflow-x:auto;
+  border:1px solid var(--border);
+  border-radius:12px;
+}
+
+.backoffice-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+
+.backoffice-table th,
+.backoffice-table td{
+  padding:12px 16px;
+  text-align:left;
+  border-bottom:1px solid var(--border);
+}
+
+.backoffice-table thead th{
+  background:var(--card);
+  font-weight:600;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  color:var(--muted);
+}
+
+.backoffice-table tbody tr:last-child td{
+  border-bottom:none;
+}
+
+.backoffice-table tbody tr:hover{
+  background:rgba(122,162,255,.06);
+}
+
+.actions-cell{
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+}
+
+/* ── Icon button ── */
+.icon-btn{
+  width:34px;
+  height:34px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--text);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:background .2s, color .2s, border-color .2s;
+  padding:0;
+}
+
+.icon-btn:hover{
+  background:var(--accent);
+  color:var(--bg);
+  border-color:var(--accent);
+}
+
+.icon-btn--danger:hover{
+  background:#ef4444;
+  border-color:#ef4444;
+  color:#fff;
+}
+
+/* ── Danger button ── */
+.btn-danger{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 20px;
+  border-radius:10px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  background:#ef4444;
+  color:#fff;
+  transition:background .2s;
+}
+
+.btn-danger:hover{
+  background:#dc2626;
+}
+
+/* ── Confirm modal ── */
+.confirm-modal{
+  max-width:440px;
+  text-align:center;
+}
+
+.confirm-modal h3{
+  margin-bottom:8px;
+}
+
+.confirm-modal-actions{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin-top:16px;
+}
+
+/* ── Read modal extras ── */
+.read-modal-field{
+  margin-bottom:16px;
+}
+
+.read-modal-field strong{
+  display:block;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  color:var(--muted);
+  margin-bottom:4px;
+}
+
+.read-modal-message{
+  background:var(--bg);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:16px;
+  max-height:250px;
+  overflow-y:auto;
+  white-space:pre-wrap;
+  line-height:1.6;
+}
+
+.read-modal-actions{
+  display:flex;
+  gap:12px;
+  justify-content:flex-end;
+  margin-top:24px;
+}
+
+/* ── Responsive backoffice ── */
+@media(max-width:600px){
+  .backoffice{
+    padding:16px;
+  }
+
+  .backoffice-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .backoffice-table th:nth-child(3),
+  .backoffice-table td:nth-child(3){
+    display:none; /* hide date column on small screens */
+  }
+
+  .login-card{
+    padding:24px;
+  }
+}
