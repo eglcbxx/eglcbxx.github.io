@@ -1,0 +1,123 @@
+{
+  "skills": [
+    {
+      "id": "frontend",
+      "emoji": "💻",
+      "name": "Frontend Development",
+      "level": "Advanced",
+      "width": 90,
+      "technologies": "HTML/CSS (★★★★☆), JavaScript (★★★★☆), React (★★★★☆), TypeScript (★★★☆☆)",
+      "details": [
+        "Expert in modern HTML5/CSS3 and responsive design",
+        "Advanced JavaScript ES6+ and async programming",
+        "Extensive React experience with hooks and state management",
+        "Working knowledge of TypeScript for type-safe code",
+        "Component-based architecture and design patterns"
+      ]
+    },
+    {
+      "id": "backend",
+      "emoji": "🔧",
+      "name": "Backend Development",
+      "level": "Intermediate",
+      "width": 65,
+      "technologies": "Ruby on Rails (★★★☆☆), Java (★★★☆☆)",
+      "details": [
+        "Ruby on Rails MVC architecture and RESTful APIs",
+        "Java object-oriented programming",
+        "Server-side routing and middleware",
+        "Authentication and session management",
+        "API design and integration"
+      ]
+    },
+    {
+      "id": "database",
+      "emoji": "🗄️",
+      "name": "Databases",
+      "level": "Intermediate",
+      "width": 65,
+      "technologies": "SQL (★★★☆☆), MySQL (★★★☆☆), MongoDB (★★★☆☆)",
+      "details": [
+        "Complex SQL queries, CRUD operations, and joins",
+        "MySQL database design and optimization",
+        "MongoDB NoSQL document modeling",
+        "Data relationships and normalization",
+        "Query performance and indexing"
+      ]
+    },
+    {
+      "id": "ai",
+      "emoji": "🤖",
+      "name": "AI-Powered Development",
+      "level": "Expert",
+      "width": 100,
+      "technologies": "Copilot, ChatGPT, Claude, Gemini — All (★★★★★)",
+      "details": [
+        "Expert prompt engineering for optimal AI responses",
+        "Technical specification writing with AI assistance",
+        "AI-powered development, refactoring, and debugging",
+        "Automated documentation generation",
+        "Accelerated learning of new technologies using AI",
+        "Daily use of GitHub Copilot, ChatGPT, Claude, and Gemini"
+      ]
+    },
+    {
+      "id": "learning",
+      "emoji": "📚",
+      "name": "Learning & Adaptation",
+      "level": "Expert",
+      "width": 95,
+      "technologies": "Quick learning (★★★★★), Adaptation (★★★★★), Project structuring (★★★★☆)",
+      "details": [
+        "Rapid mastery of new frameworks and technologies",
+        "Self-directed learning and problem-solving",
+        "Translating documentation into practical implementations",
+        "Building complex systems from conceptual understanding",
+        "Continuous improvement mindset"
+      ]
+    },
+    {
+      "id": "tools",
+      "emoji": "🛠️",
+      "name": "Tools & Workflow",
+      "level": "Advanced",
+      "width": 90,
+      "technologies": "VS Code (★★★★★), Windows/macOS (★★★★☆), Google Workspace & Office (★★★★☆)",
+      "details": [
+        "Expert in VS Code with extensions and shortcuts",
+        "Proficient across Windows and macOS environments",
+        "Git version control and GitHub workflows",
+        "Google Workspace and Microsoft Office productivity",
+        "Effective documentation and collaboration tools"
+      ]
+    },
+    {
+      "id": "creative",
+      "emoji": "🎨",
+      "name": "Creative & Design",
+      "level": "Intermediate",
+      "width": 60,
+      "technologies": "Adobe Photoshop (★★★☆☆)",
+      "details": [
+        "Photoshop for image editing and design mockups",
+        "UI/UX design principles",
+        "Visual hierarchy and layout composition",
+        "Color theory and typography basics"
+      ]
+    },
+    {
+      "id": "languages",
+      "emoji": "🌍",
+      "name": "Languages",
+      "level": "Bilingual",
+      "width": 95,
+      "technologies": "French (★★★★★), English (★★★★☆)",
+      "details": [
+        "Native French speaker",
+        "Advanced English proficiency",
+        "Technical communication in both languages",
+        "Effective cross-cultural collaboration"
+      ]
+    }
+  ]
+}
