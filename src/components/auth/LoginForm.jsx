@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { supabase } from '../../lib/supabaseClient';
 
 /**
@@ -91,7 +92,7 @@ export default function LoginForm() {
           </button>
 
           <p style={{ textAlign: 'center', marginTop: 16 }}>
-            <a href="#/">← Back to website</a>
+            <Link to="/">← Back to website</Link>
           </p>
         </form>
       </div>

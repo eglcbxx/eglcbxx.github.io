@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import LanguageProvider from './hooks/useLanguage.jsx';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -12,7 +12,7 @@ import './styles.css';
 export default function App() {
   return (
     <LanguageProvider>
-      <HashRouter>
+      <MemoryRouter>
         <Routes>
           {/* Public site with shared layout (Navbar, Footer, etc.) */}
           <Route element={<Layout />}>
@@ -26,7 +26,7 @@ export default function App() {
           {/* Admin backoffice – standalone (no Navbar/Footer) */}
           <Route path="secret-backoffice" element={<SecretBackoffice />} />
         </Routes>
-      </HashRouter>
+      </MemoryRouter>
     </LanguageProvider>
   );
 }
