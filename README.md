@@ -1,21 +1,16 @@
-# The exact prompts students should use (copy/paste)
+# React + Vite
 
-## Prompt 1 (Create global layout + CSS)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Read aiPromptSpec.md. Create styles.css for a modern dark portfolio and provide a reusable header/footer HTML snippet.
+Currently, two official plugins are available:
 
-## Prompt 2 (Generate Home page)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Read aiPromptSpec.md and index.spec.md. Generate index.html only.
+## React Compiler
 
-## Prompt 3 (Generate Portfolio page)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Read aiPromptSpec.md and portfolio.spec.md. Generate portfolio.html only.
+## Expanding the ESLint configuration
 
-## Prompt 4 (Generate Links page)
-
-Read aiPromptSpec.md and links.spec.md. Generate links.html only.
-
-## Prompt 5 (Generate Contact page + JS)
-
-Read aiPromptSpec.md and contact.spec.md. Generate contact.html and script.js using a mailto: approach.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

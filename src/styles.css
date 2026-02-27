@@ -1447,3 +1447,10 @@ textarea:focus-visible{
   white-space:nowrap;
   border-width:0;
 }
+
+/* Light theme input overrides */
+[data-theme="light"] input,
+[data-theme="light"] textarea{
+  background:var(--card);
+  color:var(--text);
+}
