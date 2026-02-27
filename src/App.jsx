@@ -1,4 +1,5 @@
-import { MemoryRouter, Routes, Route } from 'react-router-dom';
+import { MemoryRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import LanguageProvider from './hooks/useLanguage.jsx';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -9,10 +10,27 @@ import NotFound from './pages/NotFound';
 import SecretBackoffice from './pages/SecretBackoffice';
 import './styles.css';
 
+/** ⌘+Shift+K (Mac) / Ctrl+Shift+K (other) → navigate to backoffice */
+function SecretShortcut() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    function handleKey(e) {
+      if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        navigate('/secret-backoffice');
+      }
+    }
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [navigate]);
+  return null;
+}
+
 export default function App() {
   return (
     <LanguageProvider>
       <MemoryRouter>
+        <SecretShortcut />
         <Routes>
           {/* Public site with shared layout (Navbar, Footer, etc.) */}
           <Route element={<Layout />}>
