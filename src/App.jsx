@@ -6,6 +6,7 @@ import Portfolio from './pages/Portfolio';
 import Links from './pages/Links';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import SecretBackoffice from './pages/SecretBackoffice';
 import './styles.css';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
     <LanguageProvider>
       <HashRouter>
         <Routes>
+          {/* Public site with shared layout (Navbar, Footer, etc.) */}
           <Route element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="portfolio" element={<Portfolio />} />
@@ -20,6 +22,9 @@ export default function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+
+          {/* Admin backoffice – standalone (no Navbar/Footer) */}
+          <Route path="secret-backoffice" element={<SecretBackoffice />} />
         </Routes>
       </HashRouter>
     </LanguageProvider>
