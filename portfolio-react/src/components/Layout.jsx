@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
+import { useLanguage } from '../hooks/useLanguage';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ThemeToggle from './ThemeToggle';
@@ -8,6 +9,7 @@ import ScrollProgress from './ScrollProgress';
 
 export default function Layout() {
   const location = useLocation();
+  const { t } = useLanguage();
 
   /* Re-trigger the page-load animation on every route change */
   useEffect(() => {
@@ -20,7 +22,7 @@ export default function Layout() {
   return (
     <>
       <a href="#main-content" className="skip-to-main">
-        Skip to main content
+        {t('aria.skipToMain')}
       </a>
       <ScrollProgress />
       <Navbar />

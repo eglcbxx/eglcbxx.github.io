@@ -93,7 +93,7 @@ export default function Contact() {
             <input
               id="email"
               type="email"
-              placeholder="you@example.com"
+              placeholder={t('contact.emailPlaceholder')}
               className={emailError ? 'error' : email && validateEmail(email) ? 'success' : ''}
               value={email}
               onChange={(e) => {
