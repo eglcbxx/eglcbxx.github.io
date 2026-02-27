@@ -89,6 +89,10 @@ export default function LoginForm() {
           >
             {loading ? <span className="btn-loading">Signing in…</span> : 'Sign In'}
           </button>
+
+          <p style={{ textAlign: 'center', marginTop: 16 }}>
+            <a href="#/">← Back to website</a>
+          </p>
         </form>
       </div>
     </div>

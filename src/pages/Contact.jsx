@@ -121,7 +121,7 @@ export default function Contact() {
     setStatusMsg('');
 
     try {
-      const { error } = await supabase.from('contact_messages').insert([
+      const { error } = await supabase.from('contact_form').insert([
         { name: name.trim(), email: email.trim(), message: message.trim() },
       ]);
 

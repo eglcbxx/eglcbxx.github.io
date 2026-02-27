@@ -4,7 +4,7 @@ You are GitHub Copilot acting as a senior React engineer.
 CONTEXT
 This is a React + Vite portfolio hosted on GitHub Pages.
 Supabase is used for:
-- Contact form inserts into table: public.contact_messages (name, email, message, created_at)
+- Contact form inserts into table: public.contact_form (name, email, message, created_at)
 - Auth for a private admin/backoffice section
 
 GOAL
@@ -43,7 +43,7 @@ C) Backoffice (single page + modals)
 7) Ensure components are reusable: Modal, ConfirmModal, DataTable (or MessagesTable), IconButton, etc.
 
 D) Data layer (Supabase)
-1) Read messages using Supabase client from table: contact_messages
+1) Read messages using Supabase client from table: contact_form
 2) Delete messages by id
 3) Sort messages by created_at descending
 

@@ -23,9 +23,9 @@ const TrashIcon = (
 );
 
 /**
- * Table listing contact_messages with Read + Delete actions.
+ * Table listing contact_form with Read + Delete actions.
  *
- * @param {Array}    messages    – rows from contact_messages
+ * @param {Array}    messages    – rows from contact_form
  * @param {boolean}  loading     – initial data loading
  * @param {function} onRefresh   – callback to re-fetch data from parent
  */
@@ -40,7 +40,7 @@ export default function MessagesTable({ messages, loading, onRefresh }) {
     if (!deleteTarget) return;
     setDeleting(true);
     const { error } = await supabase
-      .from('contact_messages')
+      .from('contact_form')
       .delete()
       .eq('id', deleteTarget.id);
     setDeleting(false);

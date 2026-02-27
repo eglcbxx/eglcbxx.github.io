@@ -47,10 +47,10 @@ http://localhost:5173/#/secret-backoffice
 
 ### Supabase setup — Table & RLS policies
 
-#### 1. Create the `contact_messages` table (if not already done)
+#### 1. Create the `contact_form` table (if not already done)
 
 ```sql
-CREATE TABLE public.contact_messages (
+CREATE TABLE public.contact_form (
   id        uuid DEFAULT gen_random_uuid() PRIMARY KEY,
   name      text NOT NULL,
   email     text NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE public.contact_messages (
   created_at timestamptz DEFAULT now()
 );
 
-ALTER TABLE public.contact_messages ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.contact_form ENABLE ROW LEVEL SECURITY;
 ```
 
 #### 2. RLS policies
@@ -67,7 +67,7 @@ ALTER TABLE public.contact_messages ENABLE ROW LEVEL SECURITY;
 
 ```sql
 CREATE POLICY "Allow anon insert"
-  ON public.contact_messages
+  ON public.contact_form
   FOR INSERT
   TO anon
   WITH CHECK (true);
@@ -77,7 +77,7 @@ CREATE POLICY "Allow anon insert"
 
 ```sql
 CREATE POLICY "Allow authenticated select"
-  ON public.contact_messages
+  ON public.contact_form
   FOR SELECT
   TO authenticated
   USING (true);
@@ -87,7 +87,7 @@ CREATE POLICY "Allow authenticated select"
 
 ```sql
 CREATE POLICY "Allow authenticated delete"
-  ON public.contact_messages
+  ON public.contact_form
   FOR DELETE
   TO authenticated
   USING (true);

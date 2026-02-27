@@ -48,7 +48,7 @@ DELIVERABLES
    - Create Contact.jsx with a form: name, email, message
    - Validate: required fields, basic email format, message length min (e.g. 10 chars)
    - Show friendly success + error UI states
-   - Submit using Supabase client to insert into table `contact_messages` with columns:
+   - Submit using Supabase client to insert into table `contact_form` with columns:
      name (text), email (text), message (text), created_at (timestamp default now)
    - Use environment variables:
      VITE_SUPABASE_URL

@@ -25,7 +25,7 @@ export default function SecretBackoffice() {
   const fetchMessages = useCallback(async () => {
     setLoadingMessages(true);
     const { data, error } = await supabase
-      .from('contact_messages')
+      .from('contact_form')
       .select('*')
       .order('created_at', { ascending: false });
 
