@@ -76,6 +76,7 @@ useEffect(() => {
 
 ## Navbar (`Navbar.jsx`)
 
+- **Sticky header:** `position: sticky; top: 0; z-index: 100` — stays at the top of the viewport on scroll with a solid `var(--bg)` background so content never shows through or overlaps it
 - Brand: logo image (`/assets/images/logo.png`) + "Coach E.T @ Codeboxx" text
 - Navigation links using `<NavLink>`:
   - Home (`/`, `end` prop for exact match)

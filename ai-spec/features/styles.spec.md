@@ -44,7 +44,7 @@ Components reference CSS classes directly via `className` strings. Theming is do
 | Section | Lines | Description |
 |---|---|---|
 | Root variables + reset | 1–40 | Custom properties, box-sizing, body styles |
-| Header / Navbar | 40–100 | `.nav`, `.brand`, nav links |
+| Header / Navbar | 40–100 | `header` (sticky, `z-index:100`, solid `var(--bg)` background), `.nav`, `.brand`, nav links |
 | Hero | 100–240 | `.hero`, `.hero-content`, `.hero-tags`, `.hero-cta` |
 | Responsive (768px) | 239–310 | Mobile adaptations for hero, nav |
 | Scroll animations | 310–400 | `.animate-fade`, `.animate-on-scroll`, `.animated` class |
