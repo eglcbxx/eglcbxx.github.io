@@ -12,7 +12,8 @@
       "subtitle": "Full-Stack Developer & AI Tools Expert",
       "description": "I specialize in leveraging AI tools to accelerate learning, improve code quality, and build efficient solutions with modern web technologies.",
       "viewWork": "View My Work",
-      "getInTouch": "Get In Touch"
+      "getInTouch": "Get In Touch",
+      "aiExpert": "AI Tools Expert"
     },
     "sections": {
       "skills": "Technical Skills",
@@ -36,13 +37,51 @@
     "contact": {
       "title": "Contact",
       "description": "Enter your email below and I'll send you a message. Reply to that email to start our conversation!",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
       "emailLabel": "Your email address",
       "emailPlaceholder": "you@example.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your message (min 10 characters, 3 words)",
       "sendButton": "Send",
       "sending": "Sending...",
       "success": "Message sent! Check your email inbox.",
       "error": "Something went wrong. Please try again.",
-      "invalidEmail": "Please enter a valid email address"
+      "invalidEmail": "Please enter a valid email address",
+      "chars": "chars",
+      "word": "word",
+      "words": "words"
+    },
+    "validation": {
+      "nameRequired": "Name is required.",
+      "nameMinLength": "Name must be at least 2 characters.",
+      "nameMaxLength": "Name must be under 80 characters.",
+      "nameNoNumbers": "Name should not contain numbers.",
+      "nameLettersOnly": "Name should only contain letters, spaces, hyphens, or apostrophes.",
+      "emailRequired": "Email is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageRequired": "Message is required.",
+      "messageMinChars": "Message must be at least 10 characters.",
+      "messageMinWords": "Message must contain at least 3 words.",
+      "messageMaxLength": "Message must be under 2000 characters."
+    },
+    "ui": {
+      "clickDetails": "Click to see details",
+      "viewDetails": "View Details →",
+      "viewOnGithub": "View on GitHub →",
+      "visit": "Visit →",
+      "closeModal": "Close modal",
+      "closeImage": "Close image"
+    },
+    "projectModal": {
+      "problem": "🎯 Problem",
+      "solution": "💡 Solution",
+      "technologies": "🛠️ Technologies",
+      "keyLearnings": "📚 Key Learnings"
+    },
+    "notFound": {
+      "message": "Page not found.",
+      "goHome": "Go Home"
     },
     "footer": {
       "rights": "All rights reserved."
@@ -67,7 +106,8 @@
       "subtitle": "Développeur Full-Stack & Expert en Outils IA",
       "description": "Je me spécialise dans l'utilisation d'outils d'IA pour accélérer l'apprentissage, améliorer la qualité du code et créer des solutions efficaces avec des technologies web modernes.",
       "viewWork": "Voir Mon Travail",
-      "getInTouch": "Me Contacter"
+      "getInTouch": "Me Contacter",
+      "aiExpert": "Expert en Outils IA"
     },
     "sections": {
       "skills": "Compétences Techniques",
@@ -91,13 +131,51 @@
     "contact": {
       "title": "Contact",
       "description": "Entrez votre email ci-dessous et je vous enverrai un message. Répondez à cet email pour commencer notre conversation!",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Votre nom",
       "emailLabel": "Votre adresse email",
       "emailPlaceholder": "vous@exemple.com",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Votre message (min 10 caractères, 3 mots)",
       "sendButton": "Envoyer",
       "sending": "Envoi...",
       "success": "Message envoyé! Vérifiez votre boîte de réception.",
       "error": "Une erreur s'est produite. Veuillez réessayer.",
-      "invalidEmail": "Veuillez entrer une adresse email valide"
+      "invalidEmail": "Veuillez entrer une adresse email valide",
+      "chars": "car.",
+      "word": "mot",
+      "words": "mots"
+    },
+    "validation": {
+      "nameRequired": "Le nom est requis.",
+      "nameMinLength": "Le nom doit contenir au moins 2 caractères.",
+      "nameMaxLength": "Le nom doit contenir moins de 80 caractères.",
+      "nameNoNumbers": "Le nom ne doit pas contenir de chiffres.",
+      "nameLettersOnly": "Le nom ne doit contenir que des lettres, espaces, tirets ou apostrophes.",
+      "emailRequired": "L'email est requis.",
+      "emailInvalid": "Veuillez entrer une adresse email valide.",
+      "messageRequired": "Le message est requis.",
+      "messageMinChars": "Le message doit contenir au moins 10 caractères.",
+      "messageMinWords": "Le message doit contenir au moins 3 mots.",
+      "messageMaxLength": "Le message doit contenir moins de 2000 caractères."
+    },
+    "ui": {
+      "clickDetails": "Cliquez pour voir les détails",
+      "viewDetails": "Voir les détails →",
+      "viewOnGithub": "Voir sur GitHub →",
+      "visit": "Visiter →",
+      "closeModal": "Fermer la fenêtre",
+      "closeImage": "Fermer l'image"
+    },
+    "projectModal": {
+      "problem": "🎯 Problème",
+      "solution": "💡 Solution",
+      "technologies": "🛠️ Technologies",
+      "keyLearnings": "📚 Apprentissages Clés"
+    },
+    "notFound": {
+      "message": "Page non trouvée.",
+      "goHome": "Retour à l'accueil"
     },
     "footer": {
       "rights": "Tous droits réservés."
@@ -122,7 +200,8 @@
       "subtitle": "Lập Trình Viên Full-Stack & Chuyên Gia Công Cụ AI",
       "description": "Tôi chuyên về việc tận dụng các công cụ AI để tăng tốc độ học tập, cải thiện chất lượng mã và xây dựng các giải pháp hiệu quả với công nghệ web hiện đại.",
       "viewWork": "Xem Công Việc",
-      "getInTouch": "Liên Hệ Tôi"
+      "getInTouch": "Liên Hệ Tôi",
+      "aiExpert": "Chuyên Gia Công Cụ AI"
     },
     "sections": {
       "skills": "Kỹ Năng Kỹ Thuật",
@@ -146,13 +225,51 @@
     "contact": {
       "title": "Liên Hệ",
       "description": "Nhập email của bạn bên dưới và tôi sẽ gửi cho bạn một tin nhắn. Trả lời email đó để bắt đầu cuộc trò chuyện của chúng ta!",
+      "nameLabel": "Tên",
+      "namePlaceholder": "Tên của bạn",
       "emailLabel": "Địa chỉ email của bạn",
       "emailPlaceholder": "ban@example.com",
+      "messageLabel": "Tin nhắn",
+      "messagePlaceholder": "Tin nhắn của bạn (tối thiểu 10 ký tự, 3 từ)",
       "sendButton": "Gửi",
       "sending": "Đang gửi...",
       "success": "Tin nhắn đã được gửi! Kiểm tra hộp thư đến của bạn.",
       "error": "Đã xảy ra lỗi. Vui lòng thử lại.",
-      "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ"
+      "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ",
+      "chars": "ký tự",
+      "word": "từ",
+      "words": "từ"
+    },
+    "validation": {
+      "nameRequired": "Tên là bắt buộc.",
+      "nameMinLength": "Tên phải có ít nhất 2 ký tự.",
+      "nameMaxLength": "Tên phải dưới 80 ký tự.",
+      "nameNoNumbers": "Tên không được chứa số.",
+      "nameLettersOnly": "Tên chỉ được chứa chữ cái, khoảng trắng, dấu gạch ngang hoặc dấu nháy đơn.",
+      "emailRequired": "Email là bắt buộc.",
+      "emailInvalid": "Vui lòng nhập địa chỉ email hợp lệ.",
+      "messageRequired": "Tin nhắn là bắt buộc.",
+      "messageMinChars": "Tin nhắn phải có ít nhất 10 ký tự.",
+      "messageMinWords": "Tin nhắn phải chứa ít nhất 3 từ.",
+      "messageMaxLength": "Tin nhắn phải dưới 2000 ký tự."
+    },
+    "ui": {
+      "clickDetails": "Nhấn để xem chi tiết",
+      "viewDetails": "Xem chi tiết →",
+      "viewOnGithub": "Xem trên GitHub →",
+      "visit": "Truy cập →",
+      "closeModal": "Đóng cửa sổ",
+      "closeImage": "Đóng hình ảnh"
+    },
+    "projectModal": {
+      "problem": "🎯 Vấn Đề",
+      "solution": "💡 Giải Pháp",
+      "technologies": "🛠️ Công Nghệ",
+      "keyLearnings": "📚 Bài Học Chính"
+    },
+    "notFound": {
+      "message": "Không tìm thấy trang.",
+      "goHome": "Về Trang Chủ"
     },
     "footer": {
       "rights": "Bảo lưu mọi quyền."

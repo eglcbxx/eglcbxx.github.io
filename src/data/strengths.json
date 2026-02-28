@@ -2,43 +2,115 @@
   "strengths": [
     {
       "emoji": "🚀",
-      "title": "AI-Enhanced Development",
-      "points": [
-        "Leveraging AI tools to accelerate development cycles",
-        "Expert in writing effective prompts for code generation",
-        "Combining human expertise with AI assistance",
-        "Rapid prototyping and iterative improvement"
-      ]
+      "title": {
+        "en": "AI-Enhanced Development",
+        "fr": "Développement Amélioré par IA",
+        "vn": "Phát Triển Tăng Cường AI"
+      },
+      "points": {
+        "en": [
+          "Leveraging AI tools to accelerate development cycles",
+          "Expert in writing effective prompts for code generation",
+          "Combining human expertise with AI assistance",
+          "Rapid prototyping and iterative improvement"
+        ],
+        "fr": [
+          "Tirer parti des outils IA pour accélérer les cycles de développement",
+          "Expert en rédaction de prompts efficaces pour la génération de code",
+          "Combinaison de l'expertise humaine avec l'assistance IA",
+          "Prototypage rapide et amélioration itérative"
+        ],
+        "vn": [
+          "Tận dụng công cụ AI để tăng tốc chu kỳ phát triển",
+          "Chuyên gia viết prompt hiệu quả cho tạo mã",
+          "Kết hợp chuyên môn con người với hỗ trợ AI",
+          "Tạo mẫu nhanh và cải tiến lặp lại"
+        ]
+      }
     },
     {
       "emoji": "💡",
-      "title": "Fast Learning & Adaptation",
-      "points": [
-        "Quickly mastering new frameworks and technologies",
-        "Thriving in dynamic, evolving tech environments",
-        "Self-motivated continuous learning",
-        "Translating technical concepts into actionable solutions"
-      ]
+      "title": {
+        "en": "Fast Learning & Adaptation",
+        "fr": "Apprentissage Rapide & Adaptation",
+        "vn": "Học Nhanh & Thích Ứng"
+      },
+      "points": {
+        "en": [
+          "Quickly mastering new frameworks and technologies",
+          "Thriving in dynamic, evolving tech environments",
+          "Self-motivated continuous learning",
+          "Translating technical concepts into actionable solutions"
+        ],
+        "fr": [
+          "Maîtrise rapide de nouveaux frameworks et technologies",
+          "S'épanouir dans des environnements technologiques dynamiques",
+          "Apprentissage continu et autonome",
+          "Traduction de concepts techniques en solutions concrètes"
+        ],
+        "vn": [
+          "Nắm vững nhanh các framework và công nghệ mới",
+          "Phát triển trong môi trường công nghệ năng động",
+          "Tự học liên tục và chủ động",
+          "Chuyển đổi khái niệm kỹ thuật thành giải pháp thực tế"
+        ]
+      }
     },
     {
       "emoji": "🤝",
-      "title": "Collaboration & Communication",
-      "points": [
-        "Bilingual communication (French/English)",
-        "Clear technical documentation and specifications",
-        "Effective remote collaboration using modern tools",
-        "Team-oriented with strong interpersonal skills"
-      ]
+      "title": {
+        "en": "Collaboration & Communication",
+        "fr": "Collaboration & Communication",
+        "vn": "Hợp Tác & Giao Tiếp"
+      },
+      "points": {
+        "en": [
+          "Bilingual communication (French/English)",
+          "Clear technical documentation and specifications",
+          "Effective remote collaboration using modern tools",
+          "Team-oriented with strong interpersonal skills"
+        ],
+        "fr": [
+          "Communication bilingue (Français/Anglais)",
+          "Documentation technique et spécifications claires",
+          "Collaboration à distance efficace avec des outils modernes",
+          "Esprit d'équipe avec de fortes compétences interpersonnelles"
+        ],
+        "vn": [
+          "Giao tiếp song ngữ (Pháp/Anh)",
+          "Tài liệu kỹ thuật và đặc tả rõ ràng",
+          "Cộng tác từ xa hiệu quả với công cụ hiện đại",
+          "Định hướng nhóm với kỹ năng giao tiếp tốt"
+        ]
+      }
     },
     {
       "emoji": "🎯",
-      "title": "Problem-Solving Approach",
-      "points": [
-        "Systematic debugging and troubleshooting",
-        "Breaking down complex problems methodically",
-        "Research-driven decision making",
-        "Balancing practical solutions with best practices"
-      ]
+      "title": {
+        "en": "Problem-Solving Approach",
+        "fr": "Approche de Résolution de Problèmes",
+        "vn": "Phương Pháp Giải Quyết Vấn Đề"
+      },
+      "points": {
+        "en": [
+          "Systematic debugging and troubleshooting",
+          "Breaking down complex problems methodically",
+          "Research-driven decision making",
+          "Balancing practical solutions with best practices"
+        ],
+        "fr": [
+          "Débogage et dépannage systématiques",
+          "Décomposition méthodique de problèmes complexes",
+          "Prise de décision basée sur la recherche",
+          "Équilibre entre solutions pratiques et bonnes pratiques"
+        ],
+        "vn": [
+          "Gỡ lỗi và khắc phục sự cố có hệ thống",
+          "Phân tích vấn đề phức tạp một cách có phương pháp",
+          "Ra quyết định dựa trên nghiên cứu",
+          "Cân bằng giải pháp thực tế với best practices"
+        ]
+      }
     }
   ]
 }

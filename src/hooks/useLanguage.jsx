@@ -38,8 +38,18 @@ export default function LanguageProvider({ children }) {
     setLanguage(code);
   }, []);
 
+  const localize = useCallback(
+    (obj) => {
+      if (obj == null) return '';
+      if (typeof obj === 'string') return obj;
+      if (Array.isArray(obj)) return obj;
+      return obj[language] || obj.en || obj;
+    },
+    [language]
+  );
+
   return (
-    <LanguageContext.Provider value={{ language, changeLanguage, t, LANGUAGES }}>
+    <LanguageContext.Provider value={{ language, changeLanguage, t, localize, LANGUAGES }}>
       {children}
     </LanguageContext.Provider>
   );

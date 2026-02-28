@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { useLanguage } from '../hooks/useLanguage';
 
 export default function ProjectModal({ project, onClose }) {
+  const { t, localize } = useLanguage();
+
   useEffect(() => {
     function handleKey(e) {
       if (e.key === 'Escape') onClose();
@@ -16,37 +19,37 @@ export default function ProjectModal({ project, onClose }) {
   return (
     <div className="modal active" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" aria-label="Close modal" onClick={onClose}>
+        <button className="modal-close" aria-label={t('ui.closeModal')} onClick={onClose}>
           ×
         </button>
         <div>
-          <h2>{title}</h2>
+          <h2>{localize(title)}</h2>
 
           <div className="modal-section">
-            <h4>🎯 Problem</h4>
-            <p className="small">{modalData.problem}</p>
+            <h4>{t('projectModal.problem')}</h4>
+            <p className="small">{localize(modalData.problem)}</p>
           </div>
 
           <div className="modal-section">
-            <h4>💡 Solution</h4>
-            <p className="small">{modalData.solution}</p>
+            <h4>{t('projectModal.solution')}</h4>
+            <p className="small">{localize(modalData.solution)}</p>
           </div>
 
           <div className="modal-section">
-            <h4>🛠️ Technologies</h4>
+            <h4>{t('projectModal.technologies')}</h4>
             <div className="modal-tech">
-              {modalData.tech.map((t) => (
-                <span key={t} className="tag">
-                  {t}
+              {modalData.tech.map((techItem) => (
+                <span key={techItem} className="tag">
+                  {techItem}
                 </span>
               ))}
             </div>
           </div>
 
           <div className="modal-section">
-            <h4>📚 Key Learnings</h4>
+            <h4>{t('projectModal.keyLearnings')}</h4>
             <ul>
-              {modalData.lessons.map((lesson, i) => (
+              {localize(modalData.lessons).map((lesson, i) => (
                 <li key={i} className="small">
                   {lesson}
                 </li>
@@ -56,7 +59,7 @@ export default function ProjectModal({ project, onClose }) {
 
           <div className="modal-section">
             <a href={link} target="_blank" rel="noreferrer">
-              View on GitHub →
+              {t('ui.viewOnGithub')}
             </a>
           </div>
         </div>

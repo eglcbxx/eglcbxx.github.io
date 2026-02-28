@@ -39,14 +39,10 @@ a:hover{text-decoration:underline}
 
 header{
   position:sticky; top:0;
-  background:rgba(11,15,25,.85);
-  backdrop-filter: blur(8px);
+  z-index:100;
+  background:var(--bg);
   border-bottom:1px solid var(--border);
   transition:background 0.3s ease;
-}
-
-[data-theme="light"] header{
-  background:rgba(248,249,250,.95);
 }
 
 .nav{

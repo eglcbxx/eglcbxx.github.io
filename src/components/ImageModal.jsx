@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { useLanguage } from '../hooks/useLanguage';
 
 export default function ImageModal({ src, alt, onClose }) {
+  const { t } = useLanguage();
+
   useEffect(() => {
     function handleKey(e) {
       if (e.key === 'Escape') onClose();
@@ -11,7 +14,7 @@ export default function ImageModal({ src, alt, onClose }) {
 
   return (
     <div className="image-modal active" onClick={onClose}>
-      <button className="modal-close" aria-label="Close image" onClick={onClose}>
+      <button className="modal-close" aria-label={t('ui.closeImage')} onClick={onClose}>
         ×
       </button>
       <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
