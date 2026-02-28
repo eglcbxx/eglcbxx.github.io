@@ -37,10 +37,10 @@ A filter bar lets users filter projects by category.
 Projects rendered in a `.grid` container.
 
 Each `ProjectCard` renders:
-- `project.title` (h3)
+- `localize(project.title)` (h3)
 - Image: `project.image` (prepends `/` if starting with `assets/`)
-- `project.description` (small text)
-- "View Details →" link to `project.link` (opens in new tab)
+- `localize(project.description)` (small text)
+- `t('ui.viewDetails')` link to `project.link` (opens in new tab)
 
 **Interactions:**
 - **Click card** → opens `ProjectModal` (via `onOpenModal` prop)
@@ -52,13 +52,13 @@ Each `ProjectCard` renders:
 `ProjectModal` opens as a full-screen overlay when a project card is clicked.
 
 **Sections displayed:**
-| Section | Icon | Data field |
+| Section | Heading key | Data field |
 |---|---|---|
-| Problem | 🎯 | `modalData.problem` |
-| Solution | 💡 | `modalData.solution` |
-| Technologies | 🛠️ | `modalData.tech` (array → tag chips) |
-| Key Learnings | 📚 | `modalData.lessons` (array → bullet list) |
-| GitHub link | — | `project.link` |
+| Problem | `t('projectModal.problem')` | `localize(modalData.problem)` |
+| Solution | `t('projectModal.solution')` | `localize(modalData.solution)` |
+| Technologies | `t('projectModal.technologies')` | `modalData.tech` (array → tag chips, not translated) |
+| Key Learnings | `t('projectModal.keyLearnings')` | `localize(modalData.lessons)` (array → bullet list) |
+| GitHub link | — | `t('ui.viewOnGithub')` + `project.link` |
 
 **Close triggers:**
 - Click `×` button
@@ -80,21 +80,23 @@ Each `ProjectCard` renders:
 
 ### projects.json
 
+All text fields are multilingual objects `{ en, fr, vn }`:
+
 ```json
 {
   "projects": [
     {
-      "id": "number",
-      "title": "string",
-      "description": "string",
+      "id": "string",
+      "title": { "en": "...", "fr": "...", "vn": "..." },
+      "description": { "en": "...", "fr": "...", "vn": "..." },
       "image": "string (path)",
       "link": "string (URL)",
       "category": "web | fullstack | backend | mobile",
       "modalData": {
-        "problem": "string",
-        "solution": "string",
+        "problem": { "en": "...", "fr": "...", "vn": "..." },
+        "solution": { "en": "...", "fr": "...", "vn": "..." },
         "tech": ["string"],
-        "lessons": ["string"]
+        "lessons": { "en": ["..."], "fr": ["..."], "vn": ["..."] }
       }
     }
   ]
@@ -117,9 +119,9 @@ Currently **9 projects** in the data file.
 
 - `portfolio.title`, `portfolio.description`
 - `portfolio.allProjects`, `portfolio.frontend`, `portfolio.fullstack`, `portfolio.backend`, `portfolio.mobile`
+- `ui.viewDetails` (ProjectCard link text)
+- `ui.closeModal` (ProjectModal aria-label)
+- `ui.viewOnGithub` (ProjectModal GitHub link)
+- `projectModal.problem`, `projectModal.solution`, `projectModal.technologies`, `projectModal.keyLearnings`
 
-## Non-Translated Text
-
-- "View Details →" (hard-coded in `ProjectCard.jsx`)
-- All `modalData` content (project data is English-only)
-- "View on GitHub →" (hard-coded in `ProjectModal.jsx`)
+All project content uses `localize()` for multilingual title/description/problem/solution/lessons fields.

@@ -28,7 +28,7 @@ export default function Home() {
               <span className="tag">HTML/CSS</span>
               <span className="tag">Ruby on Rails</span>
               <span className="tag">SQL</span>
-              <span className="tag">AI Tools Expert</span>
+              <span className="tag">{t('hero.aiExpert')}</span>
             </div>
             <div className="hero-cta">
               <Link to="/portfolio" className="btn-primary">

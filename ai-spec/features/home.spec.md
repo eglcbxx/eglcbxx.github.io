@@ -23,11 +23,11 @@ The hero is displayed inside a `<section className="hero animate-fade">` and obs
 | Greeting | "Hi, I'm Coach E.T" + wave emoji | `hero.greeting` |
 | Subtitle | Tag line | `hero.subtitle` |
 | Description | Paragraph | `hero.description` |
-| Tags | Hard-coded: `JavaScript`, `React`, `HTML/CSS`, `Ruby on Rails`, `SQL`, `AI Tools Expert` | — (not translated) |
+| Tags | Hard-coded tech names: `JavaScript`, `React`, `HTML/CSS`, `Ruby on Rails`, `SQL`; translated: `t('hero.aiExpert')` | `hero.aiExpert` |
 | CTA buttons | "View My Work" → `/portfolio`, "Get In Touch" → `/contact` | `hero.viewWork`, `hero.getInTouch` |
 | Image | `/assets/images/egl-picture.jpg` | — |
 
-**Note:** Hero tags are **hard-coded strings** in JSX (not in a data file, not translated).
+**Note:** Hero tags are hard-coded tech names (universal, not translated) except `AI Tools Expert` which uses `t('hero.aiExpert')`.
 
 ### 2. Skills Carousel
 
@@ -39,11 +39,13 @@ The hero is displayed inside a `<section className="hero animate-fade">` and obs
 | Section heading | `sections.skills` (i18n) |
 
 **SkillCard** renders:
-- `skill.emoji` + `skill.name` (header)
-- `skill.level` (level badge)
-- `skill.technologies` (small text)
-- `skill.details` (bulleted list, shown when expanded)
-- "Click to see details" prompt
+- `skill.emoji` + `localize(skill.name)` (header)
+- `localize(skill.level)` (level badge)
+- `localize(skill.technologies)` (small text)
+- `localize(skill.details)` (bulleted list, shown when expanded)
+- `t('ui.clickDetails')` prompt
+
+All skill data fields are multilingual objects resolved via `localize()`.
 
 **Interactions:** Click toggles `.expanded` class. When expanded inside the Carousel, the carousel pauses and centers the card.
 
@@ -57,9 +59,11 @@ The hero is displayed inside a `<section className="hero animate-fade">` and obs
 | Section heading | `sections.strengths` (i18n) |
 
 **StrengthCard** renders:
-- `strength.emoji` + `strength.title` (header)
-- `strength.points` (bulleted list, shown when expanded)
-- "Click to see details" prompt
+- `strength.emoji` + `localize(strength.title)` (header)
+- `localize(strength.points)` (bulleted list, shown when expanded)
+- `t('ui.clickDetails')` prompt
+
+All strength data fields are multilingual objects resolved via `localize()`.
 
 **Interactions:** Same expand/collapse as SkillCard.
 
@@ -78,16 +82,19 @@ The hero is displayed inside a `<section className="hero animate-fade">` and obs
 
 ### skills.json
 
+All text fields are multilingual objects `{ en, fr, vn }`:
+
 ```json
 {
   "skills": [
     {
       "id": "string",
       "emoji": "string",
-      "name": "string",
-      "level": "string",
-      "technologies": "string",
-      "details": ["string"]
+      "name": { "en": "...", "fr": "...", "vn": "..." },
+      "level": { "en": "...", "fr": "...", "vn": "..." },
+      "width": "number",
+      "technologies": { "en": "...", "fr": "...", "vn": "..." },
+      "details": { "en": ["..."], "fr": ["..."], "vn": ["..."] }
     }
   ]
 }
@@ -95,13 +102,15 @@ The hero is displayed inside a `<section className="hero animate-fade">` and obs
 
 ### strengths.json
 
+All text fields are multilingual objects `{ en, fr, vn }`:
+
 ```json
 {
   "strengths": [
     {
       "emoji": "string",
-      "title": "string",
-      "points": ["string"]
+      "title": { "en": "...", "fr": "...", "vn": "..." },
+      "points": { "en": ["..."], "fr": ["..."], "vn": ["..."] }
     }
   ]
 }
@@ -112,5 +121,8 @@ The hero is displayed inside a `<section className="hero animate-fade">` and obs
 ## i18n Keys Used
 
 - `hero.greeting`, `hero.subtitle`, `hero.description`
-- `hero.viewWork`, `hero.getInTouch`
+- `hero.viewWork`, `hero.getInTouch`, `hero.aiExpert`
 - `sections.skills`, `sections.strengths`
+- `ui.clickDetails` (SkillCard, StrengthCard)
+
+Data content uses `localize()` for multilingual skill/strength fields.

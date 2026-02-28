@@ -1,7 +1,9 @@
 import { useNavigate } from 'react-router-dom';
+import { useLanguage } from '../hooks/useLanguage';
 
 export default function Footer() {
     const navigate = useNavigate();
+    const { t } = useLanguage();
 
     return (
         <footer style={{ marginTop: 20 }}>
@@ -14,10 +16,10 @@ export default function Footer() {
                         GitHub
                     </a>
                     <a onClick={() => navigate('/contact')} rel="noreferrer">
-                        Contact
+                        {t('nav.contact')}
                     </a>
                 </div>
-                <p className="small">© {new Date().getFullYear()} Coach E.T @ Codeboxx</p>
+                <p className="small">© {new Date().getFullYear()} Coach E.T @ Codeboxx · {t('footer.rights')}</p>
             </div>
         </footer>
     );

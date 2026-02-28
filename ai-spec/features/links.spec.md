@@ -29,10 +29,10 @@ A simple page displaying external resource links as cards in a grid.
 ### ResourceCard (`ResourceCard.jsx`)
 
 Each card renders:
-- `resource.title` (h3)
+- `resource.title` (h3) — brand names, not translated
 - Image: `resource.image` (prepends `/` if path starts with `assets/`)
-- `resource.description` (small text)
-- "Visit →" external link (`target="_blank"`)
+- `localize(resource.description)` (small text — multilingual)
+- `t('ui.visit')` external link (`target="_blank"`)
 
 Additional classes: `.card .no-modal .animate-on-scroll`
 
@@ -44,12 +44,14 @@ Individual `useScrollAnimation()` ref for fade-in on scroll.
 
 ### resources.json
 
+Description field is a multilingual object `{ en, fr, vn }`:
+
 ```json
 {
   "resources": [
     {
-      "title": "string",
-      "description": "string",
+      "title": "string (brand name, not translated)",
+      "description": { "en": "...", "fr": "...", "vn": "..." },
       "image": "string (path)",
       "link": "string (URL)"
     }
@@ -64,8 +66,6 @@ Currently **2 resources** in the data file.
 ## i18n Keys Used
 
 - `links.title`, `links.description`
+- `ui.visit` (ResourceCard link text)
 
-## Non-Translated Text
-
-- "Visit →" (hard-coded in `ResourceCard.jsx`)
-- All resource data (title, description) is English-only
+Resource descriptions use `localize()` for multilingual content.

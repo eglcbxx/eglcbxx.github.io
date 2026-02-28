@@ -54,9 +54,9 @@ MAX_MESSAGE_LENGTH = 2000
 
 Below the message textarea, a counter shows:
 ```
-{charCount}/{MAX_MESSAGE_LENGTH} chars · {wordCount} word(s)
+{charCount}/{MAX_MESSAGE_LENGTH} {t('contact.chars')} · {wordCount} {t('contact.word')|t('contact.words')}
 ```
-Styled with `opacity: 0.5`, right-aligned.
+Styled with `opacity: 0.5`, right-aligned. Counter text is fully translated.
 
 ---
 
@@ -91,18 +91,30 @@ Styled with `opacity: 0.5`, right-aligned.
 ## i18n Keys Used
 
 - `contact.title`, `contact.description`
+- `contact.nameLabel`, `contact.namePlaceholder`
 - `contact.emailLabel`, `contact.emailPlaceholder`
+- `contact.messageLabel`, `contact.messagePlaceholder`
 - `contact.sendButton`, `contact.sending`
 - `contact.success`, `contact.error`
+- `contact.chars`, `contact.word`, `contact.words`
+- `validation.nameRequired`, `validation.nameMinLength`, `validation.nameMaxLength`
+- `validation.nameNoNumbers`, `validation.nameLettersOnly`
+- `validation.emailRequired`, `validation.emailInvalid`
+- `validation.messageRequired`, `validation.messageMinChars`
+- `validation.messageMinWords`, `validation.messageMaxLength`
 
-## Non-Translated Text (Hard-Coded English)
+### Validation Key Pattern
 
-- "Name" label
-- "Your name" placeholder
-- "Message" label
-- "Your message (min 10 characters, 3 words)" placeholder
-- All validation error messages (e.g., "Name is required.", "Name should not contain numbers.")
-- Character/word counter text
+Validators return **translation keys** (not English strings):
+```js
+function validateName(val) {
+  if (!v) return 'validation.nameRequired';  // key, not string
+  ...
+}
+```
+Keys are resolved in JSX: `{nameErr && <div>{t(nameErr)}</div>}`
+
+All form labels, placeholders, validation errors, and counter text are fully translated.
 
 ---
 

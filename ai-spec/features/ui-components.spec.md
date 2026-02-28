@@ -163,10 +163,11 @@ Fullscreen image lightbox overlay.
 
 ### Behavior
 - Overlay: `.image-modal.active` — click calls `onClose`
-- Close button: `×` in top corner
+- Close button: `×` in top corner, `aria-label={t('ui.closeImage')}`
 - Content: `.image-modal-content` — click stops propagation
 - Escape key: closes modal
 - Image renders at full size within the viewport
+- Uses `useLanguage` hook for translated aria-label
 
 ### Usage
 Used in `ProjectCard` — clicking a project image opens the lightbox.

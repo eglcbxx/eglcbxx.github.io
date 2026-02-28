@@ -3,13 +3,21 @@
     {
       "title": "Codeboxx Academy",
       "image": "assets/images/resources/resource1.png",
-      "description": "My primary learning platform for full-stack development, where I've built foundational skills in web technologies and software engineering practices.",
+      "description": {
+        "en": "My primary learning platform for full-stack development, where I've built foundational skills in web technologies and software engineering practices.",
+        "fr": "Ma plateforme d'apprentissage principale pour le développement full-stack, où j'ai acquis des compétences fondamentales en technologies web et pratiques d'ingénierie logicielle.",
+        "vn": "Nền tảng học tập chính của tôi cho phát triển full-stack, nơi tôi đã xây dựng kỹ năng nền tảng về công nghệ web và thực hành kỹ thuật phần mềm."
+      },
       "link": "https://academy.codeboxx.com/"
     },
     {
       "title": "Codecademy",
       "image": "assets/images/resources/resource2.png",
-      "description": "Interactive platform for learning programming languages and frameworks through hands-on practice and projects.",
+      "description": {
+        "en": "Interactive platform for learning programming languages and frameworks through hands-on practice and projects.",
+        "fr": "Plateforme interactive pour apprendre les langages de programmation et les frameworks par la pratique et les projets.",
+        "vn": "Nền tảng tương tác để học ngôn ngữ lập trình và framework thông qua thực hành và dự án."
+      },
       "link": "https://www.codecademy.com/"
     }
   ]

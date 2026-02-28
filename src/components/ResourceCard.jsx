@@ -1,7 +1,9 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useLanguage } from '../hooks/useLanguage';
 
 export default function ResourceCard({ resource }) {
   const ref = useScrollAnimation();
+  const { t, localize } = useLanguage();
 
   const imgSrc = resource.image.startsWith('assets/')
     ? `/${resource.image}`
@@ -11,9 +13,9 @@ export default function ResourceCard({ resource }) {
     <div ref={ref} className="card no-modal animate-on-scroll">
       <h3>{resource.title}</h3>
       <img className="project-img" src={imgSrc} alt={resource.title} />
-      <p className="small">{resource.description}</p>
+      <p className="small">{localize(resource.description)}</p>
       <a href={resource.link} target="_blank" rel="noreferrer">
-        Visit →
+        {t('ui.visit')}
       </a>
     </div>
   );
