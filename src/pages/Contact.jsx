@@ -15,28 +15,28 @@ const MAX_MESSAGE_LENGTH = 2000;
 
 function validateName(val) {
   const v = val.trim();
-  if (!v) return 'Name is required.';
-  if (v.length < MIN_NAME_LENGTH) return `Name must be at least ${MIN_NAME_LENGTH} characters.`;
-  if (v.length > MAX_NAME_LENGTH) return `Name must be under ${MAX_NAME_LENGTH} characters.`;
-  if (RE_HAS_NUMBER.test(v)) return 'Name should not contain numbers.';
-  if (!RE_ONLY_LETTERS_SPACES.test(v)) return 'Name should only contain letters, spaces, hyphens, or apostrophes.';
+  if (!v) return 'validation.nameRequired';
+  if (v.length < MIN_NAME_LENGTH) return 'validation.nameMinLength';
+  if (v.length > MAX_NAME_LENGTH) return 'validation.nameMaxLength';
+  if (RE_HAS_NUMBER.test(v)) return 'validation.nameNoNumbers';
+  if (!RE_ONLY_LETTERS_SPACES.test(v)) return 'validation.nameLettersOnly';
   return null;
 }
 
 function validateEmail(val) {
   const v = val.trim();
-  if (!v) return 'Email is required.';
-  if (!RE_EMAIL.test(v)) return 'Please enter a valid email address.';
+  if (!v) return 'validation.emailRequired';
+  if (!RE_EMAIL.test(v)) return 'validation.emailInvalid';
   return null;
 }
 
 function validateMessage(val) {
   const v = val.trim();
-  if (!v) return 'Message is required.';
-  if (v.length < MIN_MESSAGE_CHARS) return `Message must be at least ${MIN_MESSAGE_CHARS} characters.`;
+  if (!v) return 'validation.messageRequired';
+  if (v.length < MIN_MESSAGE_CHARS) return 'validation.messageMinChars';
   const wordCount = v.split(/\s+/).filter(Boolean).length;
-  if (wordCount < MIN_MESSAGE_WORDS) return `Message must contain at least ${MIN_MESSAGE_WORDS} words.`;
-  if (v.length > MAX_MESSAGE_LENGTH) return `Message must be under ${MAX_MESSAGE_LENGTH} characters.`;
+  if (wordCount < MIN_MESSAGE_WORDS) return 'validation.messageMinWords';
+  if (v.length > MAX_MESSAGE_LENGTH) return 'validation.messageMaxLength';
   return null;
 }
 
@@ -159,18 +159,18 @@ export default function Contact() {
           {/* Name */}
           <div className="form-group">
             <label className="small" htmlFor="name">
-              Name
+              {t('contact.nameLabel')}
             </label>
             <input
               id="name"
               type="text"
-              placeholder="Your name"
+              placeholder={t('contact.namePlaceholder')}
               value={name}
               className={fieldClass(nameErr, name, touched.name)}
               onChange={(e) => handleNameChange(e.target.value)}
               onBlur={handleNameBlur}
             />
-            {nameErr && <div className="form-error active">{nameErr}</div>}
+            {nameErr && <div className="form-error active">{t(nameErr)}</div>}
           </div>
 
           {/* Email */}
@@ -187,17 +187,17 @@ export default function Contact() {
               onChange={(e) => handleEmailChange(e.target.value)}
               onBlur={handleEmailBlur}
             />
-            {emailErr && <div className="form-error active">{emailErr}</div>}
+            {emailErr && <div className="form-error active">{t(emailErr)}</div>}
           </div>
 
           {/* Message */}
           <div className="form-group">
             <label className="small" htmlFor="message">
-              Message
+              {t('contact.messageLabel')}
             </label>
             <textarea
               id="message"
-              placeholder="Your message (min 10 characters, 3 words)"
+              placeholder={t('contact.messagePlaceholder')}
               value={message}
               className={fieldClass(messageErr, message, touched.message)}
               onChange={(e) => handleMessageChange(e.target.value)}
@@ -208,9 +208,9 @@ export default function Contact() {
               className="small"
               style={{ textAlign: 'right', marginTop: 4, opacity: 0.5 }}
             >
-              {charCount}/{MAX_MESSAGE_LENGTH} chars · {wordCount} word{wordCount !== 1 ? 's' : ''}
+              {charCount}/{MAX_MESSAGE_LENGTH} {t('contact.chars')} · {wordCount} {wordCount !== 1 ? t('contact.words') : t('contact.word')}
             </div>
-            {messageErr && <div className="form-error active">{messageErr}</div>}
+            {messageErr && <div className="form-error active">{t(messageErr)}</div>}
           </div>
 
           <div style={{ height: 16 }} />

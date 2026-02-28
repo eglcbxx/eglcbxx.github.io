@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useLanguage } from '../hooks/useLanguage';
 
 export default function SkillCard({ skill }) {
   const [expanded, setExpanded] = useState(false);
   const ref = useScrollAnimation({ threshold: 0.5 });
+  const { t, localize } = useLanguage();
 
   return (
     <div
@@ -14,19 +16,19 @@ export default function SkillCard({ skill }) {
     >
       <div className="skill-header">
         <div className="skill-name">
-          {skill.emoji} {skill.name}
+          {skill.emoji} {localize(skill.name)}
         </div>
-        <div className="skill-level">{skill.level}</div>
+        <div className="skill-level">{localize(skill.level)}</div>
       </div>
-      <p className="small">{skill.technologies}</p>
+      <p className="small">{localize(skill.technologies)}</p>
       <div className="skill-details">
         <ul>
-          {skill.details.map((detail, i) => (
+          {localize(skill.details).map((detail, i) => (
             <li key={i}>{detail}</li>
           ))}
         </ul>
       </div>
-      <p className="small">Click to see details</p>
+      <p className="small">{t('ui.clickDetails')}</p>
     </div>
   );
 }

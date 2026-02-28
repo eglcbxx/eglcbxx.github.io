@@ -3,121 +3,343 @@
     {
       "id": "frontend",
       "emoji": "💻",
-      "name": "Frontend Development",
-      "level": "Advanced",
+      "name": {
+        "en": "Frontend Development",
+        "fr": "Développement Frontend",
+        "vn": "Phát Triển Frontend"
+      },
+      "level": {
+        "en": "Advanced",
+        "fr": "Avancé",
+        "vn": "Nâng Cao"
+      },
       "width": 90,
-      "technologies": "HTML/CSS (★★★★☆), JavaScript (★★★★☆), React (★★★★☆), TypeScript (★★★☆☆)",
-      "details": [
-        "Expert in modern HTML5/CSS3 and responsive design",
-        "Advanced JavaScript ES6+ and async programming",
-        "Extensive React experience with hooks and state management",
-        "Working knowledge of TypeScript for type-safe code",
-        "Component-based architecture and design patterns"
-      ]
+      "technologies": {
+        "en": "HTML/CSS (★★★★☆), JavaScript (★★★★☆), React (★★★★☆), TypeScript (★★★☆☆)",
+        "fr": "HTML/CSS (★★★★☆), JavaScript (★★★★☆), React (★★★★☆), TypeScript (★★★☆☆)",
+        "vn": "HTML/CSS (★★★★☆), JavaScript (★★★★☆), React (★★★★☆), TypeScript (★★★☆☆)"
+      },
+      "details": {
+        "en": [
+          "Expert in modern HTML5/CSS3 and responsive design",
+          "Advanced JavaScript ES6+ and async programming",
+          "Extensive React experience with hooks and state management",
+          "Working knowledge of TypeScript for type-safe code",
+          "Component-based architecture and design patterns"
+        ],
+        "fr": [
+          "Expert en HTML5/CSS3 moderne et design responsive",
+          "JavaScript ES6+ avancé et programmation asynchrone",
+          "Expérience approfondie de React avec hooks et gestion d'état",
+          "Connaissance pratique de TypeScript pour un code typé",
+          "Architecture basée sur les composants et patrons de conception"
+        ],
+        "vn": [
+          "Chuyên gia về HTML5/CSS3 hiện đại và thiết kế responsive",
+          "JavaScript ES6+ nâng cao và lập trình bất đồng bộ",
+          "Kinh nghiệm sâu rộng với React hooks và quản lý state",
+          "Kiến thức thực tế về TypeScript cho mã an toàn kiểu",
+          "Kiến trúc dựa trên component và design patterns"
+        ]
+      }
     },
     {
       "id": "backend",
       "emoji": "🔧",
-      "name": "Backend Development",
-      "level": "Intermediate",
+      "name": {
+        "en": "Backend Development",
+        "fr": "Développement Backend",
+        "vn": "Phát Triển Backend"
+      },
+      "level": {
+        "en": "Intermediate",
+        "fr": "Intermédiaire",
+        "vn": "Trung Cấp"
+      },
       "width": 65,
-      "technologies": "Ruby on Rails (★★★☆☆), Java (★★★☆☆)",
-      "details": [
-        "Ruby on Rails MVC architecture and RESTful APIs",
-        "Java object-oriented programming",
-        "Server-side routing and middleware",
-        "Authentication and session management",
-        "API design and integration"
-      ]
+      "technologies": {
+        "en": "Ruby on Rails (★★★☆☆), Java (★★★☆☆)",
+        "fr": "Ruby on Rails (★★★☆☆), Java (★★★☆☆)",
+        "vn": "Ruby on Rails (★★★☆☆), Java (★★★☆☆)"
+      },
+      "details": {
+        "en": [
+          "Ruby on Rails MVC architecture and RESTful APIs",
+          "Java object-oriented programming",
+          "Server-side routing and middleware",
+          "Authentication and session management",
+          "API design and integration"
+        ],
+        "fr": [
+          "Architecture MVC Ruby on Rails et APIs RESTful",
+          "Programmation orientée objet Java",
+          "Routage côté serveur et middleware",
+          "Authentification et gestion de sessions",
+          "Conception et intégration d'APIs"
+        ],
+        "vn": [
+          "Kiến trúc MVC Ruby on Rails và RESTful APIs",
+          "Lập trình hướng đối tượng Java",
+          "Định tuyến phía máy chủ và middleware",
+          "Xác thực và quản lý phiên",
+          "Thiết kế và tích hợp API"
+        ]
+      }
     },
     {
       "id": "database",
       "emoji": "🗄️",
-      "name": "Databases",
-      "level": "Intermediate",
+      "name": {
+        "en": "Databases",
+        "fr": "Bases de Données",
+        "vn": "Cơ Sở Dữ Liệu"
+      },
+      "level": {
+        "en": "Intermediate",
+        "fr": "Intermédiaire",
+        "vn": "Trung Cấp"
+      },
       "width": 65,
-      "technologies": "SQL (★★★☆☆), MySQL (★★★☆☆), MongoDB (★★★☆☆)",
-      "details": [
-        "Complex SQL queries, CRUD operations, and joins",
-        "MySQL database design and optimization",
-        "MongoDB NoSQL document modeling",
-        "Data relationships and normalization",
-        "Query performance and indexing"
-      ]
+      "technologies": {
+        "en": "SQL (★★★☆☆), MySQL (★★★☆☆), MongoDB (★★★☆☆)",
+        "fr": "SQL (★★★☆☆), MySQL (★★★☆☆), MongoDB (★★★☆☆)",
+        "vn": "SQL (★★★☆☆), MySQL (★★★☆☆), MongoDB (★★★☆☆)"
+      },
+      "details": {
+        "en": [
+          "Complex SQL queries, CRUD operations, and joins",
+          "MySQL database design and optimization",
+          "MongoDB NoSQL document modeling",
+          "Data relationships and normalization",
+          "Query performance and indexing"
+        ],
+        "fr": [
+          "Requêtes SQL complexes, opérations CRUD et jointures",
+          "Conception et optimisation de bases MySQL",
+          "Modélisation de documents NoSQL MongoDB",
+          "Relations de données et normalisation",
+          "Performance des requêtes et indexation"
+        ],
+        "vn": [
+          "Truy vấn SQL phức tạp, thao tác CRUD và join",
+          "Thiết kế và tối ưu hóa cơ sở dữ liệu MySQL",
+          "Mô hình hóa tài liệu NoSQL MongoDB",
+          "Quan hệ dữ liệu và chuẩn hóa",
+          "Hiệu suất truy vấn và đánh chỉ mục"
+        ]
+      }
     },
     {
       "id": "ai",
       "emoji": "🤖",
-      "name": "AI-Powered Development",
-      "level": "Expert",
+      "name": {
+        "en": "AI-Powered Development",
+        "fr": "Développement Assisté par IA",
+        "vn": "Phát Triển Hỗ Trợ AI"
+      },
+      "level": {
+        "en": "Expert",
+        "fr": "Expert",
+        "vn": "Chuyên Gia"
+      },
       "width": 100,
-      "technologies": "Copilot, ChatGPT, Claude, Gemini — All (★★★★★)",
-      "details": [
-        "Expert prompt engineering for optimal AI responses",
-        "Technical specification writing with AI assistance",
-        "AI-powered development, refactoring, and debugging",
-        "Automated documentation generation",
-        "Accelerated learning of new technologies using AI",
-        "Daily use of GitHub Copilot, ChatGPT, Claude, and Gemini"
-      ]
+      "technologies": {
+        "en": "Copilot, ChatGPT, Claude, Gemini — All (★★★★★)",
+        "fr": "Copilot, ChatGPT, Claude, Gemini — Tous (★★★★★)",
+        "vn": "Copilot, ChatGPT, Claude, Gemini — Tất cả (★★★★★)"
+      },
+      "details": {
+        "en": [
+          "Expert prompt engineering for optimal AI responses",
+          "Technical specification writing with AI assistance",
+          "AI-powered development, refactoring, and debugging",
+          "Automated documentation generation",
+          "Accelerated learning of new technologies using AI",
+          "Daily use of GitHub Copilot, ChatGPT, Claude, and Gemini"
+        ],
+        "fr": [
+          "Ingénierie de prompts experte pour des réponses IA optimales",
+          "Rédaction de spécifications techniques assistée par IA",
+          "Développement, refactoring et débogage assistés par IA",
+          "Génération automatisée de documentation",
+          "Apprentissage accéléré de nouvelles technologies grâce à l'IA",
+          "Utilisation quotidienne de GitHub Copilot, ChatGPT, Claude et Gemini"
+        ],
+        "vn": [
+          "Kỹ thuật viết prompt chuyên gia cho phản hồi AI tối ưu",
+          "Viết đặc tả kỹ thuật với sự hỗ trợ AI",
+          "Phát triển, tái cấu trúc và gỡ lỗi với AI",
+          "Tự động hóa tạo tài liệu",
+          "Học nhanh công nghệ mới bằng AI",
+          "Sử dụng hàng ngày GitHub Copilot, ChatGPT, Claude và Gemini"
+        ]
+      }
     },
     {
       "id": "learning",
       "emoji": "📚",
-      "name": "Learning & Adaptation",
-      "level": "Expert",
+      "name": {
+        "en": "Learning & Adaptation",
+        "fr": "Apprentissage & Adaptation",
+        "vn": "Học Tập & Thích Ứng"
+      },
+      "level": {
+        "en": "Expert",
+        "fr": "Expert",
+        "vn": "Chuyên Gia"
+      },
       "width": 95,
-      "technologies": "Quick learning (★★★★★), Adaptation (★★★★★), Project structuring (★★★★☆)",
-      "details": [
-        "Rapid mastery of new frameworks and technologies",
-        "Self-directed learning and problem-solving",
-        "Translating documentation into practical implementations",
-        "Building complex systems from conceptual understanding",
-        "Continuous improvement mindset"
-      ]
+      "technologies": {
+        "en": "Quick learning (★★★★★), Adaptation (★★★★★), Project structuring (★★★★☆)",
+        "fr": "Apprentissage rapide (★★★★★), Adaptation (★★★★★), Structuration de projets (★★★★☆)",
+        "vn": "Học nhanh (★★★★★), Thích ứng (★★★★★), Cấu trúc dự án (★★★★☆)"
+      },
+      "details": {
+        "en": [
+          "Rapid mastery of new frameworks and technologies",
+          "Self-directed learning and problem-solving",
+          "Translating documentation into practical implementations",
+          "Building complex systems from conceptual understanding",
+          "Continuous improvement mindset"
+        ],
+        "fr": [
+          "Maîtrise rapide de nouveaux frameworks et technologies",
+          "Apprentissage autonome et résolution de problèmes",
+          "Traduction de la documentation en implémentations pratiques",
+          "Construction de systèmes complexes à partir de concepts",
+          "Mentalité d'amélioration continue"
+        ],
+        "vn": [
+          "Nắm vững nhanh các framework và công nghệ mới",
+          "Tự học và giải quyết vấn đề",
+          "Chuyển đổi tài liệu thành triển khai thực tế",
+          "Xây dựng hệ thống phức tạp từ hiểu biết khái niệm",
+          "Tư duy cải tiến liên tục"
+        ]
+      }
     },
     {
       "id": "tools",
       "emoji": "🛠️",
-      "name": "Tools & Workflow",
-      "level": "Advanced",
+      "name": {
+        "en": "Tools & Workflow",
+        "fr": "Outils & Flux de Travail",
+        "vn": "Công Cụ & Quy Trình"
+      },
+      "level": {
+        "en": "Advanced",
+        "fr": "Avancé",
+        "vn": "Nâng Cao"
+      },
       "width": 90,
-      "technologies": "VS Code (★★★★★), Windows/macOS (★★★★☆), Google Workspace & Office (★★★★☆)",
-      "details": [
-        "Expert in VS Code with extensions and shortcuts",
-        "Proficient across Windows and macOS environments",
-        "Git version control and GitHub workflows",
-        "Google Workspace and Microsoft Office productivity",
-        "Effective documentation and collaboration tools"
-      ]
+      "technologies": {
+        "en": "VS Code (★★★★★), Windows/macOS (★★★★☆), Google Workspace & Office (★★★★☆)",
+        "fr": "VS Code (★★★★★), Windows/macOS (★★★★☆), Google Workspace & Office (★★★★☆)",
+        "vn": "VS Code (★★★★★), Windows/macOS (★★★★☆), Google Workspace & Office (★★★★☆)"
+      },
+      "details": {
+        "en": [
+          "Expert in VS Code with extensions and shortcuts",
+          "Proficient across Windows and macOS environments",
+          "Git version control and GitHub workflows",
+          "Google Workspace and Microsoft Office productivity",
+          "Effective documentation and collaboration tools"
+        ],
+        "fr": [
+          "Expert en VS Code avec extensions et raccourcis",
+          "Compétent sur les environnements Windows et macOS",
+          "Contrôle de version Git et flux GitHub",
+          "Productivité Google Workspace et Microsoft Office",
+          "Outils de documentation et collaboration efficaces"
+        ],
+        "vn": [
+          "Chuyên gia VS Code với tiện ích mở rộng và phím tắt",
+          "Thành thạo trên môi trường Windows và macOS",
+          "Quản lý phiên bản Git và quy trình GitHub",
+          "Năng suất Google Workspace và Microsoft Office",
+          "Công cụ tài liệu và cộng tác hiệu quả"
+        ]
+      }
     },
     {
       "id": "creative",
       "emoji": "🎨",
-      "name": "Creative & Design",
-      "level": "Intermediate",
+      "name": {
+        "en": "Creative & Design",
+        "fr": "Créativité & Design",
+        "vn": "Sáng Tạo & Thiết Kế"
+      },
+      "level": {
+        "en": "Intermediate",
+        "fr": "Intermédiaire",
+        "vn": "Trung Cấp"
+      },
       "width": 60,
-      "technologies": "Adobe Photoshop (★★★☆☆)",
-      "details": [
-        "Photoshop for image editing and design mockups",
-        "UI/UX design principles",
-        "Visual hierarchy and layout composition",
-        "Color theory and typography basics"
-      ]
+      "technologies": {
+        "en": "Adobe Photoshop (★★★☆☆)",
+        "fr": "Adobe Photoshop (★★★☆☆)",
+        "vn": "Adobe Photoshop (★★★☆☆)"
+      },
+      "details": {
+        "en": [
+          "Photoshop for image editing and design mockups",
+          "UI/UX design principles",
+          "Visual hierarchy and layout composition",
+          "Color theory and typography basics"
+        ],
+        "fr": [
+          "Photoshop pour l'édition d'images et les maquettes",
+          "Principes de design UI/UX",
+          "Hiérarchie visuelle et composition de mise en page",
+          "Théorie des couleurs et bases de typographie"
+        ],
+        "vn": [
+          "Photoshop cho chỉnh sửa hình ảnh và bản mẫu thiết kế",
+          "Nguyên tắc thiết kế UI/UX",
+          "Hệ thống phân cấp trực quan và bố cục",
+          "Lý thuyết màu sắc và cơ bản về kiểu chữ"
+        ]
+      }
     },
     {
       "id": "languages",
       "emoji": "🌍",
-      "name": "Languages",
-      "level": "Bilingual",
+      "name": {
+        "en": "Languages",
+        "fr": "Langues",
+        "vn": "Ngôn Ngữ"
+      },
+      "level": {
+        "en": "Bilingual",
+        "fr": "Bilingue",
+        "vn": "Song Ngữ"
+      },
       "width": 95,
-      "technologies": "French (★★★★★), English (★★★★☆)",
-      "details": [
-        "Native French speaker",
-        "Advanced English proficiency",
-        "Technical communication in both languages",
-        "Effective cross-cultural collaboration"
-      ]
+      "technologies": {
+        "en": "French (★★★★★), English (★★★★☆)",
+        "fr": "Français (★★★★★), Anglais (★★★★☆)",
+        "vn": "Tiếng Pháp (★★★★★), Tiếng Anh (★★★★☆)"
+      },
+      "details": {
+        "en": [
+          "Native French speaker",
+          "Advanced English proficiency",
+          "Technical communication in both languages",
+          "Effective cross-cultural collaboration"
+        ],
+        "fr": [
+          "Francophone natif",
+          "Maîtrise avancée de l'anglais",
+          "Communication technique dans les deux langues",
+          "Collaboration interculturelle efficace"
+        ],
+        "vn": [
+          "Người nói tiếng Pháp bản xứ",
+          "Trình độ tiếng Anh nâng cao",
+          "Giao tiếp kỹ thuật bằng cả hai ngôn ngữ",
+          "Cộng tác đa văn hóa hiệu quả"
+        ]
+      }
     }
   ]
 }

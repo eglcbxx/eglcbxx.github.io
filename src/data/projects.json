@@ -2,184 +2,476 @@
   "projects": [
     {
       "id": "project1",
-      "title": "Rocket Elevators Website (Static Front-End)",
+      "title": {
+        "en": "Rocket Elevators Website (Static Front-End)",
+        "fr": "Site Web Rocket Elevators (Front-End Statique)",
+        "vn": "Trang Web Rocket Elevators (Front-End Tĩnh)"
+      },
       "category": "web",
       "image": "assets/images/projects/project1.png",
-      "description": "Rebuilt static website from legacy Smarty template to modern HTML/CSS with brand identity.",
+      "description": {
+        "en": "Rebuilt static website from legacy Smarty template to modern HTML/CSS with brand identity.",
+        "fr": "Reconstruction du site statique à partir d'un modèle Smarty vers du HTML/CSS moderne avec l'identité de marque.",
+        "vn": "Xây dựng lại trang web tĩnh từ mẫu Smarty cũ sang HTML/CSS hiện đại với nhận diện thương hiệu."
+      },
       "link": "https://github.com/eglcbxx",
       "modalData": {
-        "problem": "The existing website was based on a Smarty Template and did not reflect the Rocket Elevators brand or business requirements.",
-        "solution": "Rebuilt the website by removing all template-specific references, updating content and links, and creating new pages aligned with the Rocket Elevators identity.",
+        "problem": {
+          "en": "The existing website was based on a Smarty Template and did not reflect the Rocket Elevators brand or business requirements.",
+          "fr": "Le site existant était basé sur un modèle Smarty et ne reflétait pas la marque Rocket Elevators ni les exigences commerciales.",
+          "vn": "Trang web hiện tại dựa trên mẫu Smarty và không phản ánh thương hiệu Rocket Elevators hay yêu cầu kinh doanh."
+        },
+        "solution": {
+          "en": "Rebuilt the website by removing all template-specific references, updating content and links, and creating new pages aligned with the Rocket Elevators identity.",
+          "fr": "Reconstruction du site en supprimant toutes les références au modèle, en mettant à jour le contenu et les liens, et en créant de nouvelles pages alignées avec l'identité Rocket Elevators.",
+          "vn": "Xây dựng lại trang web bằng cách loại bỏ tất cả tham chiếu mẫu, cập nhật nội dung và liên kết, tạo các trang mới phù hợp với nhận diện Rocket Elevators."
+        },
         "tech": ["HTML", "CSS"],
-        "lessons": [
-          "Understanding and refactoring legacy HTML templates",
-          "Structuring a multi-page static website",
-          "Applying semantic HTML best practices",
-          "Creating consistent layouts and navigation",
-          "Styling pages using CSS for branding and readability"
-        ]
+        "lessons": {
+          "en": [
+            "Understanding and refactoring legacy HTML templates",
+            "Structuring a multi-page static website",
+            "Applying semantic HTML best practices",
+            "Creating consistent layouts and navigation",
+            "Styling pages using CSS for branding and readability"
+          ],
+          "fr": [
+            "Compréhension et refactoring de modèles HTML hérités",
+            "Structuration d'un site statique multi-pages",
+            "Application des bonnes pratiques HTML sémantique",
+            "Création de mises en page et navigation cohérentes",
+            "Stylisation des pages avec CSS pour l'image de marque et la lisibilité"
+          ],
+          "vn": [
+            "Hiểu và tái cấu trúc các mẫu HTML cũ",
+            "Cấu trúc trang web tĩnh nhiều trang",
+            "Áp dụng các best practices HTML ngữ nghĩa",
+            "Tạo bố cục và điều hướng nhất quán",
+            "Tạo kiểu trang bằng CSS cho thương hiệu và khả năng đọc"
+          ]
+        }
       }
     },
     {
       "id": "project2",
-      "title": "Elevator Quote Form",
+      "title": {
+        "en": "Elevator Quote Form",
+        "fr": "Formulaire de Devis d'Ascenseur",
+        "vn": "Biểu Mẫu Báo Giá Thang Máy"
+      },
       "category": "web",
       "image": "assets/images/projects/project2.png",
-      "description": "Dynamic pricing calculator with Bootstrap and JavaScript for elevator installations.",
+      "description": {
+        "en": "Dynamic pricing calculator with Bootstrap and JavaScript for elevator installations.",
+        "fr": "Calculateur de prix dynamique avec Bootstrap et JavaScript pour les installations d'ascenseurs.",
+        "vn": "Máy tính giá động với Bootstrap và JavaScript cho lắp đặt thang máy."
+      },
       "link": "https://github.com/eglcbxx",
       "modalData": {
-        "problem": "There was no system in place to generate elevator pricing based on different building types.",
-        "solution": "Designed and implemented a dynamic quote form that calculates pricing based on user input and building specifications.",
+        "problem": {
+          "en": "There was no system in place to generate elevator pricing based on different building types.",
+          "fr": "Il n'existait aucun système pour générer des prix d'ascenseurs selon les types de bâtiments.",
+          "vn": "Không có hệ thống nào để tạo báo giá thang máy dựa trên các loại tòa nhà khác nhau."
+        },
+        "solution": {
+          "en": "Designed and implemented a dynamic quote form that calculates pricing based on user input and building specifications.",
+          "fr": "Conception et implémentation d'un formulaire de devis dynamique calculant les prix selon les entrées utilisateur et les spécifications du bâtiment.",
+          "vn": "Thiết kế và triển khai biểu mẫu báo giá động tính giá dựa trên dữ liệu đầu vào và thông số kỹ thuật tòa nhà."
+        },
         "tech": ["HTML", "CSS", "Bootstrap", "JavaScript"],
-        "lessons": [
-          "Building interactive forms with JavaScript",
-          "Handling user input and form validation",
-          "Implementing business logic on the client side",
-          "Using Bootstrap for responsive layouts",
-          "Improving UX through dynamic feedback"
-        ]
+        "lessons": {
+          "en": [
+            "Building interactive forms with JavaScript",
+            "Handling user input and form validation",
+            "Implementing business logic on the client side",
+            "Using Bootstrap for responsive layouts",
+            "Improving UX through dynamic feedback"
+          ],
+          "fr": [
+            "Construction de formulaires interactifs avec JavaScript",
+            "Gestion des entrées utilisateur et validation de formulaires",
+            "Implémentation de la logique métier côté client",
+            "Utilisation de Bootstrap pour les mises en page responsive",
+            "Amélioration de l'UX par les retours dynamiques"
+          ],
+          "vn": [
+            "Xây dựng biểu mẫu tương tác với JavaScript",
+            "Xử lý dữ liệu đầu vào và xác thực biểu mẫu",
+            "Triển khai logic nghiệp vụ phía client",
+            "Sử dụng Bootstrap cho bố cục responsive",
+            "Cải thiện UX thông qua phản hồi động"
+          ]
+        }
       }
     },
     {
       "id": "project3",
-      "title": "Introduction to Node.js & Express",
+      "title": {
+        "en": "Introduction to Node.js & Express",
+        "fr": "Introduction à Node.js & Express",
+        "vn": "Giới Thiệu Node.js & Express"
+      },
       "category": "backend",
       "image": "assets/images/projects/project3.png",
-      "description": "First backend server with Express, learning RESTful APIs and client-server architecture.",
+      "description": {
+        "en": "First backend server with Express, learning RESTful APIs and client-server architecture.",
+        "fr": "Premier serveur backend avec Express, apprentissage des APIs RESTful et de l'architecture client-serveur.",
+        "vn": "Máy chủ backend đầu tiên với Express, học RESTful APIs và kiến trúc client-server."
+      },
       "link": "https://github.com/eglcbxx",
       "modalData": {
-        "problem": "Lack of understanding of how server-side applications work with Node.js and Express.",
-        "solution": "Created a simple backend server using Express with basic endpoints to handle requests and responses.",
+        "problem": {
+          "en": "Lack of understanding of how server-side applications work with Node.js and Express.",
+          "fr": "Manque de compréhension du fonctionnement des applications côté serveur avec Node.js et Express.",
+          "vn": "Thiếu hiểu biết về cách ứng dụng phía máy chủ hoạt động với Node.js và Express."
+        },
+        "solution": {
+          "en": "Created a simple backend server using Express with basic endpoints to handle requests and responses.",
+          "fr": "Création d'un serveur backend simple avec Express avec des endpoints de base pour gérer les requêtes et réponses.",
+          "vn": "Tạo máy chủ backend đơn giản sử dụng Express với các endpoint cơ bản để xử lý yêu cầu và phản hồi."
+        },
         "tech": ["Node.js", "Express", "JavaScript", "Nodemon"],
-        "lessons": [
-          "Understanding the client–server architecture",
-          "Creating RESTful endpoints with Express",
-          "Handling HTTP requests and responses",
-          "Using Nodemon for development efficiency",
-          "Organizing a basic backend project structure"
-        ]
+        "lessons": {
+          "en": [
+            "Understanding the client–server architecture",
+            "Creating RESTful endpoints with Express",
+            "Handling HTTP requests and responses",
+            "Using Nodemon for development efficiency",
+            "Organizing a basic backend project structure"
+          ],
+          "fr": [
+            "Compréhension de l'architecture client-serveur",
+            "Création d'endpoints RESTful avec Express",
+            "Gestion des requêtes et réponses HTTP",
+            "Utilisation de Nodemon pour l'efficacité du développement",
+            "Organisation d'une structure de projet backend de base"
+          ],
+          "vn": [
+            "Hiểu kiến trúc client-server",
+            "Tạo endpoints RESTful với Express",
+            "Xử lý yêu cầu và phản hồi HTTP",
+            "Sử dụng Nodemon cho hiệu quả phát triển",
+            "Tổ chức cấu trúc dự án backend cơ bản"
+          ]
+        }
       }
     },
     {
       "id": "project4",
-      "title": "Node.js Backend with Database",
+      "title": {
+        "en": "Node.js Backend with Database",
+        "fr": "Backend Node.js avec Base de Données",
+        "vn": "Backend Node.js với Cơ Sở Dữ Liệu"
+      },
       "category": "backend",
       "image": "assets/images/projects/project4.png",
-      "description": "Extended Express server with MongoDB integration using Mongoose for data persistence.",
+      "description": {
+        "en": "Extended Express server with MongoDB integration using Mongoose for data persistence.",
+        "fr": "Serveur Express étendu avec intégration MongoDB utilisant Mongoose pour la persistance des données.",
+        "vn": "Mở rộng máy chủ Express với tích hợp MongoDB sử dụng Mongoose cho lưu trữ dữ liệu."
+      },
       "link": "https://github.com/eglcbxx",
       "modalData": {
-        "problem": "No experience connecting a backend server to a database.",
-        "solution": "Extended the Express server by integrating MongoDB for data storage and management using Mongoose.",
+        "problem": {
+          "en": "No experience connecting a backend server to a database.",
+          "fr": "Aucune expérience de connexion d'un serveur backend à une base de données.",
+          "vn": "Chưa có kinh nghiệm kết nối máy chủ backend với cơ sở dữ liệu."
+        },
+        "solution": {
+          "en": "Extended the Express server by integrating MongoDB for data storage and management using Mongoose.",
+          "fr": "Extension du serveur Express en intégrant MongoDB pour le stockage et la gestion des données avec Mongoose.",
+          "vn": "Mở rộng máy chủ Express bằng cách tích hợp MongoDB cho lưu trữ và quản lý dữ liệu với Mongoose."
+        },
         "tech": ["Node.js", "Express", "JavaScript", "Nodemon", "MongoDB", "Mongoose"],
-        "lessons": [
-          "Connecting a backend to a NoSQL database",
-          "Designing schemas and models with Mongoose",
-          "Performing CRUD operations",
-          "Managing asynchronous database operations",
-          "Structuring a scalable backend architecture"
-        ]
+        "lessons": {
+          "en": [
+            "Connecting a backend to a NoSQL database",
+            "Designing schemas and models with Mongoose",
+            "Performing CRUD operations",
+            "Managing asynchronous database operations",
+            "Structuring a scalable backend architecture"
+          ],
+          "fr": [
+            "Connexion d'un backend à une base de données NoSQL",
+            "Conception de schémas et modèles avec Mongoose",
+            "Exécution d'opérations CRUD",
+            "Gestion des opérations de base de données asynchrones",
+            "Structuration d'une architecture backend évolutive"
+          ],
+          "vn": [
+            "Kết nối backend với cơ sở dữ liệu NoSQL",
+            "Thiết kế schemas và models với Mongoose",
+            "Thực hiện các thao tác CRUD",
+            "Quản lý các thao tác cơ sở dữ liệu bất đồng bộ",
+            "Cấu trúc kiến trúc backend có khả năng mở rộng"
+          ]
+        }
       }
     },
     {
       "id": "project5",
-      "title": "Agent Management Web Application",
+      "title": {
+        "en": "Agent Management Web Application",
+        "fr": "Application Web de Gestion d'Agents",
+        "vn": "Ứng Dụng Web Quản Lý Đại Lý"
+      },
       "category": "fullstack",
       "image": "assets/images/projects/project5.png",
-      "description": "Full MERN stack admin app with authentication, CRUD operations, and reporting dashboards.",
+      "description": {
+        "en": "Full MERN stack admin app with authentication, CRUD operations, and reporting dashboards.",
+        "fr": "Application admin MERN complète avec authentification, opérations CRUD et tableaux de bord.",
+        "vn": "Ứng dụng quản trị MERN đầy đủ với xác thực, thao tác CRUD và bảng điều khiển báo cáo."
+      },
       "link": "https://github.com/eglcbxx",
       "modalData": {
-        "problem": "A web application was needed to manage agents, authentication, and operational data.",
-        "solution": "Built a full MERN stack admin application with authentication, session tokens, CRUD operations, reporting, and transaction management.",
+        "problem": {
+          "en": "A web application was needed to manage agents, authentication, and operational data.",
+          "fr": "Une application web était nécessaire pour gérer les agents, l'authentification et les données opérationnelles.",
+          "vn": "Cần một ứng dụng web để quản lý đại lý, xác thực và dữ liệu vận hành."
+        },
+        "solution": {
+          "en": "Built a full MERN stack admin application with authentication, session tokens, CRUD operations, reporting, and transaction management.",
+          "fr": "Construction d'une application admin MERN complète avec authentification, jetons de session, opérations CRUD, rapports et gestion des transactions.",
+          "vn": "Xây dựng ứng dụng quản trị MERN đầy đủ với xác thực, token phiên, thao tác CRUD, báo cáo và quản lý giao dịch."
+        },
         "tech": ["MongoDB", "Express", "React", "Node.js", "MERN Stack"],
-        "lessons": [
-          "Building full-stack applications",
-          "Implementing authentication and session management",
-          "Securing API endpoints",
-          "Managing complex CRUD workflows",
-          "Creating dashboards and reports",
-          "Connecting frontend and backend in a production-ready app"
-        ]
+        "lessons": {
+          "en": [
+            "Building full-stack applications",
+            "Implementing authentication and session management",
+            "Securing API endpoints",
+            "Managing complex CRUD workflows",
+            "Creating dashboards and reports",
+            "Connecting frontend and backend in a production-ready app"
+          ],
+          "fr": [
+            "Construction d'applications full-stack",
+            "Implémentation de l'authentification et gestion de sessions",
+            "Sécurisation des endpoints API",
+            "Gestion de workflows CRUD complexes",
+            "Création de tableaux de bord et rapports",
+            "Connexion frontend et backend dans une application prête pour la production"
+          ],
+          "vn": [
+            "Xây dựng ứng dụng full-stack",
+            "Triển khai xác thực và quản lý phiên",
+            "Bảo mật các endpoint API",
+            "Quản lý quy trình CRUD phức tạp",
+            "Tạo bảng điều khiển và báo cáo",
+            "Kết nối frontend và backend trong ứng dụng sẵn sàng production"
+          ]
+        }
       }
     },
     {
       "id": "project6",
-      "title": "Blog Platform",
+      "title": {
+        "en": "Blog Platform",
+        "fr": "Plateforme de Blog",
+        "vn": "Nền Tảng Blog"
+      },
       "category": "fullstack",
       "image": "assets/images/projects/project6.png",
-      "description": "MERN blog with user authentication, role-based access, post management, and comments.",
+      "description": {
+        "en": "MERN blog with user authentication, role-based access, post management, and comments.",
+        "fr": "Blog MERN avec authentification, accès basé sur les rôles, gestion des articles et commentaires.",
+        "vn": "Blog MERN với xác thực người dùng, phân quyền, quản lý bài viết và bình luận."
+      },
       "link": "https://github.com/eglcbxx",
       "modalData": {
-        "problem": "A complete blogging system was required to manage content and users.",
-        "solution": "Developed a MERN-based blog application with user registration, authentication, post creation, comments, and admin content management.",
+        "problem": {
+          "en": "A complete blogging system was required to manage content and users.",
+          "fr": "Un système de blog complet était nécessaire pour gérer le contenu et les utilisateurs.",
+          "vn": "Cần một hệ thống blog hoàn chỉnh để quản lý nội dung và người dùng."
+        },
+        "solution": {
+          "en": "Developed a MERN-based blog application with user registration, authentication, post creation, comments, and admin content management.",
+          "fr": "Développement d'une application de blog MERN avec inscription, authentification, création d'articles, commentaires et gestion de contenu admin.",
+          "vn": "Phát triển ứng dụng blog MERN với đăng ký người dùng, xác thực, tạo bài viết, bình luận và quản lý nội dung admin."
+        },
         "tech": ["MongoDB", "Express", "React", "Node.js", "MERN Stack"],
-        "lessons": [
-          "Designing role-based user systems",
-          "Managing content workflows (posts, comments)",
-          "Implementing user authentication and authorization",
-          "Building reusable React components",
-          "Handling relational-like data in MongoDB"
-        ]
+        "lessons": {
+          "en": [
+            "Designing role-based user systems",
+            "Managing content workflows (posts, comments)",
+            "Implementing user authentication and authorization",
+            "Building reusable React components",
+            "Handling relational-like data in MongoDB"
+          ],
+          "fr": [
+            "Conception de systèmes utilisateur basés sur les rôles",
+            "Gestion des workflows de contenu (articles, commentaires)",
+            "Implémentation de l'authentification et autorisation",
+            "Construction de composants React réutilisables",
+            "Gestion de données relationnelles dans MongoDB"
+          ],
+          "vn": [
+            "Thiết kế hệ thống người dùng dựa trên vai trò",
+            "Quản lý quy trình nội dung (bài viết, bình luận)",
+            "Triển khai xác thực và phân quyền người dùng",
+            "Xây dựng components React tái sử dụng",
+            "Xử lý dữ liệu quan hệ trong MongoDB"
+          ]
+        }
       }
     },
     {
       "id": "project7",
-      "title": "Rocket Food Back Office",
+      "title": {
+        "en": "Rocket Food Back Office",
+        "fr": "Back Office Rocket Food",
+        "vn": "Hệ Thống Quản Trị Rocket Food"
+      },
       "category": "backend",
       "image": "assets/images/projects/project7.png",
-      "description": "Java backend with MySQL for administrative data management of mobile application.",
+      "description": {
+        "en": "Java backend with MySQL for administrative data management of mobile application.",
+        "fr": "Backend Java avec MySQL pour la gestion administrative des données de l'application mobile.",
+        "vn": "Backend Java với MySQL cho quản lý dữ liệu hành chính của ứng dụng di động."
+      },
       "link": "https://github.com/eglcbxx",
       "modalData": {
-        "problem": "The Rocket Food mobile application lacked a back-office system for managing data.",
-        "solution": "Developed a backend server and administrative back office using Java to manage application data.",
+        "problem": {
+          "en": "The Rocket Food mobile application lacked a back-office system for managing data.",
+          "fr": "L'application mobile Rocket Food manquait d'un système de back-office pour gérer les données.",
+          "vn": "Ứng dụng di động Rocket Food thiếu hệ thống quản trị để quản lý dữ liệu."
+        },
+        "solution": {
+          "en": "Developed a backend server and administrative back office using Java to manage application data.",
+          "fr": "Développement d'un serveur backend et d'un back-office administratif en Java pour gérer les données de l'application.",
+          "vn": "Phát triển máy chủ backend và hệ thống quản trị bằng Java để quản lý dữ liệu ứng dụng."
+        },
         "tech": ["Java", "MySQL"],
-        "lessons": [
-          "Understanding backend development with Java",
-          "Designing relational databases with MySQL",
-          "Implementing CRUD operations in Java",
-          "Building admin tools for data management",
-          "Applying MVC concepts in backend systems"
-        ]
+        "lessons": {
+          "en": [
+            "Understanding backend development with Java",
+            "Designing relational databases with MySQL",
+            "Implementing CRUD operations in Java",
+            "Building admin tools for data management",
+            "Applying MVC concepts in backend systems"
+          ],
+          "fr": [
+            "Compréhension du développement backend avec Java",
+            "Conception de bases de données relationnelles avec MySQL",
+            "Implémentation d'opérations CRUD en Java",
+            "Construction d'outils admin pour la gestion des données",
+            "Application des concepts MVC dans les systèmes backend"
+          ],
+          "vn": [
+            "Hiểu phát triển backend với Java",
+            "Thiết kế cơ sở dữ liệu quan hệ với MySQL",
+            "Triển khai thao tác CRUD trong Java",
+            "Xây dựng công cụ admin cho quản lý dữ liệu",
+            "Áp dụng khái niệm MVC trong hệ thống backend"
+          ]
+        }
       }
     },
     {
       "id": "project8",
-      "title": "Mobile Application Development",
+      "title": {
+        "en": "Mobile Application Development",
+        "fr": "Développement d'Application Mobile",
+        "vn": "Phát Triển Ứng Dụng Di Động"
+      },
       "category": "mobile",
       "image": "assets/images/projects/project8.png",
-      "description": "React Native mobile app connected to Java backend for cross-platform food delivery.",
+      "description": {
+        "en": "React Native mobile app connected to Java backend for cross-platform food delivery.",
+        "fr": "Application mobile React Native connectée au backend Java pour la livraison de nourriture multiplateforme.",
+        "vn": "Ứng dụng di động React Native kết nối backend Java cho giao đồ ăn đa nền tảng."
+      },
       "link": "https://github.com/eglcbxx",
       "modalData": {
-        "problem": "No mobile application was available for users.",
-        "solution": "Built a mobile application using React Native and connected it to the existing Java backend server.",
+        "problem": {
+          "en": "No mobile application was available for users.",
+          "fr": "Aucune application mobile n'était disponible pour les utilisateurs.",
+          "vn": "Không có ứng dụng di động nào cho người dùng."
+        },
+        "solution": {
+          "en": "Built a mobile application using React Native and connected it to the existing Java backend server.",
+          "fr": "Construction d'une application mobile avec React Native et connexion au serveur backend Java existant.",
+          "vn": "Xây dựng ứng dụng di động sử dụng React Native và kết nối với máy chủ backend Java hiện có."
+        },
         "tech": ["React Native", "Java"],
-        "lessons": [
-          "Building cross-platform mobile applications",
-          "Connecting mobile apps to backend APIs",
-          "Managing application state and navigation",
-          "Understanding mobile UX best practices",
-          "Integrating frontend and backend systems"
-        ]
+        "lessons": {
+          "en": [
+            "Building cross-platform mobile applications",
+            "Connecting mobile apps to backend APIs",
+            "Managing application state and navigation",
+            "Understanding mobile UX best practices",
+            "Integrating frontend and backend systems"
+          ],
+          "fr": [
+            "Construction d'applications mobiles multiplateformes",
+            "Connexion d'applications mobiles aux APIs backend",
+            "Gestion de l'état et de la navigation de l'application",
+            "Compréhension des bonnes pratiques UX mobile",
+            "Intégration des systèmes frontend et backend"
+          ],
+          "vn": [
+            "Xây dựng ứng dụng di động đa nền tảng",
+            "Kết nối ứng dụng di động với APIs backend",
+            "Quản lý state và điều hướng ứng dụng",
+            "Hiểu best practices UX di động",
+            "Tích hợp hệ thống frontend và backend"
+          ]
+        }
       }
     },
     {
       "id": "project9",
-      "title": "AI-Enhanced Portfolio",
+      "title": {
+        "en": "AI-Enhanced Portfolio",
+        "fr": "Portfolio Amélioré par IA",
+        "vn": "Portfolio Tăng Cường AI"
+      },
       "category": "web",
       "image": "assets/images/projects/project9.png",
-      "description": "This portfolio! Built with HTML/CSS/JS using AI tools for rapid development and optimization.",
+      "description": {
+        "en": "This portfolio! Built with HTML/CSS/JS using AI tools for rapid development and optimization.",
+        "fr": "Ce portfolio! Construit avec HTML/CSS/JS en utilisant des outils IA pour un développement rapide et une optimisation.",
+        "vn": "Portfolio này! Được xây dựng với HTML/CSS/JS sử dụng công cụ AI cho phát triển nhanh và tối ưu hóa."
+      },
       "link": "https://github.com/eglcbxx/eglcbxx.github.io",
       "modalData": {
-        "problem": "Creating a professional portfolio from scratch is time-consuming and requires balancing design, functionality, and best practices.",
-        "solution": "Leveraged AI tools (GitHub Copilot, ChatGPT, Claude) to rapidly prototype and build this interactive portfolio with advanced animations, accessibility features, and modern UX patterns.",
+        "problem": {
+          "en": "Creating a professional portfolio from scratch is time-consuming and requires balancing design, functionality, and best practices.",
+          "fr": "Créer un portfolio professionnel à partir de zéro est chronophage et nécessite d'équilibrer design, fonctionnalité et bonnes pratiques.",
+          "vn": "Tạo portfolio chuyên nghiệp từ đầu tốn thời gian và đòi hỏi cân bằng thiết kế, chức năng và best practices."
+        },
+        "solution": {
+          "en": "Leveraged AI tools (GitHub Copilot, ChatGPT, Claude) to rapidly prototype and build this interactive portfolio with advanced animations, accessibility features, and modern UX patterns.",
+          "fr": "Utilisation d'outils IA (GitHub Copilot, ChatGPT, Claude) pour prototyper rapidement et construire ce portfolio interactif avec des animations avancées, des fonctionnalités d'accessibilité et des modèles UX modernes.",
+          "vn": "Tận dụng công cụ AI (GitHub Copilot, ChatGPT, Claude) để tạo mẫu nhanh và xây dựng portfolio tương tác này với hoạt ảnh nâng cao, tính năng trợ năng và mẫu UX hiện đại."
+        },
         "tech": ["HTML5", "CSS3", "JavaScript", "AI Tools (Copilot, ChatGPT, Claude)", "Responsive Design"],
-        "lessons": [
-          "Advanced prompt engineering for code generation",
-          "Effective use of AI for rapid prototyping and iteration",
-          "Combining AI suggestions with human expertise",
-          "Implementing scroll animations and micro-interactions",
-          "Building accessible, semantic HTML structures",
-          "AI-assisted debugging and refactoring workflows"
-        ]
+        "lessons": {
+          "en": [
+            "Advanced prompt engineering for code generation",
+            "Effective use of AI for rapid prototyping and iteration",
+            "Combining AI suggestions with human expertise",
+            "Implementing scroll animations and micro-interactions",
+            "Building accessible, semantic HTML structures",
+            "AI-assisted debugging and refactoring workflows"
+          ],
+          "fr": [
+            "Ingénierie de prompts avancée pour la génération de code",
+            "Utilisation efficace de l'IA pour le prototypage rapide et l'itération",
+            "Combinaison des suggestions IA avec l'expertise humaine",
+            "Implémentation d'animations de défilement et micro-interactions",
+            "Construction de structures HTML accessibles et sémantiques",
+            "Workflows de débogage et refactoring assistés par IA"
+          ],
+          "vn": [
+            "Kỹ thuật viết prompt nâng cao cho tạo mã",
+            "Sử dụng hiệu quả AI cho tạo mẫu nhanh và lặp lại",
+            "Kết hợp gợi ý AI với chuyên môn con người",
+            "Triển khai hoạt ảnh cuộn và micro-interactions",
+            "Xây dựng cấu trúc HTML trợ năng và ngữ nghĩa",
+            "Quy trình gỡ lỗi và tái cấu trúc hỗ trợ AI"
+          ]
+        }
       }
     }
   ]

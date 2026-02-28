@@ -26,13 +26,7 @@ The backoffice is a hidden admin page — it is **not** linked anywhere on the p
 Navigate to:
 
 ```
-https://<your-domain>/#/secret-backoffice
-```
-
-For local development:
-
-```
-http://localhost:5173/#/secret-backoffice
+Shift + Alt + K or Shift + Command + k
 ```
 
 ### How to create an admin user

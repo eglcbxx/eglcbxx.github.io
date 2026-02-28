@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useLanguage } from '../hooks/useLanguage';
 import ImageModal from './ImageModal';
 
 export default function ProjectCard({ project, onOpenModal }) {
   const ref = useScrollAnimation();
   const [imageModalSrc, setImageModalSrc] = useState(null);
+  const { t, localize } = useLanguage();
 
   const imgSrc = project.image.startsWith('assets/')
     ? `/${project.image}`
@@ -19,17 +21,17 @@ export default function ProjectCard({ project, onOpenModal }) {
         data-project={project.id}
         onClick={() => onOpenModal && onOpenModal(project)}
       >
-        <h3>{project.title}</h3>
+        <h3>{localize(project.title)}</h3>
         <img
           className="project-img"
           src={imgSrc}
-          alt={project.title}
+          alt={localize(project.title)}
           onClick={(e) => {
             e.stopPropagation();
             setImageModalSrc(imgSrc);
           }}
         />
-        <p className="small">{project.description}</p>
+        <p className="small">{localize(project.description)}</p>
         <p>
           <a
             href={project.link}
@@ -37,7 +39,7 @@ export default function ProjectCard({ project, onOpenModal }) {
             rel="noreferrer"
             onClick={(e) => e.stopPropagation()}
           >
-            View Details →
+            {t('ui.viewDetails')}
           </a>
         </p>
       </div>
@@ -45,7 +47,7 @@ export default function ProjectCard({ project, onOpenModal }) {
       {imageModalSrc && (
         <ImageModal
           src={imageModalSrc}
-          alt={project.title}
+          alt={localize(project.title)}
           onClose={() => setImageModalSrc(null)}
         />
       )}
