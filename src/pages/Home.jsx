@@ -6,6 +6,7 @@ import SkillCard from '../components/SkillCard';
 import StrengthCard from '../components/StrengthCard';
 import skillsData from '../data/skills.json';
 import strengthsData from '../data/strengths.json';
+import eglPicture from '../assets/images/egl-picture.jpg';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -41,7 +42,7 @@ export default function Home() {
           </div>
           <div className="hero-image">
             <div className="image-wrapper">
-              <img src="/assets/images/egl-picture.jpg" alt="Coach E.T @ Codeboxx" />
+              <img src={eglPicture} alt="Coach E.T @ Codeboxx" />
             </div>
           </div>
         </div>
