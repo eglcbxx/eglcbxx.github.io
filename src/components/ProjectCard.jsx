@@ -2,15 +2,14 @@ import { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useLanguage } from '../hooks/useLanguage';
 import ImageModal from './ImageModal';
+import { getImageUrl } from '../utils/getImageUrl';
 
 export default function ProjectCard({ project, onOpenModal }) {
   const ref = useScrollAnimation();
   const [imageModalSrc, setImageModalSrc] = useState(null);
   const { t, localize } = useLanguage();
 
-  const imgSrc = project.image.startsWith('assets/')
-    ? `/${project.image}`
-    : project.image;
+  const imgSrc = getImageUrl(project.image);
 
   return (
     <>
