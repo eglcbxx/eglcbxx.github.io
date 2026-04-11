@@ -20,7 +20,6 @@ export default function SkillCard({ skill }) {
         </div>
         <div className="skill-level">{localize(skill.level)}</div>
       </div>
-      <p className="small">{localize(skill.technologies)}</p>
       <div className="skill-details">
         <ul>
           {localize(skill.details).map((detail, i) => (
