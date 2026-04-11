@@ -41,7 +41,6 @@ The hero is displayed inside a `<section className="hero animate-fade">` and obs
 **SkillCard** renders:
 - `skill.emoji` + `localize(skill.name)` (header)
 - `localize(skill.level)` (level badge)
-- `localize(skill.technologies)` (small text)
 - `localize(skill.details)` (bulleted list, shown when expanded)
 - `t('ui.clickDetails')` prompt
 
@@ -93,7 +92,6 @@ All text fields are multilingual objects `{ en, fr, vn }`:
       "name": { "en": "...", "fr": "...", "vn": "..." },
       "level": { "en": "...", "fr": "...", "vn": "..." },
       "width": "number",
-      "technologies": { "en": "...", "fr": "...", "vn": "..." },
       "details": { "en": ["..."], "fr": ["..."], "vn": ["..."] }
     }
   ]
