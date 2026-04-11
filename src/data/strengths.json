@@ -111,6 +111,37 @@
           "Cân bằng giải pháp thực tế với best practices"
         ]
       }
+    },
+    {
+      "emoji": "🌍",
+      "title": {
+        "en": "Languages",
+        "fr": "Langues",
+        "vn": "Ngôn Ngữ"
+      },
+      "points": {
+        "en": [
+          "Bilingual",
+          "Native French speaker",
+          "Advanced English proficiency",
+          "Technical communication in both languages",
+          "Effective cross-cultural collaboration"
+        ],
+        "fr": [
+          "Bilingue",
+          "Francophone natif",
+          "Maîtrise avancée de l'anglais",
+          "Communication technique dans les deux langues",
+          "Collaboration interculturelle efficace"
+        ],
+        "vn": [
+          "Song Ngữ",
+          "Người nói tiếng Pháp bản xứ",
+          "Trình độ tiếng Anh nâng cao",
+          "Giao tiếp kỹ thuật bằng cả hai ngôn ngữ",
+          "Cộng tác đa văn hóa hiệu quả"
+        ]
+      }
     }
   ]
 }

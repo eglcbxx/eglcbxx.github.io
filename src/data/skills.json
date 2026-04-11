@@ -14,11 +14,6 @@
         "vn": "Nâng Cao"
       },
       "width": 90,
-      "technologies": {
-        "en": "HTML/CSS (★★★★☆), JavaScript (★★★★☆), React (★★★★☆), TypeScript (★★★☆☆)",
-        "fr": "HTML/CSS (★★★★☆), JavaScript (★★★★☆), React (★★★★☆), TypeScript (★★★☆☆)",
-        "vn": "HTML/CSS (★★★★☆), JavaScript (★★★★☆), React (★★★★☆), TypeScript (★★★☆☆)"
-      },
       "details": {
         "en": [
           "Expert in modern HTML5/CSS3 and responsive design",
@@ -57,11 +52,6 @@
         "vn": "Trung Cấp"
       },
       "width": 65,
-      "technologies": {
-        "en": "Ruby on Rails (★★★☆☆), Java (★★★☆☆)",
-        "fr": "Ruby on Rails (★★★☆☆), Java (★★★☆☆)",
-        "vn": "Ruby on Rails (★★★☆☆), Java (★★★☆☆)"
-      },
       "details": {
         "en": [
           "Ruby on Rails MVC architecture and RESTful APIs",
@@ -100,11 +90,6 @@
         "vn": "Trung Cấp"
       },
       "width": 65,
-      "technologies": {
-        "en": "SQL (★★★☆☆), MySQL (★★★☆☆), MongoDB (★★★☆☆)",
-        "fr": "SQL (★★★☆☆), MySQL (★★★☆☆), MongoDB (★★★☆☆)",
-        "vn": "SQL (★★★☆☆), MySQL (★★★☆☆), MongoDB (★★★☆☆)"
-      },
       "details": {
         "en": [
           "Complex SQL queries, CRUD operations, and joins",
@@ -143,11 +128,6 @@
         "vn": "Chuyên Gia"
       },
       "width": 100,
-      "technologies": {
-        "en": "Copilot, ChatGPT, Claude, Gemini — All (★★★★★)",
-        "fr": "Copilot, ChatGPT, Claude, Gemini — Tous (★★★★★)",
-        "vn": "Copilot, ChatGPT, Claude, Gemini — Tất cả (★★★★★)"
-      },
       "details": {
         "en": [
           "Expert prompt engineering for optimal AI responses",
@@ -189,11 +169,6 @@
         "vn": "Chuyên Gia"
       },
       "width": 95,
-      "technologies": {
-        "en": "Quick learning (★★★★★), Adaptation (★★★★★), Project structuring (★★★★☆)",
-        "fr": "Apprentissage rapide (★★★★★), Adaptation (★★★★★), Structuration de projets (★★★★☆)",
-        "vn": "Học nhanh (★★★★★), Thích ứng (★★★★★), Cấu trúc dự án (★★★★☆)"
-      },
       "details": {
         "en": [
           "Rapid mastery of new frameworks and technologies",
@@ -232,11 +207,6 @@
         "vn": "Nâng Cao"
       },
       "width": 90,
-      "technologies": {
-        "en": "VS Code (★★★★★), Windows/macOS (★★★★☆), Google Workspace & Office (★★★★☆)",
-        "fr": "VS Code (★★★★★), Windows/macOS (★★★★☆), Google Workspace & Office (★★★★☆)",
-        "vn": "VS Code (★★★★★), Windows/macOS (★★★★☆), Google Workspace & Office (★★★★☆)"
-      },
       "details": {
         "en": [
           "Expert in VS Code with extensions and shortcuts",
@@ -275,11 +245,6 @@
         "vn": "Trung Cấp"
       },
       "width": 60,
-      "technologies": {
-        "en": "Adobe Photoshop (★★★☆☆)",
-        "fr": "Adobe Photoshop (★★★☆☆)",
-        "vn": "Adobe Photoshop (★★★☆☆)"
-      },
       "details": {
         "en": [
           "Photoshop for image editing and design mockups",
@@ -298,46 +263,6 @@
           "Nguyên tắc thiết kế UI/UX",
           "Hệ thống phân cấp trực quan và bố cục",
           "Lý thuyết màu sắc và cơ bản về kiểu chữ"
-        ]
-      }
-    },
-    {
-      "id": "languages",
-      "emoji": "🌍",
-      "name": {
-        "en": "Languages",
-        "fr": "Langues",
-        "vn": "Ngôn Ngữ"
-      },
-      "level": {
-        "en": "Bilingual",
-        "fr": "Bilingue",
-        "vn": "Song Ngữ"
-      },
-      "width": 95,
-      "technologies": {
-        "en": "French (★★★★★), English (★★★★☆)",
-        "fr": "Français (★★★★★), Anglais (★★★★☆)",
-        "vn": "Tiếng Pháp (★★★★★), Tiếng Anh (★★★★☆)"
-      },
-      "details": {
-        "en": [
-          "Native French speaker",
-          "Advanced English proficiency",
-          "Technical communication in both languages",
-          "Effective cross-cultural collaboration"
-        ],
-        "fr": [
-          "Francophone natif",
-          "Maîtrise avancée de l'anglais",
-          "Communication technique dans les deux langues",
-          "Collaboration interculturelle efficace"
-        ],
-        "vn": [
-          "Người nói tiếng Pháp bản xứ",
-          "Trình độ tiếng Anh nâng cao",
-          "Giao tiếp kỹ thuật bằng cả hai ngôn ngữ",
-          "Cộng tác đa văn hóa hiệu quả"
         ]
       }
     }
